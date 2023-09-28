@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,18 +17,25 @@ public class Usuario {
 
     private Integer id;
     private String nombre;
-    private String rol;
     private Float cuentaCobro;
 
-    public Usuario(String nombre, String rol, Float cuentaCobro)
-    {
-        this.nombre = nombre;
-        this.rol = rol;
-        this.cuentaCobro = cuentaCobro;
-    }
+    @ManyToOne
+    @JoinColumn(name = "tipo", referencedColumnName = "id")
+    private TipoUsuario tipo;
+
+    @ManyToOne
+    @JoinColumn(name = "plan", referencedColumnName = "id")
+    private PlanConsumo plan;
 
     public Usuario()
     {;}
+
+    public Usuario(String nombre, TipoUsuario tipo, Float cuentaCobro)
+    {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.cuentaCobro = cuentaCobro;
+    }
 
     public Integer getId() {
         return id;
@@ -44,12 +53,12 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getRol() {
-        return rol;
+    public TipoUsuario getTipo() {
+        return tipo;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setTipo(TipoUsuario tipo) {
+        this.tipo = tipo;
     }
 
     public Float getCuentaCobro() {

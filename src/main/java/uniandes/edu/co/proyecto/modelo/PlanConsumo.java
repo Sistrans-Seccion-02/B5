@@ -14,12 +14,12 @@ public class PlanConsumo {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer id;
-    private String nombrePlan;
+    private String nombre;
     private String descripccion;
 
-    public PlanConsumo(String nombrePlan, String descripccion)
+    public PlanConsumo(String nombre, String descripccion)
     {
-        this.nombrePlan = nombrePlan;
+        this.nombre = nombre;
         this.descripccion = descripccion;
     }
 
@@ -34,12 +34,12 @@ public class PlanConsumo {
         this.id = id;
     }
 
-    public String getNombrePlan() {
-        return nombrePlan;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombrePlan(String nombrePlan) {
-        this.nombrePlan = nombrePlan;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDescripccion() {
