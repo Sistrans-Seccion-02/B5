@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,12 +15,16 @@ public class Habitacion {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 
-    private Integer id;
     private Integer numeroHabitacion;
-    private String tipo;
     private Boolean disponibilidad;
 
-    public Habitacion(Integer numerohabitacion, String tipo, Boolean disponibilidad)
+    @ManyToOne
+    @JoinColumn(name = "tipo", referencedColumnName = "id")
+    private TipoHabitacion tipo;
+
+
+
+    public Habitacion(Integer numerohabitacion, TipoHabitacion tipo, Boolean disponibilidad)
     {
         this.numeroHabitacion = numerohabitacion;
         this.tipo = tipo;
@@ -27,22 +33,16 @@ public class Habitacion {
     public Habitacion()
     {;}
     
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
     public Integer getNumeroHabitacion() {
         return numeroHabitacion;
     }
     public void setNumeroHabitacion(Integer numeroHabitacion) {
         this.numeroHabitacion = numeroHabitacion;
     }
-    public String getTipo() {
+    public TipoHabitacion getTipo() {
         return tipo;
     }
-    public void setTipo(String tipo) {
+    public void setTipo(TipoHabitacion tipo) {
         this.tipo = tipo;
     }
     public Boolean getDisponibilidad() {
