@@ -10,6 +10,10 @@ import jakarta.persistence.Table;
 @Table(name = "promociones")
 public class Promocion {
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+
+    private Integer idPromocion;
     private String nombre;
     private Boolean vigencia;
     private Integer descuento;
@@ -21,6 +25,13 @@ public class Promocion {
         this.vigencia = vigencia;
         this.descuento = descuento;
         this.beneficios = beneficios;
+    }
+
+    public Promocion()
+    {;}
+
+    public Integer getIdPromocion() {
+        return idPromocion;
     }
 
     public String getNombre() {
@@ -37,6 +48,10 @@ public class Promocion {
 
     public String getBeneficios() {
         return beneficios;
+    }
+
+    public void setIdPromocion(Integer idPromocion) {
+        this.idPromocion = idPromocion;
     }
 
     public void setNombre(String nombre) {
