@@ -50,8 +50,4 @@ public class Bar {
         this.capacidad = capacidad;
     }
 
-    
-
-
-    
 }
