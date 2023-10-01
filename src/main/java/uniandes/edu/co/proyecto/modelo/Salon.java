@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,21 +14,23 @@ public class Salon {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer idTipoServicio;
-    private Integer capacidad;
+    private Integer aforo;
     private String equipo;
     private Boolean aplicaCompartido;
-
-    public Salon(String equipo, Integer capacidad, Boolean aplicaCompartido)
-    {
-        this.equipo = equipo;
-        this.capacidad = capacidad;
-        this.aplicaCompartido = aplicaCompartido;
-    }
+    @ManyToOne
+    @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
+    private Hotel hoteles_nombre;
 
     public Salon()
     {;}
+
+    public Salon(Integer aforo, String equipo, Boolean aplicaCompartido, Hotel hoteles_nombre) {
+        this.aforo = aforo;
+        this.equipo = equipo;
+        this.aplicaCompartido = aplicaCompartido;
+        this.hoteles_nombre = hoteles_nombre;
+    }
 
     public Integer getIdTipoServicio() {
         return idTipoServicio;
@@ -36,12 +40,12 @@ public class Salon {
         this.idTipoServicio = idTipoServicio;
     }
 
-    public Integer getCapacidad() {
-        return capacidad;
+    public Integer getAforo() {
+        return aforo;
     }
 
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
+    public void setAforo(Integer aforo) {
+        this.aforo = aforo;
     }
 
     public String getEquipo() {
@@ -60,7 +64,11 @@ public class Salon {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    
+    public Hotel getHoteles_nombre() {
+        return hoteles_nombre;
+    }
 
-
+    public void setHoteles_nombre(Hotel hoteles_nombre) {
+        this.hoteles_nombre = hoteles_nombre;
+    }
 }

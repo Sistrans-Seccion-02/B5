@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,18 +14,20 @@ public class Supermercado {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer idTipoServicio;
     private String nombre;
     private Boolean aplicaCompartido;
+    @ManyToOne
+    @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
+    private Hotel hoteles_nombre;
 
     public Supermercado()
     {;}
 
-    public Supermercado(String nombre, Boolean aplicaCompartido)
-    {
+    public Supermercado(String nombre, Boolean aplicaCompartido, Hotel hoteles_nombre) {
         this.nombre = nombre;
         this.aplicaCompartido = aplicaCompartido;
+        this.hoteles_nombre = hoteles_nombre;
     }
 
     public Integer getIdTipoServicio() {
@@ -49,6 +53,12 @@ public class Supermercado {
     public void setAplicaCompartido(Boolean aplicaCompartido) {
         this.aplicaCompartido = aplicaCompartido;
     }
-    
-    
+
+    public Hotel getHoteles_nombre() {
+        return hoteles_nombre;
+    }
+
+    public void setHoteles_nombre(Hotel hoteles_nombre) {
+        this.hoteles_nombre = hoteles_nombre;
+    }
 }
