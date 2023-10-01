@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,21 +14,20 @@ public class Usuario {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer id;
+    private String tipoId;
     private String nombre;
-    private Float cuentaCobro;
-
-    @ManyToOne
-    @JoinColumn(name = "tipo", referencedColumnName = "id")
-    private TipoUsuario tipo;
+    private String correo;
+    private String tipoUsuario;
 
     public Usuario()
     {;}
 
-    public Usuario(String nombre, TipoUsuario tipo, Float cuentaCobro)
+    public Usuario(String nombre, String tipoId, String correo, String tipoUsuario)
     {
         this.nombre = nombre;
-        this.tipo = tipo;
-        this.cuentaCobro = cuentaCobro;
+        this.tipoId = tipoId;
+        this.correo = correo;
+        this.tipoUsuario = tipoUsuario;
     }
 
     public Integer getId() {
@@ -49,21 +46,30 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public TipoUsuario getTipo() {
-        return tipo;
+    public String getTipoUsuario() {
+        return tipoUsuario;
     }
 
-    public void setTipo(TipoUsuario tipo) {
-        this.tipo = tipo;
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 
-    public Float getCuentaCobro() {
-        return cuentaCobro;
+    public String getTipoId() {
+        return tipoId;
     }
 
-    public void setCuentaCobro(Float cuentaCobro) {
-        this.cuentaCobro = cuentaCobro;
+    public void setTipoId(String tipoId) {
+        this.tipoId = tipoId;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    
     
 }

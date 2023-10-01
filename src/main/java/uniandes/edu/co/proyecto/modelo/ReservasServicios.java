@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "reservaServicios")
-public class ReservaServicios {
+@Table(name = "reservasServicios")
+public class ReservasServicios {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -19,13 +19,13 @@ public class ReservaServicios {
     private Date fecha;
     private Boolean atendida;
 
-    public ReservaServicios(Date fecha, Boolean atendida)
+    public ReservasServicios(Date fecha, Boolean atendida)
     {
         this.fecha = fecha;
         this.atendida = atendida;
     }
 
-    public ReservaServicios()
+    public ReservasServicios()
     {;}
 
     public Integer getNumReserva() {
