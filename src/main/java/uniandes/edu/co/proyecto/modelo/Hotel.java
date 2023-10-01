@@ -15,12 +15,10 @@ public class Hotel {
 
     private Integer id;
     private String nombre;
-    private String sede;
 
-    public Hotel(String nombre, String sede)
+    public Hotel(String nombre)
     {
         this.nombre = nombre;
-        this.sede = sede;
     }
     public Hotel()
     {;}
@@ -36,12 +34,6 @@ public class Hotel {
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-    public String getSede() {
-        return sede;
-    }
-    public void setSede(String sede) {
-        this.sede = sede;
     }
 
     
