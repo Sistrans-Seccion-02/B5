@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ReservasHot_Promociones_FK" directorySegmentName="seg_3" id="E411BC1B-9A78-FB03-4394-9BFB2C67D6A6">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>256C7326-5581-A923-D1E0-0ACDE16BB1EC</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>8B75E2F4-5183-DE5C-CC81-F4EE2BB60D65</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>563524CF-B9B8-FDEF-82FC-3F98BC5875D3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A266BC0D-46AD-C912-E7F0-6DBEB2F58F74</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

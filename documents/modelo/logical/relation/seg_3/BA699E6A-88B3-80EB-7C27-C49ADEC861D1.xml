@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Consumo_Salon_FK" directorySegmentName="seg_3" id="BA699E6A-88B3-80EB-7C27-C49ADEC861D1">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>8FF0B2E7-365E-27A3-A5EA-AD7C38D741D7</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>924B1351-5B03-6FEA-28A4-AA1AAD76C771</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BAE9E770-A7AB-CC54-19A7-54BBD147F641</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7F88715D-C1B4-CD78-A05F-E51D43E592E5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

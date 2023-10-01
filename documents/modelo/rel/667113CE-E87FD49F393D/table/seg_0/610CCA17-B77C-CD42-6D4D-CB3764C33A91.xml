@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="610CCA17-B77C-CD42-6D4D-CB3764C33A91" name="Productos">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>89F4A098-E77D-BBB5-D796-A1447BF0FF95</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idProducto" id="DFDFBB7B-865C-2119-906D-260FCB230FB9">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>9DA8A9B5-6249-B1F5-04E2-FAAFBCE0BA73</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="0AFEDCA4-2E21-95E2-1D4E-5CF518FAB289">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>942E9A53-8F65-25F6-0CF5-7C6C7B0060AE</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="7F89BDB4-8E00-74D8-B7E8-424FB0B61283">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>82C483BB-10B5-95F8-2226-DBE16047F5F0</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aplicaIncluido" id="EC53F703-105C-6156-1D07-72E2B5A6B594">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>50940A65-8C5D-3360-052D-053B8AA6DEC6</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lavanderias_idTipoServicio" id="72C28AB8-76C7-D327-3CC5-436DD1224D8C">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>5BE17514-62D3-B985-EDA5-EAD37264F22B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BDF7904E-729C-13C1-3208-0C28A35AF4BB" referredColumn="D4C029A0-CE15-FBFE-7AE0-8319598AF43A"/>
+</associations>
+</Column>
+<Column name="Restaurante_idTipoServicio" id="3546B357-5E86-1AB0-1F38-49C2BD608FBE">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>8272D47C-CAC4-C11A-4D5B-876291ACA70B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4E862E0-FF7A-5BFA-E381-6E2218649C3B" referredColumn="2A6B3843-CA5A-DA06-44FA-509B7BD3888F"/>
+</associations>
+</Column>
+<Column name="Tienda_idTipoServicio" id="9E7FD5AA-9E74-EA5B-EC25-0A2CEB8DCCF2">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>BF284AD9-B0C0-F0EB-F4E3-DDDDD6587DA9</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB0FB75B-583E-E786-9A00-2B4B2A3651B8" referredColumn="F997DAAD-D389-9AE0-4524-29EA263CE4D0"/>
+</associations>
+</Column>
+<Column name="Bares_idTipoServicio" id="95DA71E3-2C16-C40D-822D-4236ECD38E67">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>BD45CC72-2621-AF47-974E-4B7CAC72166D</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE2F7E2C-940C-39E5-3952-37951C82A17F" referredColumn="608D814D-A61D-1F98-B0C9-0D45744FAD59"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E55677D0-D00B-9444-08AB-CB5376CB04E2" name="Productos_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>AE34D257-11A7-A89F-EB5A-3BE1643AEA19</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFDFBB7B-865C-2119-906D-260FCB230FB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAE7C176-5EEB-F25C-09F0-68DD17177887" name="Productos_Bares_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>90E648AE-07C7-61F4-BE0B-567A3F80EAAA</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95DA71E3-2C16-C40D-822D-4236ECD38E67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F5D0B65-D31D-8215-4C71-06D16328C6D1" name="Productos_Lavanderias_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>8D7CBCA9-EA7A-5FCE-BD64-D453ED3F10D8</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72C28AB8-76C7-D327-3CC5-436DD1224D8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E8C95322-BA68-81B7-198B-2838ED9BEB4C" name="Productos_Restaurante_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>9000015E-70D8-2356-68A9-57F2CF4836CE</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3546B357-5E86-1AB0-1F38-49C2BD608FBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB46B56D-5E20-8CBB-5AC3-9C994D7F9ED4" name="Productos_Tienda_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>3790D650-8404-8B42-8326-EFD8E7DD95F4</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E7FD5AA-9E74-EA5B-EC25-0A2CEB8DCCF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

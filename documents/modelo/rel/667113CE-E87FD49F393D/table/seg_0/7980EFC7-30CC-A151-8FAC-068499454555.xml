@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7980EFC7-30CC-A151-8FAC-068499454555" name="Promociones">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>0A010AE1-7AB1-EC86-53FC-0A548CB433C6</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombrePlan" id="A848CA68-38F9-57C6-6932-E8CE5C454EE7">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>63725944-ED54-68B4-7707-3794C99CFB70</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descuentoAlojamiento" id="C9771403-1BAA-AC0C-317E-31E0329FE70D">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>64C06588-2F92-4D9B-76E5-3CD60B1EA66A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descuentoComida" id="3D04DF32-A2FE-F015-363C-8B201BE313B3">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>7218DDE5-8849-7EB3-BFAD-58E7A3C640DF</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descuentoServicios" id="5E58F9DC-26C6-2E4F-0CF3-ABE2A5BD17DC">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>F4D1AB9F-BBD1-22F7-58C3-48BF51978D36</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="29F0C719-8871-617E-6003-A23D3E36764B">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>9E7D23F6-611E-3F21-6940-AD7E6DB69C4E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="diasMinimaEstadia" id="A3417161-567F-53F9-3F22-1E3079467470">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>D1361ADB-6F05-625A-EBA6-F579292FF71F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF19C022-B02C-F21C-0149-A189F73300DF" name="Promociones_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>E951E6FA-7BB1-A3CA-71E8-BDEAE34579A4</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A848CA68-38F9-57C6-6932-E8CE5C454EE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

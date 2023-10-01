@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="5702DF54-31AB-D247-A486-C2FC9E91043A" name="Habitaciones">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>5BFF9A2E-204B-33C4-C1E1-9D359525437B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="numeroHabitacion" id="3E482468-7679-E749-B0FF-F3689D5FDD89">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>CD09E27B-60DA-36A2-2755-AE4D1AB1B3F1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipoHabitacion" id="048CC2B1-C28D-9A9F-793A-055C47EA46D1">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>CABFA9E8-DD33-B183-4DE7-38B58055691D</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="disponible" id="4E945D91-57BA-5EEB-2105-0B966373206A">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>7FF66FB4-C45A-097C-BDD5-5DF59BB5244E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="78E8CFD3-CFC3-0767-C835-65A46A235417" name="Habitaciones PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>F1268D72-2F30-73B5-64EE-9ACF6F07730F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3E482468-7679-E749-B0FF-F3689D5FDD89</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

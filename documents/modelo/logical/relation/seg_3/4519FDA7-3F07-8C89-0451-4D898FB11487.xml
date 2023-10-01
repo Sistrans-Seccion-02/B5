@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Consumo_ReservasServicios_FK" directorySegmentName="seg_3" id="4519FDA7-3F07-8C89-0451-4D898FB11487">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>A6C9F496-5899-CDDA-F4F8-EF91D325AD6F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>F6822F2D-863C-AD7A-3281-08FBBB662295</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FDA23BB5-64CD-600C-4343-06ABF1896D90</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7F88715D-C1B4-CD78-A05F-E51D43E592E5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

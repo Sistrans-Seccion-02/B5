@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BDF7904E-729C-13C1-3208-0C28A35AF4BB" containerWithKeyObject="610CCA17-B77C-CD42-6D4D-CB3764C33A91" localFKIndex="1F5D0B65-D31D-8215-4C71-06D16328C6D1" name="Productos_Lavanderias_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>8D7CBCA9-EA7A-5FCE-BD64-D453ED3F10D8</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<referredTableLongName>Lavanderias</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4457DE40-FC11-AAA3-2D00-8D548D03830E</referredTableID>
+<keyObject>5642D57C-28ED-5945-D685-1DBBC6E260FC</keyObject>
+<referredKeyID>5642D57C-28ED-5945-D685-1DBBC6E260FC</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>idTipoServicio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

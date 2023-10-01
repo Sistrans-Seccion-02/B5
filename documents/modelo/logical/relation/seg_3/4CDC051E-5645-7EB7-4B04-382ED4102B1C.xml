@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ReservasServ_Bares_FK" directorySegmentName="seg_3" id="4CDC051E-5645-7EB7-4B04-382ED4102B1C">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>6D58BDD9-4760-2020-EE59-E208AFC66DB9</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>E3736642-9246-68C7-F102-8B08129744F6</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>484A65FD-CA3F-3336-5D57-F7CBEB6A3615</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FDA23BB5-64CD-600C-4343-06ABF1896D90</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

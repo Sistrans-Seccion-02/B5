@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Productos_Lavanderias_FK" directorySegmentName="seg_3" id="4B35CD6B-2C81-F407-4F48-C62A2E2A30D9">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>BDF7904E-729C-13C1-3208-0C28A35AF4BB</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>39E902B5-28C3-F806-8DAE-5EE17CA8C8C0</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F494AC05-5033-E273-4B6A-B49DCBC6AE87</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>31EF58F1-DD16-BD50-FC25-FD3ED8AA46A5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

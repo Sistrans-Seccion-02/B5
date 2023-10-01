@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Usuarios_Habitaciones_FK" directorySegmentName="seg_3" id="D5324E11-1B9E-34D4-7E89-5115E6492FC8">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 18:07:54 UTC</createdTime>
+<generatorID>E23458A2-31B1-1F5E-1565-DEC6C41D7CA7</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>78E8CFD3-CFC3-0767-C835-65A46A235417</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5702DF54-31AB-D247-A486-C2FC9E91043A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0B410C52-3FE2-D7A9-8A1E-E28E7D42D386</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
