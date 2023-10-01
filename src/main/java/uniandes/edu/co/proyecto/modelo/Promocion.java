@@ -11,63 +11,75 @@ import jakarta.persistence.Table;
 public class Promocion {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    private String nombrePlan;
+    private Float descuentoAlojamiento;
+    private Float descuentoComidas;
+    private Float descuentoServicios;
+    private Float costo;
+    private Integer diasMinimaEstadia;
 
-    private Integer idPromocion;
-    private String nombre;
-    private Boolean vigencia;
-    private Integer descuento;
-    private String beneficios;
-
-    public Promocion(String nombre, Boolean vigencia, Integer descuento, String beneficios)
+    public Promocion(Float descuentoAlojamiento, Float descuentoComidas, Float descuentoServicios, Float costo,Integer diasMinimaEstadia)
     {
-        this.nombre = nombre;
-        this.vigencia = vigencia;
-        this.descuento = descuento;
-        this.beneficios = beneficios;
+        this.descuentoAlojamiento = descuentoAlojamiento;
+        this.descuentoComidas = descuentoComidas;
+        this.descuentoServicios = descuentoServicios;
+        this.costo = costo;
+        this.diasMinimaEstadia = diasMinimaEstadia;
     }
 
     public Promocion()
     {;}
 
-    public Integer getIdPromocion() {
-        return idPromocion;
+
+    public String getNombrePlan() {
+        return nombrePlan;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setNombrePlan(String nombrePlan) {
+        this.nombrePlan = nombrePlan;
     }
 
-    public Boolean getVigencia() {
-        return vigencia;
+    public Float getDescuentoAlojamiento() {
+        return descuentoAlojamiento;
     }
 
-    public Integer getDescuento() {
-        return descuento;
+    public void setDescuentoAlojamiento(Float descuentoAlojamiento) {
+        this.descuentoAlojamiento = descuentoAlojamiento;
     }
 
-    public String getBeneficios() {
-        return beneficios;
+    public Float getDescuentoComidas() {
+        return descuentoComidas;
     }
 
-    public void setIdPromocion(Integer idPromocion) {
-        this.idPromocion = idPromocion;
+    public void setDescuentoComidas(Float descuentoComidas) {
+        this.descuentoComidas = descuentoComidas;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public Float getDescuentoServicios() {
+        return descuentoServicios;
     }
 
-    public void setVigencia(Boolean vigencia) {
-        this.vigencia = vigencia;
+    public void setDescuentoServicios(Float descuentoServicios) {
+        this.descuentoServicios = descuentoServicios;
     }
 
-    public void setDescuento(Integer descuento) {
-        this.descuento = descuento;
+    public Float getCosto() {
+        return costo;
     }
 
-    public void setBeneficios(String beneficios) {
-        this.beneficios = beneficios;
+    public void setCosto(Float costo) {
+        this.costo = costo;
     }
+
+    public Integer getDiasMinimaEstadia() {
+        return diasMinimaEstadia;
+    }
+
+    public void setDiasMinimaEstadia(Integer diasMinimaEstadia) {
+        this.diasMinimaEstadia = diasMinimaEstadia;
+    }
+
+    
+
 
 }

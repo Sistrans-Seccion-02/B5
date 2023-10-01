@@ -23,10 +23,6 @@ public class Usuario {
     @JoinColumn(name = "tipo", referencedColumnName = "id")
     private TipoUsuario tipo;
 
-    @ManyToOne
-    @JoinColumn(name = "plan", referencedColumnName = "id")
-    private PlanConsumo plan;
-
     public Usuario()
     {;}
 

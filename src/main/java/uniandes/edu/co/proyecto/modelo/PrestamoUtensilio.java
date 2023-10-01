@@ -14,6 +14,14 @@ public class PrestamoUtensilio {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer idTipoServicio;
+    private String nombre;
+    private Boolean retornado;
+
+    public PrestamoUtensilio(String nombre, Boolean retornado)
+    {
+        this.nombre = nombre;
+        this.retornado = retornado;
+    }
 
     public PrestamoUtensilio()
     {;}
@@ -24,6 +32,22 @@ public class PrestamoUtensilio {
 
     public void setIdTipoServicio(Integer idTipoServicio) {
         this.idTipoServicio = idTipoServicio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Boolean getRetornado() {
+        return retornado;
+    }
+
+    public void setRetornado(Boolean retornado) {
+        this.retornado = retornado;
     }
 
     
