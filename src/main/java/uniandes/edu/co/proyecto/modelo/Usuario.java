@@ -20,18 +20,18 @@ public class Usuario {
     private String tipoUsuario;
     private String correo;
     @ManyToOne(optional=true)
-    @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="habitaciones_numeroHabitacion")
-    private Integer habitaciones_numeroHabitacion;
+    @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="numeroHabitacion")
+    private Habitacion habitaciones_numeroHabitacion;
 
     public Usuario()
     {;}
 
-    public Usuario(String nombre, String tipoId, String correo, String tipoUsuario, Integer habitaciones_numeroHabitacion)
-    {
-        this.nombre = nombre;
+    public Usuario(String tipoId, String nombre, String tipoUsuario, String correo,
+            Habitacion habitaciones_numeroHabitacion) {
         this.tipoId = tipoId;
-        this.correo = correo;
+        this.nombre = nombre;
         this.tipoUsuario = tipoUsuario;
+        this.correo = correo;
         this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
     }
 
@@ -75,11 +75,11 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public Integer getHabitaciones_numeroHabitacion() {
+    public Habitacion getHabitaciones_numeroHabitacion() {
         return habitaciones_numeroHabitacion;
     }
 
-    public void setHabitaciones_numeroHabitacion(Integer habitaciones_numeroHabitacion) {
+    public void setHabitaciones_numeroHabitacion(Habitacion habitaciones_numeroHabitacion) {
         this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
     }
 }
