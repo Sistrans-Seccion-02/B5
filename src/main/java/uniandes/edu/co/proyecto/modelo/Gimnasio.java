@@ -15,12 +15,16 @@ public class Gimnasio {
 
     private Integer idTipoServicio;
     private Integer capacidad;
-    private String maquinas;
+    private Integer numMaquinas;
+    private String horario;
+    private Boolean aplicaCompartido;
 
-    public Gimnasio(String maquinas, Integer capacidad)
+    public Gimnasio(Integer numMaquinas, Integer capacidad, String horario, Boolean aplicaCompartido)
     {
         this.capacidad = capacidad;
-        this.maquinas = maquinas;
+        this.numMaquinas = numMaquinas;
+        this.horario = horario;
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Gimnasio()
@@ -42,14 +46,31 @@ public class Gimnasio {
         this.capacidad = capacidad;
     }
 
-    public String getMaquinas() {
-        return maquinas;
+    public Integer getNumMaquinas() {
+        return numMaquinas;
     }
 
-    public void setMaquinas(String maquinas) {
-        this.maquinas = maquinas;
+    public void setNumMaquinas(Integer numMaquinas) {
+        this.numMaquinas = numMaquinas;
     }
 
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
     
 
 
