@@ -15,10 +15,14 @@ public class Internet {
 
     private Integer idTipoServicio;
     private Integer capacidad;
+    private Boolean incluido;
+    private Boolean aplicaCompartido;
 
-    public Internet(Integer capacidad)
+    public Internet(Integer capacidad, Boolean incluido, Boolean aplicaCompartido)
     {
         this.capacidad = capacidad;
+        this.incluido = incluido;
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Internet()
@@ -39,6 +43,23 @@ public class Internet {
     public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
+
+    public Boolean getIncluido() {
+        return incluido;
+    }
+
+    public void setIncluido(Boolean incluido) {
+        this.incluido = incluido;
+    }
+
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+    
     
     
 }
