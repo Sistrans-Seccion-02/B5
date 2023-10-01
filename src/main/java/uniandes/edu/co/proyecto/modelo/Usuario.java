@@ -11,26 +11,28 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
-    
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer id;
+    private String tipoId;
     private String nombre;
-    private Float cuentaCobro;
-
-    @ManyToOne
-    @JoinColumn(name = "tipo", referencedColumnName = "id")
-    private TipoUsuario tipo;
+    private String tipoUsuario;
+    private String correo;
+    @ManyToOne(optional=true)
+    @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="habitaciones_numeroHabitacion")
+    private Integer habitaciones_numeroHabitacion;
 
     public Usuario()
     {;}
 
-    public Usuario(String nombre, TipoUsuario tipo, Float cuentaCobro)
+    public Usuario(String nombre, String tipoId, String correo, String tipoUsuario, Integer habitaciones_numeroHabitacion)
     {
         this.nombre = nombre;
-        this.tipo = tipo;
-        this.cuentaCobro = cuentaCobro;
+        this.tipoId = tipoId;
+        this.correo = correo;
+        this.tipoUsuario = tipoUsuario;
+        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
     }
 
     public Integer getId() {
@@ -41,6 +43,14 @@ public class Usuario {
         this.id = id;
     }
 
+    public String getTipoId() {
+        return tipoId;
+    }
+
+    public void setTipoId(String tipoId) {
+        this.tipoId = tipoId;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -49,21 +59,27 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public TipoUsuario getTipo() {
-        return tipo;
+    public String getTipoUsuario() {
+        return tipoUsuario;
     }
 
-    public void setTipo(TipoUsuario tipo) {
-        this.tipo = tipo;
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 
-    public Float getCuentaCobro() {
-        return cuentaCobro;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setCuentaCobro(Float cuentaCobro) {
-        this.cuentaCobro = cuentaCobro;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    
+    public Integer getHabitaciones_numeroHabitacion() {
+        return habitaciones_numeroHabitacion;
+    }
+
+    public void setHabitaciones_numeroHabitacion(Integer habitaciones_numeroHabitacion) {
+        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
+    }
 }

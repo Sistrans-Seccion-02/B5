@@ -15,11 +15,12 @@ public class Spa {
 
     private Integer idTipoServicio;
     private Integer duracion;
+    private Boolean aplicaCompartido;
 
-    public Spa(Integer duracion)
+    public Spa(Integer duracion,Boolean aplicaCompartido)
     {
         this.duracion = duracion;
-
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Spa()
@@ -41,5 +42,14 @@ public class Spa {
         this.duracion = duracion;
     }
 
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
     
 }

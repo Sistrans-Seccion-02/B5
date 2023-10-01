@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "internets")
+@Table(name = "ServiciosInternet")
 public class Internet {
 
     @Id

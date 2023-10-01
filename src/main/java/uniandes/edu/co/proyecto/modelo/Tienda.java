@@ -10,17 +10,17 @@ import jakarta.persistence.Table;
 @Table(name = "tiendas")
 public class Tienda {
 
-    
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer idTipoServicio;
-    private String tipoTienda;
+    private String nombre;
+    private Boolean aplicaCompartido;
+    
 
-    public Tienda(String tipoTienda)
+    public Tienda(String nombre,Boolean aplicaCompartido)
     {
-        this.tipoTienda = tipoTienda;
-
+        this.nombre = nombre;
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Tienda()
@@ -34,15 +34,19 @@ public class Tienda {
         this.idTipoServicio = idTipoServicio;
     }
 
-    public String getTipoTienda() {
-        return tipoTienda;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTipoTienda(String tipoTienda) {
-        this.tipoTienda = tipoTienda;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
 
-    
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
 }
