@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,21 +14,23 @@ public class Restaurante {
     
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer idTipoServicio;
-    private Integer capacidad;
+    private Integer aforo;
     private String estilo;
     private Boolean aplicaCompartido;
-
-    public Restaurante(Integer capacidad, String estilo,Boolean aplicaCompartido)
-    {
-        this.capacidad = capacidad;
-        this.estilo = estilo;
-        this.aplicaCompartido = aplicaCompartido;
-    }
+    @ManyToOne
+    @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
+    private Hotel hoteles_nombre;
 
     public Restaurante()
     {;}
+
+    public Restaurante(Integer aforo, String estilo, Boolean aplicaCompartido, Hotel hoteles_nombre) {
+        this.aforo = aforo;
+        this.estilo = estilo;
+        this.aplicaCompartido = aplicaCompartido;
+        this.hoteles_nombre = hoteles_nombre;
+    }
 
     public Integer getIdTipoServicio() {
         return idTipoServicio;
@@ -36,12 +40,12 @@ public class Restaurante {
         this.idTipoServicio = idTipoServicio;
     }
 
-    public Integer getCapacidad() {
-        return capacidad;
+    public Integer getAforo() {
+        return aforo;
     }
 
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
+    public void setAforo(Integer aforo) {
+        this.aforo = aforo;
     }
 
     public String getEstilo() {
@@ -60,7 +64,11 @@ public class Restaurante {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    
-    
+    public Hotel getHoteles_nombre() {
+        return hoteles_nombre;
+    }
 
+    public void setHoteles_nombre(Hotel hoteles_nombre) {
+        this.hoteles_nombre = hoteles_nombre;
+    }
 }
