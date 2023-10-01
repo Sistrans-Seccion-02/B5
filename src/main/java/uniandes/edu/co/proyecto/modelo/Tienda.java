@@ -10,13 +10,12 @@ import jakarta.persistence.Table;
 @Table(name = "tiendas")
 public class Tienda {
 
-    
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer idTipoServicio;
-    private String tipoTienda;
+    private String nombre;
     private Boolean aplicaCompartido;
+    
 
     public Tienda(String tipoTienda,Boolean aplicaCompartido)
     {
@@ -50,10 +49,4 @@ public class Tienda {
     public void setAplicaCompartido(Boolean aplicaCompartido) {
         this.aplicaCompartido = aplicaCompartido;
     }
-
-    
-
-    
-
-    
 }
