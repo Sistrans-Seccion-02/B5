@@ -19,29 +19,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="aforo" id="FF0286E6-E0F9-5A66-81B1-ED075D53C1F3">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>F45DEF3E-2546-DD64-68D4-C49EC1A09074</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="aplicaCompartido" id="D494DA43-00AF-59D3-2DB4-E616EE963792">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>E9741DA0-35C2-9297-9CA9-CA8B51CE05B3</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Hoteles_nombre" id="C5886E4F-95D8-7C18-2AFE-24BD49CC976C">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 16:40:31 UTC</createdTime>

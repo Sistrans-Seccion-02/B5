@@ -20,17 +20,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="aforo" id="8DFB2D30-DC30-BD2F-AF1A-EE8E7411E521">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>EF482AEC-ED6A-D56D-D84C-74F7551A91FC</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="incluido" id="614C199E-D015-F24B-B7CE-49DCEC2EF954">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 16:40:31 UTC</createdTime>

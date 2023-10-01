@@ -97,7 +97,7 @@
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Hoteles nombre" id="280905C1-DC51-EB62-6AA0-E99DD1C3F999">
 <createdBy>andre</createdBy>
@@ -112,7 +112,7 @@
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Habitaciones numeroHabitacion" id="6205BB8C-D546-7AC0-653B-A9AA1441B255">
 <createdBy>andre</createdBy>
