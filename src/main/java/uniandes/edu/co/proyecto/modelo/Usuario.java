@@ -18,18 +18,15 @@ public class Usuario {
     private Integer id;
     private String nombre;
     private Float cuentaCobro;
-
-    @ManyToOne
-    @JoinColumn(name = "tipo", referencedColumnName = "id")
-    private TipoUsuario tipo;
+    private String tipoUsuario;
 
     public Usuario()
     {;}
 
-    public Usuario(String nombre, TipoUsuario tipo, Float cuentaCobro)
+    public Usuario(String nombre, String tipoUsuario, Float cuentaCobro)
     {
         this.nombre = nombre;
-        this.tipo = tipo;
+        this.tipoUsuario = tipoUsuario;
         this.cuentaCobro = cuentaCobro;
     }
 
@@ -49,12 +46,12 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public TipoUsuario getTipo() {
-        return tipo;
+    public String getTipoUsuario() {
+        return tipoUsuario;
     }
 
-    public void setTipo(TipoUsuario tipo) {
-        this.tipo = tipo;
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 
     public Float getCuentaCobro() {
