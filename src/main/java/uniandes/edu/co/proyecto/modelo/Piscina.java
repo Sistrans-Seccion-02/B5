@@ -16,11 +16,13 @@ public class Piscina {
     private Integer idTipoServicio;
     private Integer capacidad;
     private Integer profundidad;
+    private Boolean aplicaCompartido;
 
-    public Piscina(Integer profundidad, Integer capacidad)
+    public Piscina(Integer profundidad, Integer capacidad, Boolean aplicaCompartido)
     {
         this.capacidad = capacidad;
         this.profundidad = profundidad;
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Piscina()
@@ -50,5 +52,14 @@ public class Piscina {
         this.profundidad = profundidad;
     }
 
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
 
 }
