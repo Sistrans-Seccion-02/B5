@@ -27,6 +27,7 @@ public interface PlanConsumoRepository extends JpaRepository<PlanConsumo, Intege
     void actualizarPlandeConsumo(@Param("id") int id, @Param("nombre") String nombre, @Param("descripcion") String descripcion);
 
 
+
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM planesConsumo WHERE id =:id", nativeQuery = true)

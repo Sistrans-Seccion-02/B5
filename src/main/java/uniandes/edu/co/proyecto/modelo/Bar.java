@@ -16,11 +16,13 @@ public class Bar {
     private Integer idTipoServicio;
     private String estilo;
     private Integer capacidad;
+    private Boolean aplicaCompartido;
 
-    public Bar(String estilo, Integer capacidad)
+    public Bar(String estilo, Integer capacidad, Boolean aplicaCompartido)
     {
         this.estilo = estilo;
         this.capacidad = capacidad;
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Bar()
@@ -49,5 +51,15 @@ public class Bar {
     public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
+
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
 
 }
