@@ -16,11 +16,12 @@ public class Tienda {
 
     private Integer idTipoServicio;
     private String tipoTienda;
+    private Boolean aplicaCompartido;
 
-    public Tienda(String tipoTienda)
+    public Tienda(String tipoTienda,Boolean aplicaCompartido)
     {
         this.tipoTienda = tipoTienda;
-
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Tienda()
@@ -41,6 +42,16 @@ public class Tienda {
     public void setTipoTienda(String tipoTienda) {
         this.tipoTienda = tipoTienda;
     }
+
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
 
     
 

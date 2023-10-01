@@ -14,9 +14,17 @@ public class Supermercado {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer idTipoServicio;
+    private String nombre;
+    private Boolean aplicaCompartido;
 
     public Supermercado()
     {;}
+
+    public Supermercado(String nombre, Boolean aplicaCompartido)
+    {
+        this.nombre = nombre;
+        this.aplicaCompartido = aplicaCompartido;
+    }
 
     public Integer getIdTipoServicio() {
         return idTipoServicio;
@@ -25,5 +33,22 @@ public class Supermercado {
     public void setIdTipoServicio(Integer idTipoServicio) {
         this.idTipoServicio = idTipoServicio;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+    
     
 }

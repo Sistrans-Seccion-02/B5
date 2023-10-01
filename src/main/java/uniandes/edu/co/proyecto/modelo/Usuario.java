@@ -14,18 +14,20 @@ public class Usuario {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer id;
+    private String tipoId;
     private String nombre;
-    private Float cuentaCobro;
+    private String correo;
     private String tipoUsuario;
 
     public Usuario()
     {;}
 
-    public Usuario(String nombre, String tipoUsuario, Float cuentaCobro)
+    public Usuario(String nombre, String tipoId, String correo, String tipoUsuario)
     {
         this.nombre = nombre;
+        this.tipoId = tipoId;
+        this.correo = correo;
         this.tipoUsuario = tipoUsuario;
-        this.cuentaCobro = cuentaCobro;
     }
 
     public Integer getId() {
@@ -52,13 +54,22 @@ public class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Float getCuentaCobro() {
-        return cuentaCobro;
+    public String getTipoId() {
+        return tipoId;
     }
 
-    public void setCuentaCobro(Float cuentaCobro) {
-        this.cuentaCobro = cuentaCobro;
+    public void setTipoId(String tipoId) {
+        this.tipoId = tipoId;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    
     
 }

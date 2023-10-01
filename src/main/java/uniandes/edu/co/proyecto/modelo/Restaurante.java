@@ -16,11 +16,13 @@ public class Restaurante {
     private Integer idTipoServicio;
     private Integer capacidad;
     private String estilo;
+    private Boolean aplicaCompartido;
 
-    public Restaurante(Integer capacidad, String estilo)
+    public Restaurante(Integer capacidad, String estilo,Boolean aplicaCompartido)
     {
         this.capacidad = capacidad;
         this.estilo = estilo;
+        this.aplicaCompartido = aplicaCompartido;
     }
 
     public Restaurante()
@@ -50,6 +52,15 @@ public class Restaurante {
         this.estilo = estilo;
     }
 
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
     
 
 }
