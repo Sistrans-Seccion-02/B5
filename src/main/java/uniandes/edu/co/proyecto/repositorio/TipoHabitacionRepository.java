@@ -22,8 +22,8 @@ public interface TipoHabitacionRepository  extends JpaRepository<TipoHabitacion,
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE tipoHabitaciones SET nombre= :nombre, dotacion =: dotacion, costo =:costo WHERE id =:id", nativeQuery = true)
-    void actualizarTipoHabitacion(@Param("id") int id, @Param("nombre") String nombre, @Param("dotacion") String dotacion , @Param("costo") Integer costo);
+    @Query(value = "UPDATE tipoHabitaciones SET nombre = :nombre, dotacion = :dotacion, costo = :costo WHERE id = :id", nativeQuery = true)
+    void actualizarTipoHabitacion(@Param("id") int id, @Param("nombre") String nombre, @Param("dotacion") String dotacion, @Param("costo") Integer costo);
 
     @Modifying
     @Transactional
