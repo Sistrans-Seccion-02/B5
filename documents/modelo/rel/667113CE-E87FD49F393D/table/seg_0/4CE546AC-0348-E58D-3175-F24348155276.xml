@@ -183,7 +183,7 @@
 <colUsage columnID="2C400A6D-E69D-3783-2477-615BF22CBE77"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9D531A6D-40E8-2B2B-A348-5DF3B4EA0620" name="ReservasServicios_Bares_FK">
+<ind_PK_UK id="9D531A6D-40E8-2B2B-A348-5DF3B4EA0620" name="ReservasServ_Bares_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>4CDC051E-5645-7EB7-4B04-382ED4102B1C</generatorID>
@@ -194,7 +194,7 @@
 <colUsage columnID="5D6A75E8-CFB3-0A22-7C7D-C499CF9FCEB1"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="63753B13-496C-39A5-0B41-2707779946C0" name="ReservasServicios_Gimnasios_FK">
+<ind_PK_UK id="63753B13-496C-39A5-0B41-2707779946C0" name="ReservasServ_Gimnasios_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>03A9FAB8-E7D5-E237-8963-B16FFC85BB3B</generatorID>
@@ -205,7 +205,7 @@
 <colUsage columnID="A125BABA-B9A4-2A49-2740-1F9EF3550BB1"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="CB0F16F4-0B41-75D0-0441-949FD6ED5628" name="ReservasServicios_Habitaciones_FK">
+<ind_PK_UK id="CB0F16F4-0B41-75D0-0441-949FD6ED5628" name="ReservasServ_Habitaciones_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>F7BAC189-4196-597B-E8BA-8BCEE52C454E</generatorID>
@@ -216,7 +216,7 @@
 <colUsage columnID="E356C627-C434-69BC-7BD5-121D53C1F055"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="61A6ABF8-3C84-5A1C-7155-3AADF8AEFFA7" name="ReservasServicios_Lavanderias_FK">
+<ind_PK_UK id="61A6ABF8-3C84-5A1C-7155-3AADF8AEFFA7" name="ReservasServ_Lavanderias_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>01C42A3C-77E5-0E3E-0C83-C2261A40D80E</generatorID>
@@ -227,7 +227,7 @@
 <colUsage columnID="6B0DC2AD-29D9-42AC-F8B4-EAC1F9793C99"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9D4EEAC3-5560-4605-F5A8-F2FA35092F22" name="ReservasServicios_Piscinas_FK">
+<ind_PK_UK id="9D4EEAC3-5560-4605-F5A8-F2FA35092F22" name="ReservasServ_Piscinas_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>373768D6-3E97-DCD0-EC2A-C7FC0492E934</generatorID>
@@ -238,7 +238,7 @@
 <colUsage columnID="5A5506E1-0672-534A-7CAF-81268930E010"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="1A27ECB1-2533-5E38-E135-515F39DBD879" name="ReservasServicios_Restaurantes_FK">
+<ind_PK_UK id="1A27ECB1-2533-5E38-E135-515F39DBD879" name="ReservasServ_Restaurantes_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>B9588E7C-969F-7BF8-E2F2-2E6618F35544</generatorID>
@@ -249,7 +249,7 @@
 <colUsage columnID="A22DBDAB-432E-5245-1212-FBEA6F4679C0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="4EB62764-1C76-FEFF-01C8-E0EF9507CCB7" name="ReservasServicios_Salones_FK">
+<ind_PK_UK id="4EB62764-1C76-FEFF-01C8-E0EF9507CCB7" name="ReservasServ_Salones_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>6FE4BE69-8782-A0C5-5AFD-2BDA7B45B80A</generatorID>
@@ -260,7 +260,7 @@
 <colUsage columnID="BE158C8B-D9A8-039E-6038-C32DC2A059F6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="EB2BED27-D02C-D98C-0F0D-C0458BD41CE2" name="ReservasServicios_Spas_FK">
+<ind_PK_UK id="EB2BED27-D02C-D98C-0F0D-C0458BD41CE2" name="ReservasServ_Spas_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>559BB3D3-DA2C-736B-F9B2-B49468C96EAF</generatorID>

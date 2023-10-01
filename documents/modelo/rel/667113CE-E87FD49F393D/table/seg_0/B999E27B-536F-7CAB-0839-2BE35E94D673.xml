@@ -49,7 +49,7 @@
 <colUsage columnID="72D6F442-8A51-B46B-5DCF-A6D10222FBC5"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="66406FD0-D3B7-3074-C204-D3E76ACE10B3" name="ElementosExtras_Habitaciones_FK">
+<ind_PK_UK id="66406FD0-D3B7-3074-C204-D3E76ACE10B3" name="Elementos_Habitaciones_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>BB07C3A8-9AB8-F441-8571-4AA6AB45C173</generatorID>

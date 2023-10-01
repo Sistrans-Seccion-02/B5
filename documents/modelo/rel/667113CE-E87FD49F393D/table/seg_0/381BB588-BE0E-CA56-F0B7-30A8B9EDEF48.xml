@@ -127,18 +127,7 @@
 <colUsage columnID="EFDAA22D-06E0-FA84-7EAE-D8869A7173EF"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="72978D61-2207-39CE-5F83-20675F19AF14" name="ReservasHoteles__IDX">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>E411BC1B-9A78-FB03-4394-9BFB2C67D6A6</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="9569880E-D1CB-8E3A-5172-2B6937B44417"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="118A02E8-35F9-3C64-4F68-B0271E6FB715" name="ReservasHoteles_Habitaciones_FK">
+<ind_PK_UK id="118A02E8-35F9-3C64-4F68-B0271E6FB715" name="ReservasHot_Habitaciones_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>79E988C5-23DC-E17A-7BD9-602B5155A713</generatorID>
@@ -149,7 +138,7 @@
 <colUsage columnID="B667C8FF-F611-1AA3-CCFC-F83069439121"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C14F1961-66E9-30B0-6DE6-F62E8BF86362" name="ReservasHoteles_Hoteles_FK">
+<ind_PK_UK id="C14F1961-66E9-30B0-6DE6-F62E8BF86362" name="ReservasHot_Hoteles_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>A292C289-32AB-D99B-B89E-CD15D44DBC6B</generatorID>
@@ -160,7 +149,7 @@
 <colUsage columnID="084B0F1C-35AE-4BA6-C7E5-9724BD3ED8E4"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A6896400-1F12-3F2A-3640-7C60A11BEDF9" name="ReservasHoteles_Promociones_FK">
+<ind_PK_UK id="A6896400-1F12-3F2A-3640-7C60A11BEDF9" name="ReservasHot_Promociones_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>E411BC1B-9A78-FB03-4394-9BFB2C67D6A6</generatorID>

@@ -78,7 +78,7 @@
 <colAssociation fkAssociation="8018B42E-962C-4830-1E15-8643FBA64688" referredColumn="49F07FF9-3C15-CB62-7008-D83F788A7E46"/>
 </associations>
 </Column>
-<Column name="PrestamosUtensilios_idTipoServicio" id="2B05B3BD-9648-A4F7-4388-10F47F66F30A">
+<Column name="Prestamos_idTipoServicio" id="2B05B3BD-9648-A4F7-4388-10F47F66F30A">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>67628BD7-D300-4EE4-58A4-D4D777FCCC1B</generatorID>
@@ -142,7 +142,7 @@
 <colAssociation fkAssociation="77441F30-6E57-E4C6-594B-F9084F8242AC" referredColumn="DBCEE256-063B-3D77-2EDF-EFAB9AE44508"/>
 </associations>
 </Column>
-<Column name="ServiciosInternet_idTipoServicio" id="F2CE547B-5B3A-1B64-63D2-59C77E6C3D8F">
+<Column name="Internet_idTipoServicio" id="F2CE547B-5B3A-1B64-63D2-59C77E6C3D8F">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>7E1CB4DD-D9A2-30F1-29D7-FD72F15EC950</generatorID>
@@ -333,7 +333,7 @@
 <colUsage columnID="CAE08153-B5AE-88DB-0C4B-D9E3E348179D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6D0D05C5-7314-DE7D-8A55-E7BE1549189D" name="Consumos_PrestamosUtensilios_FK">
+<ind_PK_UK id="6D0D05C5-7314-DE7D-8A55-E7BE1549189D" name="Consumos_Prestamos_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>079A05DF-9786-B7E0-EA41-E4779A9740CB</generatorID>

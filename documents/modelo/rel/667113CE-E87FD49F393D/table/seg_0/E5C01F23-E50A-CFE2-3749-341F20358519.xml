@@ -49,7 +49,7 @@
 <colUsage columnID="43CEBEEE-BC4B-A58D-B51C-85675F8F26F6"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C7FFAB05-5A6D-FCD0-1DA1-E0EE60BB5793" name="productosSupermercado_Supermercados_FK">
+<ind_PK_UK id="C7FFAB05-5A6D-FCD0-1DA1-E0EE60BB5793" name="productosSup_Supermercados_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>DD435288-CC60-03EF-5FDD-2145A679CBCB</generatorID>
@@ -60,7 +60,7 @@
 <colUsage columnID="10D98966-B7FD-A47A-A25C-9F0B40642B1A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9C783A22-2C4F-3970-1A07-5E5FE2EE7A9F" name="productosSupermercado_Productos_FK">
+<ind_PK_UK id="9C783A22-2C4F-3970-1A07-5E5FE2EE7A9F" name="productosSup_Productos_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>DD435288-CC60-03EF-5FDD-2145A679CBCB</generatorID>

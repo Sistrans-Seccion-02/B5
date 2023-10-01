@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 23.1.0.087.0806
---   en:        2023-10-01 13:22:32 COT
+--   en:        2023-10-01 18:00:47 COT
 --   sitio:      Oracle Database 12c
 --   tipo:      Oracle Database 12c
 
@@ -22,23 +22,23 @@ ALTER TABLE bares ADD CONSTRAINT bares_pk PRIMARY KEY ( idtiposervicio );
 CREATE TABLE consumos (
     id                            INTEGER NOT NULL,
     costo                         INTEGER NOT NULL,
-    gimnasio_idtiposervicio       INTEGER,
-    salon_idtiposervicio          INTEGER,
+    cargadohabitacion             NUMBER NOT NULL,
+    gimnasios_idtiposervicio      INTEGER,
+    salones_idtiposervicio        INTEGER,
     prestamos_idtiposervicio      INTEGER,
-    supermercado_idtiposervicio   INTEGER,
-    piscina_idtiposervicio        INTEGER,
-    tienda_idtiposervicio         INTEGER,
+    supermercados_idtiposervicio  INTEGER,
+    piscinas_idtiposervicio       INTEGER,
+    tiendas_idtiposervicio        INTEGER,
     internet_idtiposervicio       INTEGER,
     bares_idtiposervicio          INTEGER,
     lavanderias_idtiposervicio    INTEGER,
-    restaurante_idtiposervicio    INTEGER,
+    restaurantes_idtiposervicio   INTEGER,
     spas_idtiposervicio           INTEGER,
     habitaciones_numerohabitacion INTEGER NOT NULL,
-    reservasservicios_numreserva  INTEGER,
-    cargadohabitacion             NUMBER NOT NULL
+    reservasservicios_numreserva  INTEGER
 );
 
-ALTER TABLE consumos ADD CONSTRAINT consumo_pk PRIMARY KEY ( id );
+ALTER TABLE consumos ADD CONSTRAINT consumos_pk PRIMARY KEY ( id );
 
 CREATE TABLE elementosextras (
     nombreelemento                VARCHAR2(200) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE gimnasios (
     hoteles_nombre   VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE gimnasios ADD CONSTRAINT gimnasio_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE gimnasios ADD CONSTRAINT gimnasios_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE habitaciones (
     numerohabitacion INTEGER NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE piscinas (
     hoteles_nombre   VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE piscinas ADD CONSTRAINT piscina_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE piscinas ADD CONSTRAINT piscinas_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE prestamosutensilios (
     idtiposervicio INTEGER NOT NULL,
@@ -98,27 +98,27 @@ CREATE TABLE prestamosutensilios (
     hoteles_nombre VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE prestamosutensilios ADD CONSTRAINT prestamoutensilios_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE prestamosutensilios ADD CONSTRAINT prestamosutensilios_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE productos (
-    idproducto                 INTEGER NOT NULL,
-    nombre                     VARCHAR2(4000) NOT NULL,
-    costo                      INTEGER NOT NULL,
-    aplicaincluido             NUMBER NOT NULL,
-    lavanderias_idtiposervicio INTEGER,
-    restaurante_idtiposervicio INTEGER,
-    tienda_idtiposervicio      INTEGER,
-    bares_idtiposervicio       INTEGER
+    idproducto                  INTEGER NOT NULL,
+    nombre                      VARCHAR2(4000) NOT NULL,
+    costo                       INTEGER NOT NULL,
+    aplicaincluido              NUMBER NOT NULL,
+    lavanderias_idtiposervicio  INTEGER,
+    restaurantes_idtiposervicio INTEGER,
+    tiendas_idtiposervicio      INTEGER,
+    bares_idtiposervicio        INTEGER
 );
 
 ALTER TABLE productos ADD CONSTRAINT productos_pk PRIMARY KEY ( idproducto );
 
 CREATE TABLE productossupermercado (
-    supermercado_idtiposervicio INTEGER NOT NULL,
-    productos_idproducto        INTEGER NOT NULL
+    supermercados_idtiposervicio INTEGER NOT NULL,
+    productos_idproducto         INTEGER NOT NULL
 );
 
-ALTER TABLE productossupermercado ADD CONSTRAINT productossupermercado_pk PRIMARY KEY ( supermercado_idtiposervicio,
+ALTER TABLE productossupermercado ADD CONSTRAINT productossupermercado_pk PRIMARY KEY ( supermercados_idtiposervicio,
                                                                                         productos_idproducto );
 
 CREATE TABLE promociones (
@@ -138,9 +138,9 @@ CREATE TABLE reservashoteles (
     fechasalida                   DATE NOT NULL,
     pago                          NUMBER NOT NULL,
     reservatomada                 NUMBER NOT NULL,
-    promociones_nombreplan        VARCHAR2(200),
     hoteles_nombre                VARCHAR2(200) NOT NULL,
-    habitaciones_numerohabitacion INTEGER NOT NULL
+    habitaciones_numerohabitacion INTEGER NOT NULL,
+    promociones_nombreplan        VARCHAR2(200)
 );
 
 ALTER TABLE reservashoteles ADD CONSTRAINT reservashoteles_pk PRIMARY KEY ( numreserva );
@@ -153,10 +153,10 @@ CREATE TABLE reservasservicios (
     lavanderias_idtiposervicio    INTEGER,
     bares_idtiposervicio          INTEGER,
     spas_idtiposervicio           INTEGER,
-    gimnasio_idtiposervicio       INTEGER,
-    salon_idtiposervicio          INTEGER,
-    restaurante_idtiposervicio    INTEGER,
-    piscina_idtiposervicio        INTEGER
+    gimnasios_idtiposervicio      INTEGER,
+    salones_idtiposervicio        INTEGER,
+    restaurantes_idtiposervicio   INTEGER,
+    piscinas_idtiposervicio       INTEGER
 );
 
 ALTER TABLE reservasservicios ADD CONSTRAINT reservasservicios_pk PRIMARY KEY ( numreserva );
@@ -169,7 +169,7 @@ CREATE TABLE restaurantes (
     hoteles_nombre   VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE restaurantes ADD CONSTRAINT restaurante_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE restaurantes ADD CONSTRAINT restaurantes_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE salones (
     idtiposervicio   INTEGER NOT NULL,
@@ -179,7 +179,7 @@ CREATE TABLE salones (
     aplicacompartido NUMBER NOT NULL
 );
 
-ALTER TABLE salones ADD CONSTRAINT salon_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE salones ADD CONSTRAINT salones_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE serviciosinternet (
     idtiposervicio   INTEGER NOT NULL,
@@ -189,7 +189,7 @@ CREATE TABLE serviciosinternet (
     hoteles_nombre   VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE serviciosinternet ADD CONSTRAINT internet_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE serviciosinternet ADD CONSTRAINT serviciosinternet_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE spas (
     idtiposervicio   INTEGER NOT NULL,
@@ -207,7 +207,7 @@ CREATE TABLE supermercados (
     hoteles_nombre   VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE supermercados ADD CONSTRAINT supermercado_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE supermercados ADD CONSTRAINT supermercados_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE tiendas (
     idtiposervicio   INTEGER NOT NULL,
@@ -216,7 +216,7 @@ CREATE TABLE tiendas (
     hoteles_nombre   VARCHAR2(200) NOT NULL
 );
 
-ALTER TABLE tiendas ADD CONSTRAINT tienda_pk PRIMARY KEY ( idtiposervicio );
+ALTER TABLE tiendas ADD CONSTRAINT tiendas_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE usuarios (
     id                            INTEGER NOT NULL,
@@ -234,55 +234,55 @@ ALTER TABLE bares
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_bares_fk FOREIGN KEY ( bares_idtiposervicio )
+    ADD CONSTRAINT consumos_bares_fk FOREIGN KEY ( bares_idtiposervicio )
         REFERENCES bares ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_gimnasio_fk FOREIGN KEY ( gimnasio_idtiposervicio )
+    ADD CONSTRAINT consumos_gimnasios_fk FOREIGN KEY ( gimnasios_idtiposervicio )
         REFERENCES gimnasios ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_habitaciones_fk FOREIGN KEY ( habitaciones_numerohabitacion )
+    ADD CONSTRAINT consumos_habitaciones_fk FOREIGN KEY ( habitaciones_numerohabitacion )
         REFERENCES habitaciones ( numerohabitacion );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_internet_fk FOREIGN KEY ( internet_idtiposervicio )
-        REFERENCES serviciosinternet ( idtiposervicio );
-
-ALTER TABLE consumos
-    ADD CONSTRAINT consumo_lavanderias_fk FOREIGN KEY ( lavanderias_idtiposervicio )
+    ADD CONSTRAINT consumos_lavanderias_fk FOREIGN KEY ( lavanderias_idtiposervicio )
         REFERENCES lavanderias ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_piscina_fk FOREIGN KEY ( piscina_idtiposervicio )
+    ADD CONSTRAINT consumos_piscinas_fk FOREIGN KEY ( piscinas_idtiposervicio )
         REFERENCES piscinas ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_prestamoutensilios_fk FOREIGN KEY ( prestamos_idtiposervicio )
+    ADD CONSTRAINT consumos_prestamos_fk FOREIGN KEY ( prestamos_idtiposervicio )
         REFERENCES prestamosutensilios ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_reservasservicios_fk FOREIGN KEY ( reservasservicios_numreserva )
+    ADD CONSTRAINT consumos_reservasservicios_fk FOREIGN KEY ( reservasservicios_numreserva )
         REFERENCES reservasservicios ( numreserva );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_restaurante_fk FOREIGN KEY ( restaurante_idtiposervicio )
+    ADD CONSTRAINT consumos_restaurantes_fk FOREIGN KEY ( restaurantes_idtiposervicio )
         REFERENCES restaurantes ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_salon_fk FOREIGN KEY ( salon_idtiposervicio )
+    ADD CONSTRAINT consumos_salones_fk FOREIGN KEY ( salones_idtiposervicio )
         REFERENCES salones ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_spas_fk FOREIGN KEY ( spas_idtiposervicio )
+    ADD CONSTRAINT consumos_serviciosinternet_fk FOREIGN KEY ( internet_idtiposervicio )
+        REFERENCES serviciosinternet ( idtiposervicio );
+
+ALTER TABLE consumos
+    ADD CONSTRAINT consumos_spas_fk FOREIGN KEY ( spas_idtiposervicio )
         REFERENCES spas ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_supermercado_fk FOREIGN KEY ( supermercado_idtiposervicio )
+    ADD CONSTRAINT consumos_supermercados_fk FOREIGN KEY ( supermercados_idtiposervicio )
         REFERENCES supermercados ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumo_tienda_fk FOREIGN KEY ( tienda_idtiposervicio )
+    ADD CONSTRAINT consumos_tiendas_fk FOREIGN KEY ( tiendas_idtiposervicio )
         REFERENCES tiendas ( idtiposervicio );
 
 ALTER TABLE elementosextras
@@ -290,11 +290,7 @@ ALTER TABLE elementosextras
         REFERENCES habitaciones ( numerohabitacion );
 
 ALTER TABLE gimnasios
-    ADD CONSTRAINT gimnasio_hoteles_fk FOREIGN KEY ( hoteles_nombre )
-        REFERENCES hoteles ( nombre );
-
-ALTER TABLE serviciosinternet
-    ADD CONSTRAINT internet_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT gimnasios_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE lavanderias
@@ -302,11 +298,11 @@ ALTER TABLE lavanderias
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE piscinas
-    ADD CONSTRAINT piscina_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT piscinas_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE prestamosutensilios
-    ADD CONSTRAINT prestamoutensilios_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT prestamosutensilios_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE productos
@@ -318,11 +314,11 @@ ALTER TABLE productos
         REFERENCES lavanderias ( idtiposervicio );
 
 ALTER TABLE productos
-    ADD CONSTRAINT productos_restaurante_fk FOREIGN KEY ( restaurante_idtiposervicio )
+    ADD CONSTRAINT productos_restaurantes_fk FOREIGN KEY ( restaurantes_idtiposervicio )
         REFERENCES restaurantes ( idtiposervicio );
 
 ALTER TABLE productos
-    ADD CONSTRAINT productos_tienda_fk FOREIGN KEY ( tienda_idtiposervicio )
+    ADD CONSTRAINT productos_tiendas_fk FOREIGN KEY ( tiendas_idtiposervicio )
         REFERENCES tiendas ( idtiposervicio );
 
 ALTER TABLE productossupermercado
@@ -330,7 +326,7 @@ ALTER TABLE productossupermercado
         REFERENCES productos ( idproducto );
 
 ALTER TABLE productossupermercado
-    ADD CONSTRAINT productossup_supermercado_fk FOREIGN KEY ( supermercado_idtiposervicio )
+    ADD CONSTRAINT productossup_supermercados_fk FOREIGN KEY ( supermercados_idtiposervicio )
         REFERENCES supermercados ( idtiposervicio );
 
 ALTER TABLE reservashoteles
@@ -350,7 +346,7 @@ ALTER TABLE reservasservicios
         REFERENCES bares ( idtiposervicio );
 
 ALTER TABLE reservasservicios
-    ADD CONSTRAINT reservasserv_gimnasio_fk FOREIGN KEY ( gimnasio_idtiposervicio )
+    ADD CONSTRAINT reservasserv_gimnasios_fk FOREIGN KEY ( gimnasios_idtiposervicio )
         REFERENCES gimnasios ( idtiposervicio );
 
 ALTER TABLE reservasservicios
@@ -362,15 +358,15 @@ ALTER TABLE reservasservicios
         REFERENCES lavanderias ( idtiposervicio );
 
 ALTER TABLE reservasservicios
-    ADD CONSTRAINT reservasserv_piscina_fk FOREIGN KEY ( piscina_idtiposervicio )
+    ADD CONSTRAINT reservasserv_piscinas_fk FOREIGN KEY ( piscinas_idtiposervicio )
         REFERENCES piscinas ( idtiposervicio );
 
 ALTER TABLE reservasservicios
-    ADD CONSTRAINT reservasserv_restaurante_fk FOREIGN KEY ( restaurante_idtiposervicio )
+    ADD CONSTRAINT reservasserv_restaurantes_fk FOREIGN KEY ( restaurantes_idtiposervicio )
         REFERENCES restaurantes ( idtiposervicio );
 
 ALTER TABLE reservasservicios
-    ADD CONSTRAINT reservasserv_salon_fk FOREIGN KEY ( salon_idtiposervicio )
+    ADD CONSTRAINT reservasserv_salones_fk FOREIGN KEY ( salones_idtiposervicio )
         REFERENCES salones ( idtiposervicio );
 
 ALTER TABLE reservasservicios
@@ -378,11 +374,15 @@ ALTER TABLE reservasservicios
         REFERENCES spas ( idtiposervicio );
 
 ALTER TABLE restaurantes
-    ADD CONSTRAINT restaurante_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT restaurantes_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE salones
-    ADD CONSTRAINT salon_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT salones_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+        REFERENCES hoteles ( nombre );
+
+ALTER TABLE serviciosinternet
+    ADD CONSTRAINT serviciosinternet_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE spas
@@ -390,11 +390,11 @@ ALTER TABLE spas
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE supermercados
-    ADD CONSTRAINT supermercado_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT supermercados_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE tiendas
-    ADD CONSTRAINT tienda_hoteles_fk FOREIGN KEY ( hoteles_nombre )
+    ADD CONSTRAINT tiendas_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
 ALTER TABLE usuarios
