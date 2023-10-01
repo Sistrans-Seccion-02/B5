@@ -14,6 +14,14 @@ public class Lavanderia {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer idTipoServicio;
+    private Integer capacidad;
+    private Boolean aplicaCompartido;
+
+    public Lavanderia(Integer capacidad, Boolean aplicaCompartido)
+    {
+        this.capacidad = capacidad;
+        this.aplicaCompartido = aplicaCompartido;
+    }
 
     public Lavanderia()
     {;}
@@ -26,6 +34,23 @@ public class Lavanderia {
         this.idTipoServicio = idTipoServicio;
     }
 
+    public Integer getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(Integer capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public Boolean getAplicaCompartido() {
+        return aplicaCompartido;
+    }
+
+    public void setAplicaCompartido(Boolean aplicaCompartido) {
+        this.aplicaCompartido = aplicaCompartido;
+    }
+
+    
     
     
 }
