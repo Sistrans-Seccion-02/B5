@@ -18,13 +18,13 @@ public class ElementoExtra {
     private Integer idElemento;
     private String nombreElemento;
     @ManyToOne(optional=true)
-    @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="habitaciones_numeroHabitacion")
-    private Integer habitaciones_numeroHabitacion;
+    @JoinColumn(name="numeroHabitacion", referencedColumnName="numeroHabitacion")
+    private Habitacion numeroHabitacion;
 
-    public ElementoExtra(String nombreElemento, Integer habitaciones_numeroHabitacion)
+    public ElementoExtra(String nombreElemento, Habitacion numeroHabitacion)
     {
         this.nombreElemento = nombreElemento;
-        this.habitaciones_numeroHabitacion= habitaciones_numeroHabitacion;
+        this.numeroHabitacion= numeroHabitacion;
     }
 
     public ElementoExtra()
@@ -45,4 +45,13 @@ public class ElementoExtra {
     public void setNombreElemento(String nombreElemento) {
         this.nombreElemento = nombreElemento;
     }
+
+    public Habitacion getNumeroHabitacion() {
+        return numeroHabitacion;
+    }
+
+    public void setNumeroHabitacion(Habitacion numeroHabitacion) {
+        this.numeroHabitacion = numeroHabitacion;
+    }
+    
 }
