@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,13 +20,18 @@ public class Gimnasio {
     private Integer numMaquinas;
     private String horario;
     private Boolean aplicaCompartido;
+    @ManyToOne(optional=true)
+    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    private Hotel nombreHotel;
 
-    public Gimnasio(Integer numMaquinas, Integer capacidad, String horario, Boolean aplicaCompartido)
+
+    public Gimnasio(Integer numMaquinas, Integer capacidad, String horario, Boolean aplicaCompartido, Hotel nombreHotel)
     {
         this.capacidad = capacidad;
         this.numMaquinas = numMaquinas;
         this.horario = horario;
         this.aplicaCompartido = aplicaCompartido;
+        this.nombreHotel = nombreHotel;
     }
 
     public Gimnasio()
@@ -70,6 +77,15 @@ public class Gimnasio {
         this.aplicaCompartido = aplicaCompartido;
     }
 
+    public Hotel getNombreHotel() {
+        return nombreHotel;
+    }
+
+    public void setNombreHotel(Hotel nombreHotel) {
+        this.nombreHotel = nombreHotel;
+    }
+
+    
     
     
 

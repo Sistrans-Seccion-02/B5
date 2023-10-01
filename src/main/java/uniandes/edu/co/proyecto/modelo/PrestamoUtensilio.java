@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,11 +18,16 @@ public class PrestamoUtensilio {
     private Integer idTipoServicio;
     private String nombre;
     private Boolean retornado;
+    @ManyToOne(optional=true)
+    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    private Hotel nombreHotel;
 
-    public PrestamoUtensilio(String nombre, Boolean retornado)
+
+    public PrestamoUtensilio(String nombre, Boolean retornado, Hotel nombreHotel)
     {
         this.nombre = nombre;
         this.retornado = retornado;
+        this.nombreHotel = nombreHotel;
     }
 
     public PrestamoUtensilio()
@@ -48,6 +55,14 @@ public class PrestamoUtensilio {
 
     public void setRetornado(Boolean retornado) {
         this.retornado = retornado;
+    }
+
+    public Hotel getNombreHotel() {
+        return nombreHotel;
+    }
+
+    public void setNombreHotel(Hotel nombreHotel) {
+        this.nombreHotel = nombreHotel;
     }
 
     

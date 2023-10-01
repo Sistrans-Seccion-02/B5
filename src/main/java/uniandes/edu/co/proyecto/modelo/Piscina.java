@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,12 +19,17 @@ public class Piscina {
     private Integer capacidad;
     private Integer profundidad;
     private Boolean aplicaCompartido;
+    @ManyToOne(optional=true)
+    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    private Hotel nombreHotel;
 
-    public Piscina(Integer profundidad, Integer capacidad, Boolean aplicaCompartido)
+
+    public Piscina(Integer profundidad, Integer capacidad, Boolean aplicaCompartido, Hotel nombreHotel)
     {
         this.capacidad = capacidad;
         this.profundidad = profundidad;
         this.aplicaCompartido = aplicaCompartido;
+        this.nombreHotel = nombreHotel;
     }
 
     public Piscina()
@@ -58,6 +65,14 @@ public class Piscina {
 
     public void setAplicaCompartido(Boolean aplicaCompartido) {
         this.aplicaCompartido = aplicaCompartido;
+    }
+
+    public Hotel getNombreHotel() {
+        return nombreHotel;
+    }
+
+    public void setNombreHotel(Hotel nombreHotel) {
+        this.nombreHotel = nombreHotel;
     }
 
     
