@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "elementosExtras")
-public class ElementosExtra {
+public class ElementoExtra {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -16,12 +16,12 @@ public class ElementosExtra {
     private Integer idElemento;
     private String nombreElemento;
 
-    public ElementosExtra(String nombreElemento)
+    public ElementoExtra(String nombreElemento)
     {
         this.nombreElemento = nombreElemento;
     }
 
-    public ElementosExtra()
+    public ElementoExtra()
     {;}
 
     public Integer getIdElemento() {
