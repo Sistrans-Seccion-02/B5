@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="610CCA17-B77C-CD42-6D4D-CB3764C33A91" name="Productos">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="381BB588-BE0E-CA56-F0B7-30A8B9EDEF48" name="ReservasHoteles">
 <createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>89F4A098-E77D-BBB5-D796-A1447BF0FF95</generatorID>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>A266BC0D-46AD-C912-E7F0-6DBEB2F58F74</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idProducto" id="DFDFBB7B-865C-2119-906D-260FCB230FB9">
+<Column name="numReserva" id="EFDAA22D-06E0-FA84-7EAE-D8869A7173EF">
 <createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>9DA8A9B5-6249-B1F5-04E2-FAAFBCE0BA73</generatorID>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>DB30991A-EE11-21BE-1A1C-D7B553727073</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -19,32 +19,32 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="0AFEDCA4-2E21-95E2-1D4E-5CF518FAB289">
+<Column name="fechaEntrada" id="356A2C85-3C68-AF72-7E2F-F6EA574DE109">
 <createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>942E9A53-8F65-25F6-0CF5-7C6C7B0060AE</generatorID>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>FDB080C9-D74E-2F7B-2F73-AD33B0628834</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="costo" id="7F89BDB4-8E00-74D8-B7E8-424FB0B61283">
+<Column name="fechaSalida" id="6B2D0D05-04C1-B6E5-16CA-67AE9CBCE067">
 <createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>82C483BB-10B5-95F8-2226-DBE16047F5F0</generatorID>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>C9FC6641-5B98-9817-6577-544D56B57B5A</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="aplicaIncluido" id="EC53F703-105C-6156-1D07-72E2B5A6B594">
+<Column name="pago" id="D84FCC42-7993-4173-C990-937E58AC11BE">
 <createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>50940A65-8C5D-3360-052D-053B8AA6DEC6</generatorID>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>AEB0182C-D287-7425-470D-249FC5A272BB</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -53,28 +53,39 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Lavanderias_idTipoServicio" id="70407287-8C08-25CE-E15F-C27E0C6C15B6">
+<Column name="reservaTomada" id="A3BD5D2E-B31E-769C-5E35-E44D2B973C83">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>3FC83EA1-23DE-AEB2-AD69-A35B3722D0B9</generatorID>
+<generatorID>6CBE5D09-9380-E4E9-6F35-1E95C2A4123A</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hoteles_nombre" id="084B0F1C-35AE-4BA6-C7E5-9724BD3ED8E4">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>280905C1-DC51-EB62-6AA0-E99DD1C3F999</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="7F899C50-8394-6A10-6BEF-5FB1962F6711" referredColumn="B6E31913-5328-85E6-A41D-AC5AD129A9BF"/>
+<colAssociation fkAssociation="DCBBDD7D-116F-2290-D4AC-360DD6E6188E" referredColumn="A17F75B1-2F55-646F-D9F3-DB0A53D7F20F"/>
 </associations>
 </Column>
-<Column name="Restaurantes_idTipoServicio" id="7A6FB33C-711C-5699-2AE4-932B9D2BBDEC">
+<Column name="Habitaciones_numeroHabitacion" id="B667C8FF-F611-1AA3-CCFC-F83069439121">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>06D1E132-C63F-A59B-604A-F1A3344DEDD0</generatorID>
+<generatorID>6205BB8C-D546-7AC0-653B-A9AA1441B255</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -82,97 +93,82 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="313D04FA-99EF-0918-B130-69AB1D02893D" referredColumn="CA05F74A-54B4-71A3-CBE6-F1782D4758A7"/>
+<colAssociation fkAssociation="1B5E34B3-6B32-FDB2-528F-D33D27DC0529" referredColumn="2D228822-994C-8EC4-F62E-99ABA213E6B4"/>
 </associations>
 </Column>
-<Column name="Tiendas_idTipoServicio" id="42DB5077-9D10-B05B-D132-7240964F6FA5">
+<Column name="Promociones_nombrePlan" id="9569880E-D1CB-8E3A-5172-2B6937B44417">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>596AD044-31E4-3523-5D46-5B81C4EFDA83</generatorID>
+<generatorID>F1EF3C54-46A7-07DF-B250-47AB84621BD1</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="EE011D5A-D018-D3E9-3C6A-3C9606BF23A1" referredColumn="DBCEE256-063B-3D77-2EDF-EFAB9AE44508"/>
-</associations>
-</Column>
-<Column name="Bares_idTipoServicio" id="D6D29835-614D-0107-8B86-333F1804C2E8">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>13629062-F73F-2654-F122-83A41C558439</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="BC89C2B5-A700-6CE5-65A5-CAC85BC1AD25" referredColumn="575DB1F8-B3F0-2AC1-4B8B-ECDD6E44EE2D"/>
+<colAssociation fkAssociation="DC4C9E7D-9576-885A-82A6-084B250D81FD" referredColumn="CD3EB46C-1226-14FF-E7DD-A6DE1B23B213"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="E55677D0-D00B-9444-08AB-CB5376CB04E2" name="Productos_PK">
+<ind_PK_UK id="27BE1DA5-F76C-3756-43D2-83CAEC78E20B" name="ReservasHoteles_PK">
 <createdBy>andre</createdBy>
-<createdTime>2023-10-01 16:40:31 UTC</createdTime>
-<generatorID>AE34D257-11A7-A89F-EB5A-3BE1643AEA19</generatorID>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>92266713-091D-07BF-C16F-FEB995E2972F</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="DFDFBB7B-865C-2119-906D-260FCB230FB9"/>
+<colUsage columnID="EFDAA22D-06E0-FA84-7EAE-D8869A7173EF"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9AC0A8F9-0A20-0ADA-6158-1EFB80665CAD" name="Productos_Bares_FK">
+<ind_PK_UK id="72978D61-2207-39CE-5F83-20675F19AF14" name="ReservasHoteles__IDX">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>4E8A3345-D2E6-CF11-31D3-683BABD06C12</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E411BC1B-9A78-FB03-4394-9BFB2C67D6A6</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="9569880E-D1CB-8E3A-5172-2B6937B44417"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="118A02E8-35F9-3C64-4F68-B0271E6FB715" name="ReservasHoteles_Habitaciones_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>79E988C5-23DC-E17A-7BD9-602B5155A713</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="D6D29835-614D-0107-8B86-333F1804C2E8"/>
+<colUsage columnID="B667C8FF-F611-1AA3-CCFC-F83069439121"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="E1AE6089-CB19-C822-A9E6-AC43FAD3DA15" name="Productos_Lavanderias_FK">
+<ind_PK_UK id="C14F1961-66E9-30B0-6DE6-F62E8BF86362" name="ReservasHoteles_Hoteles_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>4B35CD6B-2C81-F407-4F48-C62A2E2A30D9</generatorID>
+<generatorID>A292C289-32AB-D99B-B89E-CD15D44DBC6B</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="70407287-8C08-25CE-E15F-C27E0C6C15B6"/>
+<colUsage columnID="084B0F1C-35AE-4BA6-C7E5-9724BD3ED8E4"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="346DE843-1374-5C47-5282-F152E87944F8" name="Productos_Restaurantes_FK">
+<ind_PK_UK id="A6896400-1F12-3F2A-3640-7C60A11BEDF9" name="ReservasHoteles_Promociones_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>F5489DFA-3CFB-F1C6-44B9-D0FB7DDFD828</generatorID>
+<generatorID>E411BC1B-9A78-FB03-4394-9BFB2C67D6A6</generatorID>
 <ownerDesignName>modelo</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="7A6FB33C-711C-5699-2AE4-932B9D2BBDEC"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="74915F99-F14F-DD64-06A5-ACDFDCCF6D30" name="Productos_Tiendas_FK">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>C8553DA9-52EF-4046-5FE9-0278143A6497</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="42DB5077-9D10-B05B-D132-7240964F6FA5"/>
+<colUsage columnID="9569880E-D1CB-8E3A-5172-2B6937B44417"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

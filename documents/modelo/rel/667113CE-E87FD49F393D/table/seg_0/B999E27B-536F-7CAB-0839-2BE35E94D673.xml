@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B999E27B-536F-7CAB-0839-2BE35E94D673" name="ElementosExtras">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>734BAEB2-A661-6605-FB93-62D3848C50B7</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombreElemento" id="72D6F442-8A51-B46B-5DCF-A6D10222FBC5">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>C40ED61A-AE55-C4DE-D1C6-2B2990352CC6</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Habitaciones_numeroHabitacion" id="1C211DFF-E2E0-5A3C-9193-3A260CF6B84E">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>02D21388-4614-617B-787D-2AC5305B2892</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA3B484B-3D88-9C86-D5CC-F4700AAF7953" referredColumn="2D228822-994C-8EC4-F62E-99ABA213E6B4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="99D5BE36-9BC5-7364-693D-A59376B78CD3" name="ElementosExtras_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>D5188CBA-F8F6-C5FD-CC15-A0E8BC01D806</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72D6F442-8A51-B46B-5DCF-A6D10222FBC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66406FD0-D3B7-3074-C204-D3E76ACE10B3" name="ElementosExtras_Habitaciones_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>BB07C3A8-9AB8-F441-8571-4AA6AB45C173</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C211DFF-E2E0-5A3C-9193-3A260CF6B84E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -15,10 +15,10 @@
 <generatorId>A3B76A84-9DAE-E0AB-F51C-525DA5183E96</generatorId>
 <notation>1</notation>
 <objectViews>
-<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="10524D81-D906-5193-11E6-FD505E8B8B93" otype="Table" vid="23645272-48DB-0737-B0D9-EE21BECD77D1">
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="FBC2A34F-950C-90A6-4517-580EB1415DE7" otype="Table" vid="A13CBEE8-0C35-41C4-855A-F8FC6171B0B3">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <bounds x="483" y="0" width="149" height="67"/>
-<generatorID>9E270A7F-3C44-4655-2DA6-9767FAE23230</generatorID>
+<generatorID>D52B8ED9-4411-A7A8-1CED-81CD8679BC45</generatorID>
 </OView>
 </objectViews>
 </Diagram>

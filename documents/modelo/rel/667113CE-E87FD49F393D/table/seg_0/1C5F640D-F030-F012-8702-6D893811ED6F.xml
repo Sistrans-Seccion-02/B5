@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1C5F640D-F030-F012-8702-6D893811ED6F" name="Spas">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>C5A77486-AC7B-6E20-4D72-119879827E89</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTipoServicio" id="6D851ED2-99F6-2A88-1C55-FA501D1F2002">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>FB28CD07-3509-CDE6-0F85-619069870BD8</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="duracion" id="C70FA9C6-27E2-7DE2-C7FB-B981FA1CE966">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>64949C6D-B95D-2482-AAC9-660143B7B89C</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aplicaCompartido" id="6C351BEE-8BFD-A321-21C8-5D82D8C08F7F">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>655BC683-F896-4063-F6CB-E7EB32E3FF7C</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hoteles_nombre" id="E93C4188-46AF-9713-A043-A540FECA72B6">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>EA0AA7D9-7A68-2C9C-DE43-06798DF2054E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C93111A0-8776-C3E4-ABC0-728B09C313F1" referredColumn="A17F75B1-2F55-646F-D9F3-DB0A53D7F20F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9C2949A3-4C11-CB6C-F1E2-C04780698101" name="Spas_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>4F4EFC6E-2012-77C2-8112-F381AA33BBD6</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D851ED2-99F6-2A88-1C55-FA501D1F2002"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB2B9E3B-735D-5942-B771-6FFBC2BD3C8E" name="Spas_Hoteles_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>B9D958A3-492C-BBD6-1F42-86E2A72693C2</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E93C4188-46AF-9713-A043-A540FECA72B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -83,22 +83,6 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Promociones nombrePlan" id="E1A572E0-D890-0853-0B30-D70A249E654D">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 18:07:54 UTC</createdTime>
-<generatorID>E411BC1B-9A78-FB03-4394-9BFB2C67D6A6</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<engineerTo>
-<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>44EE161D-66CA-278A-F9E4-D95D183E37C4</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Hoteles nombre" id="280905C1-DC51-EB62-6AA0-E99DD1C3F999">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 18:07:54 UTC</createdTime>
@@ -126,6 +110,21 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombrePlan" id="F1EF3C54-46A7-07DF-B250-47AB84621BD1">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:13 UTC</createdTime>
+<generatorID>E411BC1B-9A78-FB03-4394-9BFB2C67D6A6</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<referedAttribute>44EE161D-66CA-278A-F9E4-D95D183E37C4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

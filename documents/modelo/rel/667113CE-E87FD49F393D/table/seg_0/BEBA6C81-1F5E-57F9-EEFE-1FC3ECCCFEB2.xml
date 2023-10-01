@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BEBA6C81-1F5E-57F9-EEFE-1FC3ECCCFEB2" name="Habitaciones">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>5702DF54-31AB-D247-A486-C2FC9E91043A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="numeroHabitacion" id="2D228822-994C-8EC4-F62E-99ABA213E6B4">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>3E482468-7679-E749-B0FF-F3689D5FDD89</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoHabitacion" id="1F8CB7CE-07BB-45A0-C176-03A251821287">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>048CC2B1-C28D-9A9F-793A-055C47EA46D1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="disponible" id="9E089F96-DAC5-07F8-F791-4DA9F62917BE">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>4E945D91-57BA-5EEB-2105-0B966373206A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3841BA0D-AFCD-235D-AF07-EF91EA23CE6D" name="Habitaciones_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>78E8CFD3-CFC3-0767-C835-65A46A235417</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D228822-994C-8EC4-F62E-99ABA213E6B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

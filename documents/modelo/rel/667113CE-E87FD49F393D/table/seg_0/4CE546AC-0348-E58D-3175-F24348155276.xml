@@ -1,0 +1,275 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4CE546AC-0348-E58D-3175-F24348155276" name="ReservasServicios">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>FDA23BB5-64CD-600C-4343-06ABF1896D90</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="numReserva" id="2C400A6D-E69D-3783-2477-615BF22CBE77">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>F0BE079F-2E69-4ECB-2655-3E07C871AB8F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="FE821901-3581-1F23-6A0B-AC9A56F6DFD8">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>502EE875-6226-FA2B-79DD-98C9A247A1DB</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="atendida" id="9B1B4982-3972-AEAE-E388-8D90C8614DFC">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>996B84DE-E279-92A2-05D6-66965D40C1C9</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Habitaciones_numeroHabitacion" id="E356C627-C434-69BC-7BD5-121D53C1F055">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>22DF608C-EC88-7BEB-9707-8C239BAC3BA9</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B195CB3B-866C-EBAC-20E7-9C4DF1C9654B" referredColumn="2D228822-994C-8EC4-F62E-99ABA213E6B4"/>
+</associations>
+</Column>
+<Column name="Lavanderias_idTipoServicio" id="6B0DC2AD-29D9-42AC-F8B4-EAC1F9793C99">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>C3CD9E1A-52DA-B66D-8EA5-B685A309491A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D29A6E9A-257A-33CD-E625-E366165A1C1E" referredColumn="B6E31913-5328-85E6-A41D-AC5AD129A9BF"/>
+</associations>
+</Column>
+<Column name="Bares_idTipoServicio" id="5D6A75E8-CFB3-0A22-7C7D-C499CF9FCEB1">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>4E696F43-42D1-DE90-8D91-6A067DFF8636</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DEA100A7-F4AD-93FC-DB57-4E659933664F" referredColumn="575DB1F8-B3F0-2AC1-4B8B-ECDD6E44EE2D"/>
+</associations>
+</Column>
+<Column name="Spas_idTipoServicio" id="B9B439C3-E688-1CA8-3ACC-DF01424233D0">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>47F68E74-17E6-C8BD-A717-86257A2BDE11</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FDDEF7B-72FE-8D2D-2907-9CA505B13626" referredColumn="6D851ED2-99F6-2A88-1C55-FA501D1F2002"/>
+</associations>
+</Column>
+<Column name="Gimnasios_idTipoServicio" id="A125BABA-B9A4-2A49-2740-1F9EF3550BB1">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>663F6811-A5AA-3D8B-7FD4-B2347559C7A5</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E220B41-2354-0833-E723-F81AD2FB6701" referredColumn="90396EE1-C107-E8BC-BCF4-7004D4365476"/>
+</associations>
+</Column>
+<Column name="Salones_idTipoServicio" id="BE158C8B-D9A8-039E-6038-C32DC2A059F6">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>3A144618-D3CE-23F6-5DF3-EA6B7199BC58</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B662C878-C299-9DAB-B5E5-63CFF36B2FE9" referredColumn="49F07FF9-3C15-CB62-7008-D83F788A7E46"/>
+</associations>
+</Column>
+<Column name="Restaurantes_idTipoServicio" id="A22DBDAB-432E-5245-1212-FBEA6F4679C0">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>CA0A4B75-5240-7D53-44A1-90C783EABCBC</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E39DD076-22A6-2321-3CEA-754F03F5EF8D" referredColumn="CA05F74A-54B4-71A3-CBE6-F1782D4758A7"/>
+</associations>
+</Column>
+<Column name="Piscinas_idTipoServicio" id="5A5506E1-0672-534A-7CAF-81268930E010">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>B8774F33-5107-89AB-CC8D-2A7066EDE536</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F183AEAF-131E-FC0F-BBF3-D3BBCD51E757" referredColumn="EAD2C39B-AEB7-2B54-62A0-520F3C182292"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53CC2B5B-16E7-B271-C959-76CE72FBF938" name="ReservasServicios_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>F6822F2D-863C-AD7A-3281-08FBBB662295</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C400A6D-E69D-3783-2477-615BF22CBE77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D531A6D-40E8-2B2B-A348-5DF3B4EA0620" name="ReservasServicios_Bares_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>4CDC051E-5645-7EB7-4B04-382ED4102B1C</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D6A75E8-CFB3-0A22-7C7D-C499CF9FCEB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="63753B13-496C-39A5-0B41-2707779946C0" name="ReservasServicios_Gimnasios_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>03A9FAB8-E7D5-E237-8963-B16FFC85BB3B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A125BABA-B9A4-2A49-2740-1F9EF3550BB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB0F16F4-0B41-75D0-0441-949FD6ED5628" name="ReservasServicios_Habitaciones_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>F7BAC189-4196-597B-E8BA-8BCEE52C454E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E356C627-C434-69BC-7BD5-121D53C1F055"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="61A6ABF8-3C84-5A1C-7155-3AADF8AEFFA7" name="ReservasServicios_Lavanderias_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>01C42A3C-77E5-0E3E-0C83-C2261A40D80E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B0DC2AD-29D9-42AC-F8B4-EAC1F9793C99"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D4EEAC3-5560-4605-F5A8-F2FA35092F22" name="ReservasServicios_Piscinas_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>373768D6-3E97-DCD0-EC2A-C7FC0492E934</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A5506E1-0672-534A-7CAF-81268930E010"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A27ECB1-2533-5E38-E135-515F39DBD879" name="ReservasServicios_Restaurantes_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>B9588E7C-969F-7BF8-E2F2-2E6618F35544</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A22DBDAB-432E-5245-1212-FBEA6F4679C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4EB62764-1C76-FEFF-01C8-E0EF9507CCB7" name="ReservasServicios_Salones_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>6FE4BE69-8782-A0C5-5AFD-2BDA7B45B80A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE158C8B-D9A8-039E-6038-C32DC2A059F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB2BED27-D02C-D98C-0F0D-C0458BD41CE2" name="ReservasServicios_Spas_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>559BB3D3-DA2C-736B-F9B2-B49468C96EAF</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9B439C3-E688-1CA8-3ACC-DF01424233D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
