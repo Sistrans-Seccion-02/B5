@@ -20,12 +20,12 @@ public interface SpaRepository extends JpaRepository<Spa, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO spas (idTipoServicio, duracion, aplicaCompartido, hoteles_nombre) VALUES(proyecto_sequence.nextval, :duracion, :aplicaCompartido, :hoteles_nombre) ", nativeQuery = true)
-    void insertarSpa(@Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void insertarSpa(@Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE spas SET duracion= :duracion, aplicaCompartido= :aplicaCompartido, hoteles_nombre= :hoteles_nombre WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarSpa(@Param("idTipoServicio") int idTipoServicio, @Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void actualizarSpa(@Param("idTipoServicio") int idTipoServicio, @Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
 
     @Modifying
     @Transactional

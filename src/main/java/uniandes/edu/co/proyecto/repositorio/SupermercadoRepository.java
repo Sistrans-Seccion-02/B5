@@ -20,12 +20,12 @@ public interface SupermercadoRepository extends JpaRepository<Supermercado, Inte
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO supermercados (idTipoServicio, nombre, aplicaCompartido, hoteles_nombre) VALUES(proyecto_sequence.nextval, :nombre, :aplicaCompartido, :hoteles_nombre) ", nativeQuery = true)
-    void insertarSupermercado(@Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void insertarSupermercado(@Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE supermercados SET nombre= :nombre, aplicaCompartido= :aplicaCompartido, hoteles_nombre= :hoteles_nombre WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarSupermercado(@Param("idTipoServicio") int idTipoServicio, @Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void actualizarSupermercado(@Param("idTipoServicio") int idTipoServicio, @Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
 
     @Modifying
     @Transactional

@@ -20,12 +20,12 @@ public interface TiendaRepository extends JpaRepository<Tienda, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO tiendas (idTipoServicio, nombre, aplicaCompartido, hoteles_nombre) VALUES(proyecto_sequence.nextval, :nombre, :aplicaCompartido, :hoteles_nombre) ", nativeQuery = true)
-    void insertarTienda(@Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void insertarTienda(@Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE tiendas SET nombre= :nombre, aplicaCompartido= :aplicaCompartido, hoteles_nombre= :hoteles_nombre WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarTienda(@Param("idTipoServicio") int idTipoServicio, @Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void actualizarTienda(@Param("idTipoServicio") int idTipoServicio, @Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
 
     @Modifying
     @Transactional

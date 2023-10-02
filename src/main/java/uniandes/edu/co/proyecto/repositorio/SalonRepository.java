@@ -20,12 +20,12 @@ public interface SalonRepository extends JpaRepository<Salon, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO salones (idTipoServicio, aforo, equipo, aplicaCompartido, hoteles_nombre) VALUES(:idTipoServicio, :aforo, :equipo, :aplicaCompartido, :hoteles_nombre) ", nativeQuery = true)
-    void insertarSalon(@Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void insertarSalon(@Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE salones SET aforo= :aforo, equipo= :equipo, aplicaCompartido= :aplicaCompartido, hoteles_nombre= :hoteles_nombre WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarSalon(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("hoteles_nombre") String hoteles_nombre);
+    void actualizarSalon(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
 
     @Modifying
     @Transactional

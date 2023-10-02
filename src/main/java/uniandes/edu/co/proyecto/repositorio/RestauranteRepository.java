@@ -23,7 +23,7 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Intege
     void insertarRestaurante(@Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,
-    @Param("hoteles_nombre") String hoteles_nombre
+    @Param("hoteles_nombre") Integer hoteles_nombre
     );
     
     @Modifying
@@ -32,7 +32,7 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Intege
     void actualizarRestaurante(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,
-    @Param("hoteles_nombre") String hoteles_nombre);
+    @Param("hoteles_nombre") Integer hoteles_nombre);
 
     @Modifying
     @Transactional
