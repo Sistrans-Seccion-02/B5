@@ -12,25 +12,24 @@ import uniandes.edu.co.proyecto.modelo.Consumo;
 
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer>{
 
-    @Query(value = "SELECT * FROM bares ", nativeQuery = true)
+    @Query(value = "SELECT * FROM consumos ", nativeQuery = true)
     Collection<Consumo> darConsumos();
 
-    @Query(value = "SELECT * FROM bares WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
-    Consumo darConsumo(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "SELECT * FROM consumos WHERE id = :id", nativeQuery = true)
+    Consumo darConsumo(@Param("id") int id);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO bares (idTipoServicio, estilo, aforo, aplicaCompartido) VALUES(proyecto_sequence.nextval, :estilo, :aforo, :aplicaCompartido) ", nativeQuery = true)
-    void insertarConsumo(@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido);
+    @Query(value = "INSERT INTO consumos (id, costo, barId, numeroHabitacion, internetId, piscinaId, numReserva, restauranteId, salonId, spaId, supermercadoId, tiendaId) VALUES(proyecto_sequence.nextval, :estilo, :costo, :barId, :numeroHabitacion, :internetId, :piscinaId, :numReserva, :restauranteId, :salonId, :spaId, :supermercadoId, :tiendaId) ", nativeQuery = true)
+    void insertarConsumo(@Param("costo") int costo,@Param("barId") int barId, @Param("numeroHabitacion") int numeroHabitacion, @Param("internetId") int internetId, @Param("piscinaId") int piscinaId, @Param("numReserva") int numReserva,@Param("restauranteId") int restauranteId,@Param("salonId") int salonId, @Param("spaId") int spaId, @Param("supermercadoId") int supermercadoId, @Param("tiendaId") int tiendaId );
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE bares SET estilo= :estilo, aforo= :aforo, aplicaCompartido= :aplicaCompartido WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarConsumo(@Param("idTipoServicio") int idTipoServicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido);
-
+    @Query(value = "UPDATE consumos SET costo= :costo, barId= :barId, numeroHabitacion= :numeroHabitacion, internetId= :internetId, piscinaId= :piscinaId, numReserva= :numReserva, restauranteId= :restauranteId, salonId= :salonId, spaId= :spaId, supermercadoId= :supermercadoId, tiendaId= :tiendaId  WHERE id =:id", nativeQuery = true)
+    void actualizarConsumo(@Param("id") int id,@Param("costo") int costo,@Param("barId") int barId, @Param("numeroHabitacion") int numeroHabitacion, @Param("internetId") int internetId, @Param("piscinaId") int piscinaId, @Param("numReserva") int numReserva,@Param("restauranteId") int restauranteId,@Param("salonId") int salonId, @Param("spaId") int spaId, @Param("supermercadoId") int supermercadoId, @Param("tiendaId") int tiendaId);
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM bares WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void eliminarConsumo(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "DELETE FROM consumos WHERE id =:id", nativeQuery = true)
+    void eliminarConsumo(@Param("id") int id);
     
 }
