@@ -29,19 +29,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="aforo" id="2D7306A7-1A7F-0F08-C66C-59ECE494AF14">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 18:07:54 UTC</createdTime>
-<generatorID>FF0286E6-E0F9-5A66-81B1-ED075D53C1F3</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<engineerTo>
-<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="aplicaCompartido" id="7F619F8A-362F-1132-52B9-3C4639CAD93F">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 18:07:54 UTC</createdTime>

@@ -19,17 +19,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="aforo" id="6C362E7B-F5B4-D4B3-D950-24B86D92EEF9">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>2D7306A7-1A7F-0F08-C66C-59ECE494AF14</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="aplicaCompartido" id="66DE9E55-09F0-1B68-3A50-404426A7E96F">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
