@@ -20,6 +20,9 @@ public class Usuario {
     @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="numeroHabitacion")
     private Habitacion habitaciones_numeroHabitacion;
 
+    public Usuario()
+    {;}
+
     public Usuario(Integer id, String tipoId, String nombre, String tipoUsuario, String correo,
             Habitacion habitaciones_numeroHabitacion) {
         this.id = id;
