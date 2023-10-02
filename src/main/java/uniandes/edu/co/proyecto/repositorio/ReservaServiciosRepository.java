@@ -43,11 +43,26 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
     @Modifying
     @Transactional
     @Query(value = "UPDATE reservaServicios SET atendida= :atendida WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
-    void actualizarHabitacion(@Param("habitaciones_numeroHabitacion") int habitaciones_numeroHabitacion, @Param("atendida") Boolean atendida);
+    void actualizarReservaServicioAtendido(@Param("habitaciones_numeroHabitacion") int habitaciones_numeroHabitacion, @Param("atendida") Boolean atendida);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE reservaServicios SET atendida= :atendida, habitaciones_numeroHabitacion= :habitaciones_numeroHabitacion, lavanderias_idTipoServicio= :lavanderias_idTipoServicio, bares_idTipoServicio= :bares_idTipoServicio, spas_idTipoServicio= :spas_idTipoServicio, gimnasio_idTipoServicio= :gimnasio_idTipoServicio, salon_idTipoServicio= :salon_idTipoServicio, restaurante_idTipoServicio= :restaurante_idTipoServicio, piscina_idTipoServicio= :piscina_idTipoServicio WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
+    void actualizarReservaServicio(@Param("fecha") Date fecha,
+    @Param("atendida") Boolean atendida,
+    @Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion,
+    @Param("lavanderias_idTipoServicio") Lavanderia lavanderias_idTipoServicio,
+    @Param("bares_idTipoServicio") Bar bares_idTipoServicio,
+    @Param("spas_idTipoServicio") Spa spas_idTipoServicio,
+    @Param("gimnasio_idTipoServicio") Gimnasio gimnasio_idTipoServicio,
+    @Param("salon_idTipoServicio") Salon salon_idTipoServicio,
+    @Param("restaurante_idTipoServicio") Restaurante restaurante_idTipoServicio,
+    @Param("piscina_idTipoServicio") Piscina piscina_idTipoServicio
+    );
 
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM reservaServicios WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
-    void eliminarHabitacion(@Param("habitaciones_numeroHabitacion") int habitaciones_numeroHabitacion);
+    void eliminarReservaServicio(@Param("habitaciones_numeroHabitacion") int habitaciones_numeroHabitacion);
     
 }
