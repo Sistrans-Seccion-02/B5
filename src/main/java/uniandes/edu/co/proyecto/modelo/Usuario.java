@@ -1,8 +1,6 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -13,7 +11,6 @@ import jakarta.persistence.Table;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String tipoId;
     private String nombre;
@@ -23,11 +20,9 @@ public class Usuario {
     @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="numeroHabitacion")
     private Habitacion habitaciones_numeroHabitacion;
 
-    public Usuario()
-    {;}
-
-    public Usuario(String tipoId, String nombre, String tipoUsuario, String correo,
+    public Usuario(Integer id, String tipoId, String nombre, String tipoUsuario, String correo,
             Habitacion habitaciones_numeroHabitacion) {
+        this.id = id;
         this.tipoId = tipoId;
         this.nombre = nombre;
         this.tipoUsuario = tipoUsuario;
