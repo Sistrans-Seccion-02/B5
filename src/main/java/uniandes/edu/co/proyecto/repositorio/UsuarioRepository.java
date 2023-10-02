@@ -16,7 +16,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
     Collection<Usuario> darUsuarios();
 
     @Query(value = "SELECT * FROM usuarios WHERE id = :id", nativeQuery = true)
-        Usuario darUsuario(@Param("id") int id);
+    Usuario darUsuario(@Param("id") int id);
 
     @Modifying
     @Transactional
