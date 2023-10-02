@@ -9,15 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import uniandes.edu.co.proyecto.modelo.Bar;
-import uniandes.edu.co.proyecto.modelo.Gimnasio;
-import uniandes.edu.co.proyecto.modelo.Habitacion;
-import uniandes.edu.co.proyecto.modelo.Lavanderia;
-import uniandes.edu.co.proyecto.modelo.Piscina;
 import uniandes.edu.co.proyecto.modelo.ReservaServicios;
-import uniandes.edu.co.proyecto.modelo.Restaurante;
-import uniandes.edu.co.proyecto.modelo.Salon;
-import uniandes.edu.co.proyecto.modelo.Spa;
 import uniandes.edu.co.proyecto.modelo.Usuario;
 
 public interface ReservaServiciosRepository extends JpaRepository<ReservaServicios, Integer>{
