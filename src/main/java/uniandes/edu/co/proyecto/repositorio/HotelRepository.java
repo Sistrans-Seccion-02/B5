@@ -9,11 +9,15 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Hotel;
+import uniandes.edu.co.proyecto.modelo.Usuario;
 
 public interface HotelRepository extends JpaRepository<Hotel, Integer>{
 
     @Query(value = "SELECT * FROM hoteles ", nativeQuery = true)
     Collection<Hotel> darHoteles();
+
+    @Query(value = "SELECT * FROM hoteles WHERE id = :id", nativeQuery = true)
+        Usuario darHotel(@Param("id") int id);
 
      @Modifying
     @Transactional

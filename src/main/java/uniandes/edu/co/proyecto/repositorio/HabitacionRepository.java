@@ -14,7 +14,10 @@ import uniandes.edu.co.proyecto.modelo.Usuario;
 public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>{
 
     @Query(value = "SELECT * FROM habitaciones ", nativeQuery = true)
-    Collection<Usuario> darHabitaciones();
+    Collection<Habitacion> darHabitaciones();
+    
+    @Query(value = "SELECT * FROM habitaciones WHERE numeroHabitacion = :numeroHabitacion", nativeQuery = true)
+        Usuario darHabitacion(@Param("numeroHabitacion") int numeroHabitacions);
 
     @Modifying
     @Transactional
