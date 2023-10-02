@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Usuario;
 
+
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 
     @Query(value = "SELECT * FROM usuarios ", nativeQuery = true)
@@ -25,9 +26,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE usuarios SET nombre= :nombre, cuentaCobro = :cuentaCobro WHERE id =:id", nativeQuery = true)
-    void actualizarUsuario(@Param("id") int id, @Param("nombre") String nombre, @Param("cuentaCobro") Float cuentaCobro);
-
+    @Query(value = "UPDATE usuarios SET tipoId= :tipoId, nombre= :nombre, tipoUsuario = :tipoUsuario, correo = :correo, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion WHERE id =:id", nativeQuery = true)
+    void actualizarUsuario(@Param("id") Integer id, @Param("tipoId") String tipoId, @Param("nombre") String nombre, @Param("tipoUsuario") String tipoUsuario, @Param("correo") String correo, @Param("habitaciones_numeroHabitacion") Integer habitaciones_numeroHabitacion);
+    
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM usuarios WHERE id =:id", nativeQuery = true)
