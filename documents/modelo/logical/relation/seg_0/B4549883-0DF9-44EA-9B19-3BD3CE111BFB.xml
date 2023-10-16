@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Gimnasios_Hoteles_FK" directorySegmentName="seg_0" id="B4549883-0DF9-44EA-9B19-3BD3CE111BFB">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>224B01D9-C86B-F0CE-FFD0-FE6A8670A0A8</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>ADA812D2-BC64-6EF8-76AD-93947F820BFA</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>33D72E85-BA75-7F29-3B35-3C69BCFC7645</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A08A3319-8205-3317-9190-B63B6A4DBF91</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

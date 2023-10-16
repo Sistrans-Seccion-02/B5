@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="38DE6B8A-35A8-AFEC-6F3C-1827FA1443BB" name="ElementosExtras">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>B999E27B-536F-7CAB-0839-2BE35E94D673</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nombreElemento" id="FF560413-9387-B22A-AC9D-4240F3B09F58">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>72D6F442-8A51-B46B-5DCF-A6D10222FBC5</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C2929ECD-1D88-52DF-8AE2-90F06B8DC5CA" name="ElementosExtras PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>99D5BE36-9BC5-7364-693D-A59376B78CD3</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FF560413-9387-B22A-AC9D-4240F3B09F58</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

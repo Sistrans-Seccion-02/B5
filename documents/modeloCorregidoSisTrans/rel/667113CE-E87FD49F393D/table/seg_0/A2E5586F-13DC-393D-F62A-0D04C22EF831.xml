@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A2E5586F-13DC-393D-F62A-0D04C22EF831" name="PrestamosUtensilios">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>1156CF60-1826-8C23-C1EF-3FE6C113CF18</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTipoServicio" id="A260A1DC-D330-3E61-7F1C-16BF3D637679">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>57AF552E-CF1D-E23E-F01D-CDD05BC0D672</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="F5B7A74C-C340-E259-09DB-2916DC6ACBD0">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>496419DF-AC86-82B3-4FC3-493B59316339</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="retornado" id="841D1BB8-5673-6B42-6878-142E4EBC80CE">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>05093F0F-2DD8-43DA-8088-DC81006B877D</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hoteles_nombre" id="EB3F1E97-4F64-19CE-CD6B-11C178DB864B">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>B8D76009-B268-1195-9A7C-9E987616E918</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="780C9279-B1C4-2C39-8DC3-769D94B682A7" referredColumn="A17F75B1-2F55-646F-D9F3-DB0A53D7F20F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="531BFA6A-C9F7-659F-6094-AD74C2166386" name="PrestamosUtensilios_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>0FF96B89-34D4-6D80-53B8-738D069B61E7</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A260A1DC-D330-3E61-7F1C-16BF3D637679"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAEFC2A1-365F-2B19-1AB8-C81638BDA969" name="PrestamosUtensilios_Hoteles_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>A8EB2A4A-2AC6-9A0C-309F-98878CCEEE3C</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB3F1E97-4F64-19CE-CD6B-11C178DB864B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="531F9C1E-6FB0-FB02-541E-72048DE61C46" name="Piscinas">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>1D2E9A49-695A-801B-44E5-5BC6EB3CEF1B</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idTipoServicio" id="ED6035C8-2183-8CFB-B610-71D265641792">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>EAD2C39B-AEB7-2B54-62A0-520F3C182292</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aforo" id="6821F1D4-A6ED-4997-99FF-AF404F0FA979">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>216B8CAE-555B-23EB-187F-2636F82B16D6</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="profundidad" id="EC6C48B9-A176-F2CF-E485-EC2B9C06E6A3">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>0185AC09-8601-4DC8-C70C-E2600E15A47D</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aplicaCompartido" id="CB0F1085-3638-5B1B-F9E4-9839578DE245">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>5158D967-F129-A9E4-BED4-823DE4446372</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hoteles nombre" id="A3D421B5-E4E4-C367-5DD7-39DFF5349189">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>6A0DC341-2029-8E58-3123-B4A0C4DE4876</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<referedAttribute>D92102F1-31A2-BF5B-097B-7C0021771A32</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="costoReserva" id="5DB16A70-1231-DD09-F720-383D779E7DBE">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>E98458CB-164E-1C1F-C645-498D02D0C074</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EE7A2788-4019-8E32-9503-4EB4501A0486" name="Piscinas PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>7CA69B80-633C-21B0-8DC3-57253260E85B</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>ED6035C8-2183-8CFB-B610-71D265641792</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

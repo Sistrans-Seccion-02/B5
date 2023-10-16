@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9FA0B3F4-408B-0EE3-DE02-7158BFCA0766" name="Spas">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>1C5F640D-F030-F012-8702-6D893811ED6F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idTipoServicio" id="CA4B441B-768F-694C-86DE-C451646AA3A5">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>6D851ED2-99F6-2A88-1C55-FA501D1F2002</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="duracion" id="4292FC4C-1A18-542C-9FD5-1667E2F9F17A">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>C70FA9C6-27E2-7DE2-C7FB-B981FA1CE966</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aplicaCompartido" id="D9516946-DA02-C799-CF33-6BAD7263E80C">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>6C351BEE-8BFD-A321-21C8-5D82D8C08F7F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hoteles nombre" id="229589F8-FC8B-F26B-2C5D-222F72E723FB">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>32CBA883-5CAB-7F1E-0BD7-FEE1FC5A213C</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<referedAttribute>D92102F1-31A2-BF5B-097B-7C0021771A32</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aforo" id="CAEF0354-8851-E146-BCA0-53AB43CAC476">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>0D5F8B63-1CF7-44AB-120C-C2443C1CE2B6</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="costoReserva" id="0F3F4121-DDA4-A954-42B6-AD06E585E469">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>4EFF9330-E546-DCBA-72BC-0083AA697611</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FB01938E-79C1-7E6E-C0A7-5C6D500F1021" name="Spas PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>9C2949A3-4C11-CB6C-F1E2-C04780698101</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA4B441B-768F-694C-86DE-C451646AA3A5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

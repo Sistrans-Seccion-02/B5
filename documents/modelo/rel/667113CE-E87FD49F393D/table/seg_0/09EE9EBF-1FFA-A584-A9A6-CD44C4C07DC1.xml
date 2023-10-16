@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09EE9EBF-1FFA-A584-A9A6-CD44C4C07DC1" name="ElementosTiposHabitaciones">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:13:33 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipoHabitacion" id="6F2C1121-FEB1-1F3A-F638-40063A01F6E2">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:14:43 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FE62ECC-9248-E40A-D83A-3988EB0F2B7D" referredColumn="CF1497B8-0636-8863-FA5E-E3B3343F9983"/>
+</associations>
+</Column>
+<Column name="nombreElemento" id="220073C8-6C2B-7C3E-D3A6-82213367792E">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:15:03 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB0489D8-A4EF-AF67-8015-AC0708E46995" referredColumn="72D6F442-8A51-B46B-5DCF-A6D10222FBC5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9F8168A9-CEC4-7F08-D85E-9E9620E30349" name="ElementosTiposHabitaciones_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:15:03 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F2C1121-FEB1-1F3A-F638-40063A01F6E2"/>
+<colUsage columnID="220073C8-6C2B-7C3E-D3A6-82213367792E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0591A77A-3642-F4C8-018F-F40CD61BC22F" name="ElementosTiposHab_tiposHab_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:15:47 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F2C1121-FEB1-1F3A-F638-40063A01F6E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10162004-73CA-0313-2020-8D786E3BE9CD" name="ElementosTiposHab_Elementos_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:16:25 UTC</createdTime>
+<generatorID>D5188CBA-F8F6-C5FD-CC15-A0E8BC01D806</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="220073C8-6C2B-7C3E-D3A6-82213367792E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

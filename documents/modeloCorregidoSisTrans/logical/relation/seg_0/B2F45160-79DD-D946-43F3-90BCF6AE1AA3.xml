@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Consumos_Bares_FK" directorySegmentName="seg_0" id="B2F45160-79DD-D946-43F3-90BCF6AE1AA3">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>46CEA11B-663C-7438-3430-668DAF2D43E8</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>938D2A27-270A-6832-868C-7E66D678C7B4</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C5123B12-5884-773B-32B6-9B6188381119</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>84A899A7-4DE5-C886-3968-2A1EF6A6AF0C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

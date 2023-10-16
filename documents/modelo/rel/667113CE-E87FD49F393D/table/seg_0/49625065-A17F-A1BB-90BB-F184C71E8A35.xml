@@ -70,6 +70,16 @@
 <colAssociation fkAssociation="E458A86D-7176-2219-DF51-F99457939A78" referredColumn="A17F75B1-2F55-646F-D9F3-DB0A53D7F20F"/>
 </associations>
 </Column>
+<Column name="costoReserva" id="B25B1EAC-E0F8-E62B-48A9-207A36FD5ED5">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:11:17 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7E2ABC06-D57F-B4AA-2425-4D403F2C3A3F" name="Bares_PK">

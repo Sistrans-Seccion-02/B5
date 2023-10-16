@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1C3BDA30-6122-38B9-1867-9504C89F440A" containerWithKeyObject="67081766-7CBA-82F6-4397-F559CF6AF9EB" localFKIndex="35A36954-A027-DB32-A8BB-EE847880D9C1" name="Consumos_ServiciosInternet_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>5EDFFFBF-BDBA-C7B8-3142-8813ED986E1C</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<referredTableLongName>ServiciosInternet</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D2A30FAF-71E2-104F-71DA-2771E32FECF9</referredTableID>
+<keyObject>DC1B25F0-D9B4-65C6-964F-C332001BF578</keyObject>
+<referredKeyID>DC1B25F0-D9B4-65C6-964F-C332001BF578</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>idTipoServicio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

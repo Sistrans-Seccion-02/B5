@@ -26,22 +26,13 @@
 <ownerDesignName>modelo</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="disponible" id="9E089F96-DAC5-07F8-F791-4DA9F62917BE">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>4E945D91-57BA-5EEB-2105-0B966373206A</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5226B291-D737-9C63-5BF1-20AE4B0D6714" referredColumn="CF1497B8-0636-8863-FA5E-E3B3343F9983"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -55,6 +46,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="2D228822-994C-8EC4-F62E-99ABA213E6B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6D6AF69-A6EB-3F88-2A9A-20CA130326FB" name="Habitaciones_tiposHab_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:01:17 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F8CB7CE-07BB-45A0-C176-03A251821287"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -46,6 +46,16 @@
 <dependOnForeignKeyID>7E2FC7CB-C96F-E48B-A5FA-2D748BDAD4EA</dependOnForeignKeyID>
 <isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
 </Column>
+<Column name="fecha" id="512059B9-7C53-4A0F-52D0-E521CB375FC8">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:24:40 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="Gimnasios_idTipoServicio" id="E40E61CA-D590-834C-E944-5281887EA411">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
@@ -237,22 +247,6 @@
 <colAssociation fkAssociation="7E2FC7CB-C96F-E48B-A5FA-2D748BDAD4EA" referredColumn="2D228822-994C-8EC4-F62E-99ABA213E6B4"/>
 </associations>
 </Column>
-<Column name="ReservasServicios_numReserva" id="85FE8E59-9602-5A3A-8C94-9F8AAE2EF30F">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>7C2591F3-5585-AB04-8E7F-ECC70417D8DB</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="F31C13D1-A84B-46E6-F3F5-3206A5411976" referredColumn="2C400A6D-E69D-3783-2477-615BF22CBE77"/>
-</associations>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="831E7F03-DD53-E3A8-40B1-19BC373A8074" name="Consumos_PK">
@@ -342,17 +336,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="2B05B3BD-9648-A4F7-4388-10F47F66F30A"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="05473F6F-69E1-05C8-5D31-A4D6ECCC6ED4" name="Consumos_ReservasServicios_FK">
-<createdBy>andre</createdBy>
-<createdTime>2023-10-01 22:20:50 UTC</createdTime>
-<generatorID>4519FDA7-3F07-8C89-0451-4D898FB11487</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="85FE8E59-9602-5A3A-8C94-9F8AAE2EF30F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="34F0B0D6-6256-82BC-4A86-6F56FBA999D9" name="Consumos_Restaurantes_FK">

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Consumos_Salones_FK" directorySegmentName="seg_0" id="8ECD1080-061B-EF00-8306-4CE3D279B700">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 20:01:50 UTC</createdTime>
+<generatorID>8018B42E-962C-4830-1E15-8643FBA64688</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<engineerTo>
+<item key="667113CE-64D2-A547-1BB7-E87FD49F393D" value="true"/>
+</engineerTo>
+<sourcePk>74123B68-8BD1-A6C5-57C4-22DC79EB4470</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0CD38C06-0875-8FC4-FE07-BE3EE7D24550</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>84A899A7-4DE5-C886-3968-2A1EF6A6AF0C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

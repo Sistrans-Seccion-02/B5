@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="324FDAC3-E141-569F-0D57-A6E5B97D29BB" name="Salidas">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:32:25 UTC</createdTime>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<ordsAlias>table_25</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="numReserva" id="E120FF83-4243-3727-DB30-5D127C18DF9A">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:32:48 UTC</createdTime>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0C57771-6871-F8EA-123A-A78490905B82" referredColumn="EFDAA22D-06E0-FA84-7EAE-D8869A7173EF"/>
+</associations>
+</Column>
+<Column name="cuentaTotal" id="9BB0A2E1-D1CD-B8D1-657D-70B8259EE379">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:55:21 UTC</createdTime>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="124DB8B3-8DE0-882D-4FC9-605FB1B17496" name="Salidas_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:55:21 UTC</createdTime>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E120FF83-4243-3727-DB30-5D127C18DF9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B5C7F78-C156-5097-99DC-6A2ECE547CBB" name="Salidas_ReservasHoteles_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:55:31 UTC</createdTime>
+<generatorID>92266713-091D-07BF-C16F-FEB995E2972F</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E120FF83-4243-3727-DB30-5D127C18DF9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

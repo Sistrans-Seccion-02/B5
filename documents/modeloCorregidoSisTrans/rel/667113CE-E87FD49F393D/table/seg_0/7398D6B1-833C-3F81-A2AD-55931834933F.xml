@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7398D6B1-833C-3F81-A2AD-55931834933F" name="Lavanderias">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>F494AC05-5033-E273-4B6A-B49DCBC6AE87</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTipoServicio" id="B6E31913-5328-85E6-A41D-AC5AD129A9BF">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>1F6DD651-C007-4034-4603-CE39C90DDAA1</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aplicaCompartido" id="66DE9E55-09F0-1B68-3A50-404426A7E96F">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>7F619F8A-362F-1132-52B9-3C4639CAD93F</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hoteles_nombre" id="F0DCE17D-27FC-DD25-E66C-0E85230B46F3">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>D51AFB2A-EB97-8CAE-0489-C45DCD7D62F6</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4A0FEA9-DCCB-9F40-00F5-A09632384116" referredColumn="A17F75B1-2F55-646F-D9F3-DB0A53D7F20F"/>
+</associations>
+</Column>
+<Column name="aforo" id="F3AA185A-65AF-0212-37C5-B42EE7FDD822">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:59:22 UTC</createdTime>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costoReserva" id="A16CFDBC-954C-9D3E-6BC0-72875640988A">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:08:50 UTC</createdTime>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5AEE65D5-B583-CED9-374D-E1E994B5AA3D" name="Lavanderias_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>39E902B5-28C3-F806-8DAE-5EE17CA8C8C0</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6E31913-5328-85E6-A41D-AC5AD129A9BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69DBDCDE-76CE-78E6-3B66-FB206D4EEA39" name="Lavanderias_Hoteles_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>662B4ADB-BA17-5B2A-B81C-32629A18CFBE</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0DCE17D-27FC-DD25-E66C-0E85230B46F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

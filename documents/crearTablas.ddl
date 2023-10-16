@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 23.1.0.087.0806
---   en:        2023-10-01 18:00:47 COT
+--   en:        2023-10-16 15:05:57 COT
 --   sitio:      Oracle Database 12c
 --   tipo:      Oracle Database 12c
 
@@ -14,7 +14,8 @@ CREATE TABLE bares (
     estilo           VARCHAR2(200) NOT NULL,
     aforo            INTEGER NOT NULL,
     aplicacompartido NUMBER NOT NULL,
-    hoteles_nombre   VARCHAR2(200) NOT NULL
+    hoteles_nombre   VARCHAR2(200) NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE bares ADD CONSTRAINT bares_pk PRIMARY KEY ( idtiposervicio );
@@ -23,6 +24,7 @@ CREATE TABLE consumos (
     id                            INTEGER NOT NULL,
     costo                         INTEGER NOT NULL,
     cargadohabitacion             NUMBER NOT NULL,
+    fecha                         DATE NOT NULL,
     gimnasios_idtiposervicio      INTEGER,
     salones_idtiposervicio        INTEGER,
     prestamos_idtiposervicio      INTEGER,
@@ -34,18 +36,24 @@ CREATE TABLE consumos (
     lavanderias_idtiposervicio    INTEGER,
     restaurantes_idtiposervicio   INTEGER,
     spas_idtiposervicio           INTEGER,
-    habitaciones_numerohabitacion INTEGER NOT NULL,
-    reservasservicios_numreserva  INTEGER
+    habitaciones_numerohabitacion INTEGER NOT NULL
 );
 
 ALTER TABLE consumos ADD CONSTRAINT consumos_pk PRIMARY KEY ( id );
 
 CREATE TABLE elementosextras (
-    nombreelemento                VARCHAR2(200) NOT NULL,
-    habitaciones_numerohabitacion INTEGER NOT NULL
+    nombreelemento VARCHAR2(200) NOT NULL
 );
 
 ALTER TABLE elementosextras ADD CONSTRAINT elementosextras_pk PRIMARY KEY ( nombreelemento );
+
+CREATE TABLE elementostiposhabitaciones (
+    tipohabitacion VARCHAR2(200) NOT NULL,
+    nombreelemento VARCHAR2(200) NOT NULL
+);
+
+ALTER TABLE elementostiposhabitaciones ADD CONSTRAINT elementostiposhabitaciones_pk PRIMARY KEY ( tipohabitacion,
+                                                                                                  nombreelemento );
 
 CREATE TABLE gimnasios (
     idtiposervicio   INTEGER NOT NULL,
@@ -53,15 +61,15 @@ CREATE TABLE gimnasios (
     nummaquinas      INTEGER NOT NULL,
     horario          VARCHAR2(200) NOT NULL,
     aplicacompartido NUMBER NOT NULL,
-    hoteles_nombre   VARCHAR2(200) NOT NULL
+    hoteles_nombre   VARCHAR2(200) NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE gimnasios ADD CONSTRAINT gimnasios_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE habitaciones (
     numerohabitacion INTEGER NOT NULL,
-    tipohabitacion   VARCHAR2(200) NOT NULL,
-    disponible       NUMBER NOT NULL
+    tipohabitacion   VARCHAR2(200) NOT NULL
 );
 
 ALTER TABLE habitaciones ADD CONSTRAINT habitaciones_pk PRIMARY KEY ( numerohabitacion );
@@ -74,9 +82,10 @@ ALTER TABLE hoteles ADD CONSTRAINT hoteles_pk PRIMARY KEY ( nombre );
 
 CREATE TABLE lavanderias (
     idtiposervicio   INTEGER NOT NULL,
-    aforo            INTEGER NOT NULL,
     aplicacompartido NUMBER NOT NULL,
-    hoteles_nombre   VARCHAR2(200) NOT NULL
+    hoteles_nombre   VARCHAR2(200) NOT NULL,
+    aforo            INTEGER NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE lavanderias ADD CONSTRAINT lavanderias_pk PRIMARY KEY ( idtiposervicio );
@@ -86,7 +95,8 @@ CREATE TABLE piscinas (
     aforo            INTEGER NOT NULL,
     profundidad      FLOAT NOT NULL,
     aplicacompartido NUMBER NOT NULL,
-    hoteles_nombre   VARCHAR2(200) NOT NULL
+    hoteles_nombre   VARCHAR2(200) NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE piscinas ADD CONSTRAINT piscinas_pk PRIMARY KEY ( idtiposervicio );
@@ -166,24 +176,32 @@ CREATE TABLE restaurantes (
     aforo            INTEGER NOT NULL,
     estilo           VARCHAR2(200) NOT NULL,
     aplicacompartido NUMBER NOT NULL,
-    hoteles_nombre   VARCHAR2(200) NOT NULL
+    hoteles_nombre   VARCHAR2(200) NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE restaurantes ADD CONSTRAINT restaurantes_pk PRIMARY KEY ( idtiposervicio );
+
+CREATE TABLE salidas (
+    numreserva  INTEGER NOT NULL,
+    cuentatotal FLOAT NOT NULL
+);
+
+ALTER TABLE salidas ADD CONSTRAINT salidas_pk PRIMARY KEY ( numreserva );
 
 CREATE TABLE salones (
     idtiposervicio   INTEGER NOT NULL,
     aforo            INTEGER NOT NULL,
     equipo           VARCHAR2(200) NOT NULL,
     hoteles_nombre   VARCHAR2(200) NOT NULL,
-    aplicacompartido NUMBER NOT NULL
+    aplicacompartido NUMBER NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE salones ADD CONSTRAINT salones_pk PRIMARY KEY ( idtiposervicio );
 
 CREATE TABLE serviciosinternet (
     idtiposervicio   INTEGER NOT NULL,
-    aforo            INTEGER NOT NULL,
     incluido         NUMBER NOT NULL,
     aplicacompartido NUMBER NOT NULL,
     hoteles_nombre   VARCHAR2(200) NOT NULL
@@ -195,7 +213,9 @@ CREATE TABLE spas (
     idtiposervicio   INTEGER NOT NULL,
     duracion         INTEGER NOT NULL,
     aplicacompartido NUMBER NOT NULL,
-    hoteles_nombre   VARCHAR2(200) NOT NULL
+    hoteles_nombre   VARCHAR2(200) NOT NULL,
+    aforo            INTEGER NOT NULL,
+    costoreserva     FLOAT NOT NULL
 );
 
 ALTER TABLE spas ADD CONSTRAINT spas_pk PRIMARY KEY ( idtiposervicio );
@@ -218,6 +238,18 @@ CREATE TABLE tiendas (
 
 ALTER TABLE tiendas ADD CONSTRAINT tiendas_pk PRIMARY KEY ( idtiposervicio );
 
+CREATE TABLE tiposhabitaciones (
+    tipohabitacion VARCHAR2(200) NOT NULL
+);
+
+ALTER TABLE tiposhabitaciones ADD CONSTRAINT tiposhabitaciones_pk PRIMARY KEY ( tipohabitacion );
+
+CREATE TABLE tiposusuarios (
+    tipousuario VARCHAR2(200) NOT NULL
+);
+
+ALTER TABLE tiposusuarios ADD CONSTRAINT tiposusuarios_pk PRIMARY KEY ( tipousuario );
+
 CREATE TABLE usuarios (
     id                            INTEGER NOT NULL,
     tipoid                        VARCHAR2(200) NOT NULL,
@@ -227,7 +259,8 @@ CREATE TABLE usuarios (
     habitaciones_numerohabitacion INTEGER
 );
 
-ALTER TABLE usuarios ADD CONSTRAINT usuarios_pk PRIMARY KEY ( id );
+ALTER TABLE usuarios ADD CONSTRAINT usuarios_pk PRIMARY KEY ( id,
+                                                              tipoid );
 
 ALTER TABLE bares
     ADD CONSTRAINT bares_hoteles_fk FOREIGN KEY ( hoteles_nombre )
@@ -258,10 +291,6 @@ ALTER TABLE consumos
         REFERENCES prestamosutensilios ( idtiposervicio );
 
 ALTER TABLE consumos
-    ADD CONSTRAINT consumos_reservasservicios_fk FOREIGN KEY ( reservasservicios_numreserva )
-        REFERENCES reservasservicios ( numreserva );
-
-ALTER TABLE consumos
     ADD CONSTRAINT consumos_restaurantes_fk FOREIGN KEY ( restaurantes_idtiposervicio )
         REFERENCES restaurantes ( idtiposervicio );
 
@@ -285,13 +314,21 @@ ALTER TABLE consumos
     ADD CONSTRAINT consumos_tiendas_fk FOREIGN KEY ( tiendas_idtiposervicio )
         REFERENCES tiendas ( idtiposervicio );
 
-ALTER TABLE elementosextras
-    ADD CONSTRAINT elementos_habitaciones_fk FOREIGN KEY ( habitaciones_numerohabitacion )
-        REFERENCES habitaciones ( numerohabitacion );
+ALTER TABLE elementostiposhabitaciones
+    ADD CONSTRAINT elementostiposhab_elementos_fk FOREIGN KEY ( nombreelemento )
+        REFERENCES elementosextras ( nombreelemento );
+
+ALTER TABLE elementostiposhabitaciones
+    ADD CONSTRAINT elementostiposhab_tiposhab_fk FOREIGN KEY ( tipohabitacion )
+        REFERENCES tiposhabitaciones ( tipohabitacion );
 
 ALTER TABLE gimnasios
     ADD CONSTRAINT gimnasios_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
+
+ALTER TABLE habitaciones
+    ADD CONSTRAINT habitaciones_tiposhab_fk FOREIGN KEY ( tipohabitacion )
+        REFERENCES tiposhabitaciones ( tipohabitacion );
 
 ALTER TABLE lavanderias
     ADD CONSTRAINT lavanderias_hoteles_fk FOREIGN KEY ( hoteles_nombre )
@@ -377,6 +414,10 @@ ALTER TABLE restaurantes
     ADD CONSTRAINT restaurantes_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
 
+ALTER TABLE salidas
+    ADD CONSTRAINT salidas_reservashoteles_fk FOREIGN KEY ( numreserva )
+        REFERENCES reservashoteles ( numreserva );
+
 ALTER TABLE salones
     ADD CONSTRAINT salones_hoteles_fk FOREIGN KEY ( hoteles_nombre )
         REFERENCES hoteles ( nombre );
@@ -401,13 +442,17 @@ ALTER TABLE usuarios
     ADD CONSTRAINT usuarios_habitaciones_fk FOREIGN KEY ( habitaciones_numerohabitacion )
         REFERENCES habitaciones ( numerohabitacion );
 
+ALTER TABLE usuarios
+    ADD CONSTRAINT usuarios_tiposusuarios_fk FOREIGN KEY ( tipousuario )
+        REFERENCES tiposusuarios ( tipousuario );
+
 
 
 -- Informe de Resumen de Oracle SQL Developer Data Modeler: 
 -- 
--- CREATE TABLE                            21
+-- CREATE TABLE                            25
 -- CREATE INDEX                             0
--- ALTER TABLE                             64
+-- ALTER TABLE                             71
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0

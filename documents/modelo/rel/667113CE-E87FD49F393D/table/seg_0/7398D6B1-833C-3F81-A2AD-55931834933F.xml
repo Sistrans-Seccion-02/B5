@@ -47,6 +47,26 @@
 <colAssociation fkAssociation="A4A0FEA9-DCCB-9F40-00F5-A09632384116" referredColumn="A17F75B1-2F55-646F-D9F3-DB0A53D7F20F"/>
 </associations>
 </Column>
+<Column name="aforo" id="F3AA185A-65AF-0212-37C5-B42EE7FDD822">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 18:59:22 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costoReserva" id="A16CFDBC-954C-9D3E-6BC0-72875640988A">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-16 19:08:50 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="5AEE65D5-B583-CED9-374D-E1E994B5AA3D" name="Lavanderias_PK">

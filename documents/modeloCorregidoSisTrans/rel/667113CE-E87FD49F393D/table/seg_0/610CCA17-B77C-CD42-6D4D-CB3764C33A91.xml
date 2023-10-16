@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="610CCA17-B77C-CD42-6D4D-CB3764C33A91" name="Productos">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>89F4A098-E77D-BBB5-D796-A1447BF0FF95</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idProducto" id="DFDFBB7B-865C-2119-906D-260FCB230FB9">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>9DA8A9B5-6249-B1F5-04E2-FAAFBCE0BA73</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="0AFEDCA4-2E21-95E2-1D4E-5CF518FAB289">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>942E9A53-8F65-25F6-0CF5-7C6C7B0060AE</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo" id="7F89BDB4-8E00-74D8-B7E8-424FB0B61283">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>82C483BB-10B5-95F8-2226-DBE16047F5F0</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aplicaIncluido" id="EC53F703-105C-6156-1D07-72E2B5A6B594">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>50940A65-8C5D-3360-052D-053B8AA6DEC6</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Lavanderias_idTipoServicio" id="70407287-8C08-25CE-E15F-C27E0C6C15B6">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>3FC83EA1-23DE-AEB2-AD69-A35B3722D0B9</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F899C50-8394-6A10-6BEF-5FB1962F6711" referredColumn="B6E31913-5328-85E6-A41D-AC5AD129A9BF"/>
+</associations>
+</Column>
+<Column name="Restaurantes_idTipoServicio" id="7A6FB33C-711C-5699-2AE4-932B9D2BBDEC">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>06D1E132-C63F-A59B-604A-F1A3344DEDD0</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="313D04FA-99EF-0918-B130-69AB1D02893D" referredColumn="CA05F74A-54B4-71A3-CBE6-F1782D4758A7"/>
+</associations>
+</Column>
+<Column name="Tiendas_idTipoServicio" id="42DB5077-9D10-B05B-D132-7240964F6FA5">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>596AD044-31E4-3523-5D46-5B81C4EFDA83</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE011D5A-D018-D3E9-3C6A-3C9606BF23A1" referredColumn="DBCEE256-063B-3D77-2EDF-EFAB9AE44508"/>
+</associations>
+</Column>
+<Column name="Bares_idTipoServicio" id="D6D29835-614D-0107-8B86-333F1804C2E8">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>13629062-F73F-2654-F122-83A41C558439</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BC89C2B5-A700-6CE5-65A5-CAC85BC1AD25" referredColumn="575DB1F8-B3F0-2AC1-4B8B-ECDD6E44EE2D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E55677D0-D00B-9444-08AB-CB5376CB04E2" name="Productos_PK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 16:40:31 UTC</createdTime>
+<generatorID>AE34D257-11A7-A89F-EB5A-3BE1643AEA19</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFDFBB7B-865C-2119-906D-260FCB230FB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AC0A8F9-0A20-0ADA-6158-1EFB80665CAD" name="Productos_Bares_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>4E8A3345-D2E6-CF11-31D3-683BABD06C12</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6D29835-614D-0107-8B86-333F1804C2E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1AE6089-CB19-C822-A9E6-AC43FAD3DA15" name="Productos_Lavanderias_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>4B35CD6B-2C81-F407-4F48-C62A2E2A30D9</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70407287-8C08-25CE-E15F-C27E0C6C15B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="346DE843-1374-5C47-5282-F152E87944F8" name="Productos_Restaurantes_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>F5489DFA-3CFB-F1C6-44B9-D0FB7DDFD828</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A6FB33C-711C-5699-2AE4-932B9D2BBDEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74915F99-F14F-DD64-06A5-ACDFDCCF6D30" name="Productos_Tiendas_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>C8553DA9-52EF-4046-5FE9-0278143A6497</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42DB5077-9D10-B05B-D132-7240964F6FA5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F183AEAF-131E-FC0F-BBF3-D3BBCD51E757" containerWithKeyObject="4CE546AC-0348-E58D-3175-F24348155276" localFKIndex="9D4EEAC3-5560-4605-F5A8-F2FA35092F22" name="ReservasServ_Piscinas_FK">
+<createdBy>andre</createdBy>
+<createdTime>2023-10-01 22:20:50 UTC</createdTime>
+<generatorID>373768D6-3E97-DCD0-EC2A-C7FC0492E934</generatorID>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
+<referredTableLongName>Piscinas</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1D2E9A49-695A-801B-44E5-5BC6EB3CEF1B</referredTableID>
+<keyObject>7CA69B80-633C-21B0-8DC3-57253260E85B</keyObject>
+<referredKeyID>7CA69B80-633C-21B0-8DC3-57253260E85B</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>idTipoServicio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
