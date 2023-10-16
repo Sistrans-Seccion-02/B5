@@ -3,7 +3,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>1156CF60-1826-8C23-C1EF-3FE6C113CF18</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
@@ -12,7 +12,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>57AF552E-CF1D-E23E-F01D-CDD05BC0D672</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -23,7 +23,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>496419DF-AC86-82B3-4FC3-493B59316339</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -35,7 +35,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>05093F0F-2DD8-43DA-8088-DC81006B877D</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT006</logicalDatatype>
@@ -47,12 +47,12 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>B8D76009-B268-1195-9A7C-9E987616E918</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -65,7 +65,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>0FF96B89-34D4-6D80-53B8-738D069B61E7</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
@@ -77,7 +77,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>A8EB2A4A-2AC6-9A0C-309F-98878CCEEE3C</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>

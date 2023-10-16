@@ -3,7 +3,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>C5A77486-AC7B-6E20-4D72-119879827E89</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
@@ -12,7 +12,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>FB28CD07-3509-CDE6-0F85-619069870BD8</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -23,7 +23,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>64949C6D-B95D-2482-AAC9-660143B7B89C</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -34,7 +34,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>655BC683-F896-4063-F6CB-E7EB32E3FF7C</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT006</logicalDatatype>
@@ -46,7 +46,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>EA0AA7D9-7A68-2C9C-DE43-06798DF2054E</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -61,7 +61,7 @@
 <Column name="aforo" id="0D5F8B63-1CF7-44AB-120C-C2443C1CE2B6">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:59:54 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -71,7 +71,7 @@
 <Column name="costoReserva" id="4EFF9330-E546-DCBA-72BC-0083AA697611">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 19:09:21 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT021</logicalDatatype>
@@ -84,7 +84,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>4F4EFC6E-2012-77C2-8112-F381AA33BBD6</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
@@ -96,7 +96,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-01 22:20:50 UTC</createdTime>
 <generatorID>B9D958A3-492C-BBD6-1F42-86E2A72693C2</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>

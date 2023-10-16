@@ -2,7 +2,7 @@
 <Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09EE9EBF-1FFA-A584-A9A6-CD44C4C07DC1" name="ElementosTiposHabitaciones">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:13:33 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <ordsAlias>table_24</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
@@ -11,7 +11,7 @@
 <Column name="tipoHabitacion" id="6F2C1121-FEB1-1F3A-F638-40063A01F6E2">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:14:43 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -25,7 +25,7 @@
 <Column name="nombreElemento" id="220073C8-6C2B-7C3E-D3A6-82213367792E">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:15:03 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -41,7 +41,7 @@
 <ind_PK_UK id="9F8168A9-CEC4-7F08-D85E-9E9620E30349" name="ElementosTiposHabitaciones_PK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:15:03 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
@@ -53,7 +53,7 @@
 <ind_PK_UK id="0591A77A-3642-F4C8-018F-F40CD61BC22F" name="ElementosTiposHab_tiposHab_FK">
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:15:47 UTC</createdTime>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
@@ -64,7 +64,7 @@
 <createdBy>andre</createdBy>
 <createdTime>2023-10-16 18:16:25 UTC</createdTime>
 <generatorID>D5188CBA-F8F6-C5FD-CC15-A0E8BC01D806</generatorID>
-<ownerDesignName>modelo</ownerDesignName>
+<ownerDesignName>modeloCorregidoSisTrans</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
