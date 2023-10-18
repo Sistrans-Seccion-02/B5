@@ -9,24 +9,22 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "ServiciosInternet")
+@Table(name = "serviciosInternet")
 public class Internet {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer idTipoServicio;
-    private Integer capacidad;
     private Boolean incluido;
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombreHotel;
 
 
-    public Internet(Integer capacidad, Boolean incluido, Boolean aplicaCompartido, Hotel nombreHotel)
+    public Internet(Boolean incluido, Boolean aplicaCompartido, Hotel nombreHotel)
     {
-        this.capacidad = capacidad;
         this.incluido = incluido;
         this.aplicaCompartido = aplicaCompartido;
         this.nombreHotel = nombreHotel;
@@ -41,14 +39,6 @@ public class Internet {
 
     public void setIdTipoServicio(Integer idTipoServicio) {
         this.idTipoServicio = idTipoServicio;
-    }
-
-    public Integer getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
     }
 
     public Boolean getIncluido() {
