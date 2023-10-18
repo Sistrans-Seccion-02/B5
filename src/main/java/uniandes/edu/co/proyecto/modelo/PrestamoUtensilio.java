@@ -9,7 +9,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "prestamoUtensilios")
+@Table(name = "prestamosUtensilios")
 public class PrestamoUtensilio {
 
     @Id
@@ -19,7 +19,7 @@ public class PrestamoUtensilio {
     private String nombre;
     private Boolean retornado;
     @ManyToOne(optional=true)
-    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombreHotel;
 
 
