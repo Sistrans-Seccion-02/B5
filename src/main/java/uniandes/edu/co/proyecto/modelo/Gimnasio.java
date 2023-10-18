@@ -16,18 +16,18 @@ public class Gimnasio {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer idTipoServicio;
-    private Integer capacidad;
+    private Integer aforo;
     private Integer numMaquinas;
     private String horario;
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombreHotel;
 
 
-    public Gimnasio(Integer numMaquinas, Integer capacidad, String horario, Boolean aplicaCompartido, Hotel nombreHotel)
+    public Gimnasio(Integer numMaquinas, Integer aforo, String horario, Boolean aplicaCompartido, Hotel nombreHotel)
     {
-        this.capacidad = capacidad;
+        this.aforo = aforo;
         this.numMaquinas = numMaquinas;
         this.horario = horario;
         this.aplicaCompartido = aplicaCompartido;
@@ -45,12 +45,12 @@ public class Gimnasio {
         this.idTipoServicio = idTipoServicio;
     }
 
-    public Integer getCapacidad() {
-        return capacidad;
+    public Integer getAforo() {
+        return aforo;
     }
 
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
+    public void setAforo(Integer aforo) {
+        this.aforo = aforo;
     }
 
     public Integer getNumMaquinas() {
