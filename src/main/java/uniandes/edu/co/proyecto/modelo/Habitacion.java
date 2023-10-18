@@ -14,15 +14,15 @@ public class Habitacion {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer numeroHabitacion;
-    private Boolean disponibilidad;
+    private Boolean disponible;
     private String tipoHabitacion;
 
 
-    public Habitacion(Integer numerohabitacion, String tipoHabitacion, Boolean disponibilidad)
+    public Habitacion(Integer numerohabitacion, String tipoHabitacion, Boolean disponible)
     {
         this.numeroHabitacion = numerohabitacion;
         this.tipoHabitacion = tipoHabitacion;
-        this.disponibilidad = disponibilidad;
+        this.disponible = disponible;
     }
     public Habitacion()
     {;}
@@ -39,11 +39,11 @@ public class Habitacion {
     public void setTipo(String tipoHabitacion) {
         this.tipoHabitacion = tipoHabitacion;
     }
-    public Boolean getDisponibilidad() {
-        return disponibilidad;
+    public Boolean getDisponible() {
+        return disponible;
     }
-    public void setDisponibilidad(Boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
+    public void setDisponible(Boolean disponible) {
+        this.disponible = disponible;
     }
 
     
