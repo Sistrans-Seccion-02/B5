@@ -9,7 +9,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Bares")
+@Table(name = "bares")
 public class Bar {
 
     @Id
@@ -25,11 +25,11 @@ public class Bar {
     public Bar()
     {;}
 
-    public Bar(String estilo, Integer aforo, Boolean aplicaCompartido, Hotel nombrHotel) {
+    public Bar(String estilo, Integer aforo, Boolean aplicaCompartido, Hotel nombreHotel) {
         this.estilo = estilo;
         this.aforo = aforo;
         this.aplicaCompartido = aplicaCompartido;
-        this.nombreHotel =nombrHotel;
+        this.nombreHotel = nombreHotel;
     }
 
     public Integer getIdTipoServicio() {
