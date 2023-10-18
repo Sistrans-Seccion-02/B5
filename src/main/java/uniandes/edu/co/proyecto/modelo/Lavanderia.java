@@ -16,16 +16,13 @@ public class Lavanderia {
     @GeneratedValue(strategy=GenerationType.AUTO)
 
     private Integer idTipoServicio;
-    private Integer capacidad;
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="nombreHotel", referencedColumnName="nombre")
+    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombreHotel;
 
-
-    public Lavanderia(Integer capacidad, Boolean aplicaCompartido, Hotel nombreHotel)
+    public Lavanderia(Boolean aplicaCompartido, Hotel nombreHotel)
     {
-        this.capacidad = capacidad;
         this.aplicaCompartido = aplicaCompartido;
         this.nombreHotel = nombreHotel;
     }
@@ -39,14 +36,6 @@ public class Lavanderia {
 
     public void setIdTipoServicio(Integer idTipoServicio) {
         this.idTipoServicio = idTipoServicio;
-    }
-
-    public Integer getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
     }
 
     public Boolean getAplicaCompartido() {
@@ -65,7 +54,4 @@ public class Lavanderia {
         this.nombreHotel = nombreHotel;
     }
 
-    
-    
-    
 }
