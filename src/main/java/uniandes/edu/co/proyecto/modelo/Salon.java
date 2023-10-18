@@ -19,17 +19,17 @@ public class Salon {
     private String equipo;
     private Boolean aplicaCompartido;
     @ManyToOne
-    @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
-    private Hotel hoteles_nombre;
+    @JoinColumn(name = "Hoteles_nombre", referencedColumnName = "nombre")
+    private Hotel nombreHotel;
 
     public Salon()
     {;}
 
-    public Salon(Integer aforo, String equipo, Boolean aplicaCompartido, Hotel hoteles_nombre) {
+    public Salon(Integer aforo, String equipo, Boolean aplicaCompartido, Hotel nombreHotel) {
         this.aforo = aforo;
         this.equipo = equipo;
         this.aplicaCompartido = aplicaCompartido;
-        this.hoteles_nombre = hoteles_nombre;
+        this.nombreHotel = nombreHotel;
     }
 
     public Integer getIdTipoServicio() {
@@ -64,11 +64,11 @@ public class Salon {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    public Hotel getHoteles_nombre() {
-        return hoteles_nombre;
+    public Hotel getNombreHotel() {
+        return nombreHotel;
     }
 
-    public void setHoteles_nombre(Hotel hoteles_nombre) {
-        this.hoteles_nombre = hoteles_nombre;
+    public void setNombreHotel(Hotel nombreHotel) {
+        this.nombreHotel = nombreHotel;
     }
 }
