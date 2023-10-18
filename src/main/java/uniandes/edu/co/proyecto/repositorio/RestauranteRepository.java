@@ -17,20 +17,20 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Intege
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO restaurantes (idTipoServicio, aforo, estilo, aplicaCompartido, hoteles_nombre) VALUES(:idTipoServicio, :aforo, :estilo, :aplicaCompartido, :hoteles_nombre) ", nativeQuery = true)
+    @Query(value = "INSERT INTO restaurantes (idTipoServicio, aforo, estilo, aplicaCompartido, nombreHotel) VALUES(:idTipoServicio, :aforo, :estilo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarRestaurante(@Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,
-    @Param("hoteles_nombre") Integer hoteles_nombre
+    @Param("nombreHotel") Integer nombreHotel
     );
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE restaurantes SET aforo= :aforo,estilo= :estilo,aplicaCompartido= :aplicaCompartido,hoteles_nombre= :hoteles_nombre WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    @Query(value = "UPDATE restaurantes SET aforo= :aforo,estilo= :estilo,aplicaCompartido= :aplicaCompartido,nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
     void actualizarRestaurante(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,
-    @Param("hoteles_nombre") Integer hoteles_nombre);
+    @Param("nombreHotel") Integer nombreHotel);
 
     @Modifying
     @Transactional

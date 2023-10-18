@@ -17,13 +17,13 @@ public interface SpaRepository extends JpaRepository<Spa, Integer>{
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO spas (idTipoServicio, duracion, aplicaCompartido, hoteles_nombre) VALUES(proyecto_sequence.nextval, :duracion, :aplicaCompartido, :hoteles_nombre) ", nativeQuery = true)
-    void insertarSpa(@Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
+    @Query(value = "INSERT INTO spas (idTipoServicio, duracion, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :duracion, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    void insertarSpa(@Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Integer nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE spas SET duracion= :duracion, aplicaCompartido= :aplicaCompartido, hoteles_nombre= :hoteles_nombre WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarSpa(@Param("idTipoServicio") int idTipoServicio, @Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("hoteles_nombre") Integer hoteles_nombre);
+    @Query(value = "UPDATE spas SET duracion= :duracion, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    void actualizarSpa(@Param("idTipoServicio") int idTipoServicio, @Param("duracion") Integer duracion, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Integer nombreHotel);
 
     @Modifying
     @Transactional

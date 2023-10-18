@@ -20,13 +20,13 @@ public interface PiscinaRepository extends JpaRepository<Piscina, Integer>{
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO piscinas (idTipoServicio, capacidad, profundidad, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :capacidad, :profundidad, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarPiscina(@Param("capacidad") int capacidad,@Param("profundidad") int profundidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    @Query(value = "INSERT INTO piscinas (idTipoServicio, aforo, profundidad, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :aforo, :profundidad, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    void insertarPiscina(@Param("aforo") int aforo,@Param("profundidad") int profundidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE piscinas SET capacidad= :capacidad, profundidad= :profundidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarPiscina(@Param("idTipoServicio") int idTipoServicio,@Param("profundidad") int profundidad, @Param("capacidad") int capacidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    @Query(value = "UPDATE piscinas SET aforo= :aforo, profundidad= :profundidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    void actualizarPiscina(@Param("idTipoServicio") int idTipoServicio,@Param("profundidad") int profundidad, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
 
     @Modifying
     @Transactional

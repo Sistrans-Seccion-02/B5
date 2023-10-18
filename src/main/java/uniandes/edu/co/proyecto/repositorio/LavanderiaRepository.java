@@ -20,13 +20,13 @@ public interface LavanderiaRepository extends JpaRepository<Lavanderia, Integer>
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO lavanderias (idTipoServicio, capacidad, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :capacidad, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarLavanderia(@Param("capacidad") int capacidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    @Query(value = "INSERT INTO lavanderias (idTipoServicio, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    void insertarLavanderia( @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE lavanderias SET capacidad= :capacidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarLavanderia(@Param("idTipoServicio") int idTipoServicio, @Param("capacidad") int capacidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    @Query(value = "UPDATE lavanderias SET aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    void actualizarLavanderia(@Param("idTipoServicio") int idTipoServicio, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
 
     @Modifying
     @Transactional

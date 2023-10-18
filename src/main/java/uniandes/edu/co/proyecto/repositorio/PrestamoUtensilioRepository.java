@@ -12,25 +12,25 @@ import uniandes.edu.co.proyecto.modelo.PrestamoUtensilio;
 
 public interface PrestamoUtensilioRepository extends JpaRepository<PrestamoUtensilio, Integer>{
 
-    @Query(value = "SELECT * FROM prestamoUtensilios ", nativeQuery = true)
+    @Query(value = "SELECT * FROM prestamosUtensilios ", nativeQuery = true)
     Collection<PrestamoUtensilio> darPrestamoUtensilios();
     
-    @Query(value = "SELECT * FROM prestamoUtensilios WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
+    @Query(value = "SELECT * FROM prestamosUtensilios WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
     PrestamoUtensilio darPrestamoUtensilios(@Param("idTipoServicio") int idTipoServicio);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO prestamoUtensilios (idTipoServicio, nombre, retornado,  nombreHotel) VALUES(proyecto_sequence.nextval, :nombre, :retornado, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO prestamosUtensilios (idTipoServicio, nombre, retornado,  nombreHotel) VALUES(proyecto_sequence.nextval, :nombre, :retornado, :nombreHotel) ", nativeQuery = true)
     void insertarPrestamoUtensilio(@Param("nombre") String nombre,@Param("retornado") Boolean retornado, @Param("nombreHotel") String nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE prestamoUtensilios SET capacidad= :capacidad, profundidad= :profundidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    @Query(value = "UPDATE prestamosUtensilios SET capacidad= :capacidad, profundidad= :profundidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
     void actualizarPrestamoUtensilio(@Param("idTipoServicio") int idTipoServicio,@Param("nombre") String nombre,@Param("retornado") Boolean retornado, @Param("nombreHotel") String nombreHotel);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM prestamoUtensilios WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    @Query(value = "DELETE FROM prestamosUtensilios WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
     void eliminarPrestamoUtensilio(@Param("idTipoServicio") int idTipoServicio);
     
 }
