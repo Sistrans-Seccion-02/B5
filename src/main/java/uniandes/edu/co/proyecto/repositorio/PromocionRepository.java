@@ -7,29 +7,45 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
+
 import uniandes.edu.co.proyecto.modelo.Promocion;
-import uniandes.edu.co.proyecto.modelo.Usuario;
 
-public interface PromocionRepository extends JpaRepository<Promocion, Integer>{
+public interface PromocionRepository extends JpaRepository<Promocion, String>{
+    @Modifying
+    @Transactional
+    @Query(value = "INSERT INTO promociones (nombrePlan, descuentoAlojamiento, descuentoComida,"
+        + " descuentoServicios, costo, diasMinimaEstadia)"
+        + " VALUES (:nombrePlan, :descuentoAlojamiento, :descuentoComida, :descuentoServicios, :costo,"
+        + " :diasMinimaEstadia)", nativeQuery = true)
+    void insertarPromocion(@Param("nombrePlan") String nombrePlan,
+        @Param("descuentoAlojamiento") Float descuentoAlojamiento,
+        @Param("descuentoComida") Float descuentoComida,
+        @Param("descuentoServicios") Float descuentoServicios,
+        @Param("costo") Float costo,
+        @Param("diasMinimaEstadia") Integer diasMinimaEstadia);
 
-    @Query(value = "SELECT * FROM promociones ", nativeQuery = true)
-    Collection<Usuario> darPromocion();
+    @Query(value = "SELECT * FROM promociones", nativeQuery = true)
+    Collection<Promocion> darPromociones();
+
+    @Query(value = "SELECT * FROM promociones WHERE nombrePlan = :nombrePlan", nativeQuery = true)
+    Promocion darPromocion(@Param("nombrePlan") String nombrePlan);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO promociones (nombrePlan, descuentoAlojamiento, descuentoComidas, descuentoServicios, costo, diasMinimaEstadia) VALUES(:nombrePlan, :descuentoAlojamiento, :descuentoComidas, :descuentoServicios, :costo, :diasMinimaEstadia) ", nativeQuery = true)
-    void insertarPromocion(@Param("nombrePlan") String nombrePlan,@Param("descuentoAlojamiento") Double descuentoAlojamiento,@Param("descuentoComidas") Double descuentoComidas,
-    @Param("descuentoServicios") Double descuentoServicios,@Param("costo") Double costo,@Param("diasMinimaEstadia") String diasMinimaEstadia);
-    
-    @Modifying
-    @Transactional
-    @Query(value = "UPDATE promociones SET descuentoAlojamiento= :descuentoAlojamiento,descuentoComidas= :descuentoComidas,descuentoServicios= :descuentoServicios,costo= :costo,diasMinimaEstadia= :diasMinimaEstadia WHERE nombrePlan =:nombrePlan", nativeQuery = true)
-    void actualizarPromocion(@Param("nombrePlan") String nombrePlan,@Param("descuentoAlojamiento") Double descuentoAlojamiento,@Param("descuentoComidas") Double descuentoComidas,
-    @Param("descuentoServicios") Double descuentoServicios,@Param("costo") Double costo,@Param("diasMinimaEstadia") String diasMinimaEstadia);
+    @Query(value = "UPDATE promociones SET nombrePlan = :nombrePlan_actualizado, descuentoAlojamiento = :descuentoAlojamiento,"
+        + " descuentoComida = :descuentoComida, descuentoServicios = :descuentoServicios, costo = :costo,"
+        + " diasMinimaEstadia = :diasMinimaEstadia"
+        + " WHERE nombrePlan = :nombrePlan", nativeQuery = true)
+    void actualizarPromocion(@Param("nombrePlan") String nombrePlan,
+        @Param("nombrePlan_actualizado") String nombrePlan_actualizado,
+        @Param("descuentoAlojamiento") Float descuentoAlojamiento,
+        @Param("descuentoComida") Float descuentoComida,
+        @Param("descuentoServicios") Float descuentoServicios,
+        @Param("costo") Float costo,
+        @Param("diasMinimaEstadia") Integer diasMinimaEstadia);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM promociones WHERE nombrePlan =:nombrePlan", nativeQuery = true)
-    void eliminarPromocion(@Param("nombrePlan") int nombrePlan);
-    
+    @Query(value = "DELETE FROM promociones WHERE nombrePlan = :nombrePlan", nativeQuery = true)
+    void eliminarPromocion(@Param("nombrePlan") String nombrePlan);
 }

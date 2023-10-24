@@ -7,27 +7,25 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "promociones")
 public class Promocion {
-
     @Id
     private String nombrePlan;
     private Float descuentoAlojamiento;
-    private Float descuentoComidas;
+    private Float descuentoComida;
     private Float descuentoServicios;
     private Float costo;
     private Integer diasMinimaEstadia;
 
-    public Promocion(Float descuentoAlojamiento, Float descuentoComidas, Float descuentoServicios, Float costo,Integer diasMinimaEstadia)
-    {
+    public Promocion(String nombrePlan, Float descuentoAlojamiento, Float descuentoComida, Float descuentoServicios,
+            Float costo, Integer diasMinimaEstadia) {
+        this.nombrePlan = nombrePlan;
         this.descuentoAlojamiento = descuentoAlojamiento;
-        this.descuentoComidas = descuentoComidas;
+        this.descuentoComida = descuentoComida;
         this.descuentoServicios = descuentoServicios;
         this.costo = costo;
         this.diasMinimaEstadia = diasMinimaEstadia;
     }
 
-    public Promocion()
-    {;}
-
+    public Promocion(){;}
 
     public String getNombrePlan() {
         return nombrePlan;
@@ -45,12 +43,12 @@ public class Promocion {
         this.descuentoAlojamiento = descuentoAlojamiento;
     }
 
-    public Float getDescuentoComidas() {
-        return descuentoComidas;
+    public Float getDescuentoComida() {
+        return descuentoComida;
     }
 
-    public void setDescuentoComidas(Float descuentoComidas) {
-        this.descuentoComidas = descuentoComidas;
+    public void setDescuentoComida(Float descuentoComida) {
+        this.descuentoComida = descuentoComida;
     }
 
     public Float getDescuentoServicios() {
@@ -76,8 +74,4 @@ public class Promocion {
     public void setDiasMinimaEstadia(Integer diasMinimaEstadia) {
         this.diasMinimaEstadia = diasMinimaEstadia;
     }
-
-    
-
-
 }
