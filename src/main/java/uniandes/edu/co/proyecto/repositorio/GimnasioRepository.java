@@ -21,12 +21,12 @@ public interface GimnasioRepository extends JpaRepository<Gimnasio, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO gimnasios (idTipoServicio, aforo, numMaquinas, horario, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :aforo, :numMaquinas, :horario, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarGimnasio(@Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") int nombreHotel);
+    void insertarGimnasio(@Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE gimnasios SET aforo= :aforo, numMaquinas = :numMaquinas, horario= :horario, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarGimnasio(@Param("idElemento") int idElemento, @Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") int nombreHotel);
+    void actualizarGimnasio(@Param("idElemento") int idElemento, @Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
 
     @Modifying
     @Transactional
