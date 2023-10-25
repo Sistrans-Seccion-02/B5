@@ -1,7 +1,7 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -9,44 +9,34 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
-
-    @Id
-    private Integer id;
-    private String tipoId;
+    @EmbeddedId
+    private UsuarioPk pk;
     private String nombre;
-    private String tipoUsuario;
+    @ManyToOne
+    @JoinColumn(name = "tipoUsuario", referencedColumnName = "tipoUsuario")
+    private TipoUsuario tipoUsuario;
     private String correo;
-    @ManyToOne(optional=true)
-    @JoinColumn(name="habitaciones_numeroHabitacion", referencedColumnName="numeroHabitacion")
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "habitaciones_numeroHabitacion", referencedColumnName = "numeroHabitacion")
     private Habitacion habitaciones_numeroHabitacion;
 
-    public Usuario()
-    {;}
-
-    public Usuario(Integer id, String tipoId, String nombre, String tipoUsuario, String correo,
+    public Usuario(Integer id, String tipoId, String nombre, TipoUsuario tipoUsuario, String correo,
             Habitacion habitaciones_numeroHabitacion) {
-        this.id = id;
-        this.tipoId = tipoId;
+        this.pk = new UsuarioPk(id, tipoId);
         this.nombre = nombre;
         this.tipoUsuario = tipoUsuario;
         this.correo = correo;
         this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
     }
 
-    public Integer getId() {
-        return id;
+    public Usuario(){;}
+
+    public UsuarioPk getPk() {
+        return pk;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTipoId() {
-        return tipoId;
-    }
-
-    public void setTipoId(String tipoId) {
-        this.tipoId = tipoId;
+    public void setPk(UsuarioPk pk) {
+        this.pk = pk;
     }
 
     public String getNombre() {
@@ -57,11 +47,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getTipoUsuario() {
+    public TipoUsuario getTipoUsuario() {
         return tipoUsuario;
     }
 
-    public void setTipoUsuario(String tipoUsuario) {
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
 

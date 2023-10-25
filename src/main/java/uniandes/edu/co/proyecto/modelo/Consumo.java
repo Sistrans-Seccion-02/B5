@@ -1,5 +1,7 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,181 +19,248 @@ public class Consumo {
 
     private Integer id;
     private Integer costo;
-    @ManyToOne
-    @JoinColumn(name="BarId", referencedColumnName="idTipoServicio")
-    private Bar barId;
-    @ManyToOne
-    @JoinColumn(name="NumeroHabitacion", referencedColumnName="numeroHabitacion")
-    private Habitacion numeroHabitacion;
+    private Boolean cargadoHabitacion;
+    private Date fecha;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "gimnasios_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Gimnasio gimnasios_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "salones_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Salon salones_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "prestamos_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private PrestamoUtensilio prestamos_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "supermercados_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Supermercado supermercados_idTipoServicio;
+    
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "piscinas_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Piscina piscinas_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "tiendas_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Tienda tiendas_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "internet_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Internet internet_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "bares_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Bar bares_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "lavanderias_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Lavanderia lavanderias_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "restaurantes_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Restaurante restaurantes_idTipoServicio;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "spas_idTipoServicio", referencedColumnName = "idTipoServicio")
+    private Spa spas_idTipoServicio;
 
     @ManyToOne
-    @JoinColumn(name="InternetId", referencedColumnName="idTipoServicio")
-    private Internet internetId;
+    @JoinColumn(name = "habitaciones_numeroHabitacion", referencedColumnName = "numeroHabitacion")
+    private Habitacion habitaciones_numeroHabitacion;
     
-    @ManyToOne
-    @JoinColumn(name="PiscinaId", referencedColumnName="idTipoServicio")
-    private Piscina piscinaId;
     
-    @ManyToOne
-    @JoinColumn(name="numReserva", referencedColumnName="numReserva")
-    private ReservaServicios numReserva;
     
-    @ManyToOne
-    @JoinColumn(name="RestauranteId", referencedColumnName="idTipoServicio")
-    private Restaurante restauranteId;
-    
-    @ManyToOne
-    @JoinColumn(name="SalonId", referencedColumnName="idTipoServicio")
-    private Salon salonId;
+    public Consumo(Integer costo, Boolean cargadoHabitacion , Date fecha, Gimnasio gimnasios_idTipoServicio,
+            Salon salones_idTipoServicio, PrestamoUtensilio prestamos_idTipoServicio,
+            Supermercado supermercados_idTipoServicio, Piscina piscinas_idTipoServicio,
+            Tienda tiendas_idTipoServicio, Internet internet_idTipoServicio, Bar bares_idTipoServicio,
+            Lavanderia lavanderias_idTipoServicio, Restaurante restaurantes_idTipoServicio, Spa spas_idTipoServicio,
+            Habitacion habitaciones_numeroHabitacion) {
 
-    @ManyToOne
-    @JoinColumn(name="SpaId", referencedColumnName="idTipoServicio")
-    private Spa spaId;
-
-    @ManyToOne
-    @JoinColumn(name="SupermercadoId", referencedColumnName="idTipoServicio")
-    private Supermercado supermercadoId;
-
-    @ManyToOne
-    @JoinColumn(name="TiendaId", referencedColumnName="idTipoServicio")
-    private Tienda tiendaId;
-    
-    
-    
-    public Consumo(Integer costo, Habitacion numeroHabitacion, Bar barId, Internet internetId, Piscina piscinaId, ReservaServicios numReserva, Restaurante restauranteId, Salon salonId, Spa spaId, Supermercado supermercadoId, Tienda tiendaId)
-    {
         this.costo = costo;
-        this.numeroHabitacion = numeroHabitacion;
-        this.barId = barId;
-        this.internetId = internetId;
-        this.piscinaId = piscinaId;
-        this.numReserva = numReserva;
-        this.restauranteId = restauranteId;
-        this.salonId = salonId;
-        this.spaId = spaId;
-        this.supermercadoId = supermercadoId;
-        this.tiendaId = tiendaId;
+        this.cargadoHabitacion = cargadoHabitacion;
+        this.fecha = fecha;
+        this.gimnasios_idTipoServicio = gimnasios_idTipoServicio;
+        this.salones_idTipoServicio = salones_idTipoServicio;
+        this.prestamos_idTipoServicio = prestamos_idTipoServicio;
+        this.supermercados_idTipoServicio = supermercados_idTipoServicio;
+        this.piscinas_idTipoServicio = piscinas_idTipoServicio;
+        this.tiendas_idTipoServicio = tiendas_idTipoServicio;
+        this.internet_idTipoServicio = internet_idTipoServicio;
+        this.bares_idTipoServicio = bares_idTipoServicio;
+        this.lavanderias_idTipoServicio = lavanderias_idTipoServicio;
+        this.restaurantes_idTipoServicio = restaurantes_idTipoServicio;
+        this.spas_idTipoServicio = spas_idTipoServicio;
+        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
     }
     
 
     public Consumo()
     {;}
 
+
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
     }
 
+
     public Integer getCosto() {
         return costo;
     }
+
 
     public void setCosto(Integer costo) {
         this.costo = costo;
     }
 
 
-    public Bar getBarId() {
-        return barId;
+    public boolean isCargadoHabitacion() {
+        return cargadoHabitacion;
     }
 
 
-    public void setBarId(Bar barId) {
-        this.barId = barId;
+    public void setCargadoHabitacion(Boolean cargadoHabitacion) {
+        this.cargadoHabitacion = cargadoHabitacion;
     }
 
 
-    public Habitacion getNumeroHabitacion() {
-        return numeroHabitacion;
+    public Date getFecha() {
+        return fecha;
     }
 
 
-    public void setNumeroHabitacion(Habitacion numeroHabitacion) {
-        this.numeroHabitacion = numeroHabitacion;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
 
-    public Internet getInternetId() {
-        return internetId;
+    public Gimnasio getGimnasios_idTipoServicio() {
+        return gimnasios_idTipoServicio;
     }
 
 
-    public void setInternetId(Internet internetId) {
-        this.internetId = internetId;
+    public void setGimnasios_idTipoServicio(Gimnasio gimnasios_idTipoServicio) {
+        this.gimnasios_idTipoServicio = gimnasios_idTipoServicio;
     }
 
 
-    public Piscina getPiscinaId() {
-        return piscinaId;
+    public Salon getSalones_idTipoServicio() {
+        return salones_idTipoServicio;
     }
 
 
-    public void setPiscinaId(Piscina piscinaId) {
-        this.piscinaId = piscinaId;
+    public void setSalones_idTipoServicio(Salon salones_idTipoServicio) {
+        this.salones_idTipoServicio = salones_idTipoServicio;
     }
 
 
-    public ReservaServicios getNumReserva() {
-        return numReserva;
+    public PrestamoUtensilio getPrestamos_idTipoServicio() {
+        return prestamos_idTipoServicio;
     }
 
 
-    public void setNumReserva(ReservaServicios numReserva) {
-        this.numReserva = numReserva;
+    public void setPrestamos_idTipoServicio(PrestamoUtensilio prestamos_idTipoServicio) {
+        this.prestamos_idTipoServicio = prestamos_idTipoServicio;
     }
 
 
-    public Restaurante getRestauranteId() {
-        return restauranteId;
+    public Supermercado getSupermercados_idTipoServicio() {
+        return supermercados_idTipoServicio;
     }
 
 
-    public void setRestauranteId(Restaurante restauranteId) {
-        this.restauranteId = restauranteId;
+    public void setSupermercados_idTipoServicio(Supermercado supermercados_idTipoServicio) {
+        this.supermercados_idTipoServicio = supermercados_idTipoServicio;
     }
 
 
-    public Salon getSalonId() {
-        return salonId;
+    public Piscina getPiscinas_idTipoServicio() {
+        return piscinas_idTipoServicio;
     }
 
 
-    public void setSalonId(Salon salonId) {
-        this.salonId = salonId;
+    public void setPiscinas_idTipoServicio(Piscina piscinas_idTipoServicio) {
+        this.piscinas_idTipoServicio = piscinas_idTipoServicio;
     }
 
 
-    public Spa getSpaId() {
-        return spaId;
+    public Tienda getTiendas_idTipoServicio() {
+        return tiendas_idTipoServicio;
     }
 
 
-    public void setSpaId(Spa spaId) {
-        this.spaId = spaId;
+    public void setTiendas_idTipoServicio(Tienda tiendas_idTipoServicio) {
+        this.tiendas_idTipoServicio = tiendas_idTipoServicio;
     }
 
 
-    public Supermercado getSupermercadoId() {
-        return supermercadoId;
+    public Internet getInternet_idTipoServicio() {
+        return internet_idTipoServicio;
     }
 
 
-    public void setSupermercadoId(Supermercado supermercadoId) {
-        this.supermercadoId = supermercadoId;
+    public void setInternet_idTipoServicio(Internet internet_idTipoServicio) {
+        this.internet_idTipoServicio = internet_idTipoServicio;
     }
 
 
-    public Tienda getTiendaId() {
-        return tiendaId;
+    public Bar getBares_idTipoServicio() {
+        return bares_idTipoServicio;
     }
 
 
-    public void setTiendaId(Tienda tiendaId) {
-        this.tiendaId = tiendaId;
+    public void setBares_idTipoServicio(Bar bares_idTipoServicio) {
+        this.bares_idTipoServicio = bares_idTipoServicio;
     }
+
+
+    public Lavanderia getLavanderias_idTipoServicio() {
+        return lavanderias_idTipoServicio;
+    }
+
+
+    public void setLavanderias_idTipoServicio(Lavanderia lavanderias_idTipoServicio) {
+        this.lavanderias_idTipoServicio = lavanderias_idTipoServicio;
+    }
+
+
+    public Restaurante getRestaurantes_idTipoServicio() {
+        return restaurantes_idTipoServicio;
+    }
+
+
+    public void setRestaurantes_idTipoServicio(Restaurante restaurantes_idTipoServicio) {
+        this.restaurantes_idTipoServicio = restaurantes_idTipoServicio;
+    }
+
+
+    public Spa getSpas_idTipoServicio() {
+        return spas_idTipoServicio;
+    }
+
+
+    public void setSpas_idTipoServicio(Spa spas_idTipoServicio) {
+        this.spas_idTipoServicio = spas_idTipoServicio;
+    }
+
+
+    public Habitacion getHabitaciones_numeroHabitacion() {
+        return habitaciones_numeroHabitacion;
+    }
+
+
+    public void setHabitaciones_numeroHabitacion(Habitacion habitaciones_numeroHabitacion) {
+        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
+    }
+
+    
 
     
 

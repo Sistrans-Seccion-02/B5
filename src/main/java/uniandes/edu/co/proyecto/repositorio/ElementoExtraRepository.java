@@ -10,28 +10,27 @@ import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.ElementoExtra;
 
-public interface ElementoExtraRepository extends JpaRepository<ElementoExtra, Integer>{
+public interface ElementoExtraRepository extends JpaRepository<ElementoExtra, String>{
+    @Modifying
+    @Transactional
+    @Query(value = "INSERT INTO elementosExtras (nombreElemento) VALUES (:nombreElemento)", nativeQuery = true)
+    void insertarElementoExtra(@Param("nombreElemento") String nombreElemento);
 
-    @Query(value = "SELECT * FROM elementosExtras ", nativeQuery = true)
-    Collection<ElementoExtra> darElementoExtras();
+    @Query(value = "SELECT * FROM elementosExtras", nativeQuery = true)
+    Collection<ElementoExtra> darElementosExtras();
 
-    @Query(value = "SELECT * FROM elementosExtras WHERE idElemento = :idElemento", nativeQuery = true)
-    ElementoExtra darElementoExtra(@Param("idElemento") int idElemento);
+    @Query(value = "SELECT * FROM elementosExtras WHERE nombreElemento = :nombreElemento", nativeQuery = true)
+    ElementoExtra darElementoExtra(@Param("nombreElemento") String nombreElemento);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO elementosExtras (idElemento, nombreElemento, numeroHabitacion) VALUES(proyecto_sequence.nextval, :nombreElemento, :numeroHabitacion) ", nativeQuery = true)
-    void insertarElementoExtra(@Param("nombreElemento") String nombreElemento, @Param("numeroHabitacion") int numeroHabitacion);
-    
-    @Modifying
-    @Transactional
-    @Query(value = "UPDATE elementosExtras SET nombreElemento= :nombreElemento, numeroHabitacion = :numeroHabitacion WHERE idElemento =:idElemento", nativeQuery = true)
-    void actualizarElementoExtra(@Param("idElemento") int idElemento, @Param("nombreElemento") String nombre, @Param("numeroHabitacion") int numeroHabitacion);
+    @Query(value = "UPDATE elementosExtras SET nombreElemento = :nombreElemento_actualizado"
+        + " WHERE nombreElemento = :nombreElemento", nativeQuery = true)
+    void actualizarElementoExtra(@Param("nombreElemento") String nombreElemento,
+        @Param("nombreElemento_actualizado") String nombreElemento_actualizado);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM elementosExtras WHERE idElemento =:idElemento", nativeQuery = true)
-    void eliminarElementoExtra(@Param("idElemento") int idElemento);
-
-    
+    @Query(value = "DELETE FROM elementosExtras WHERE nombreElemento =:nombreElemento", nativeQuery = true)
+    void eliminarElementoExtra(@Param("nombreElemento") String nombreElemento);
 }
