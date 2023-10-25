@@ -20,10 +20,10 @@ public class Internet {
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
     @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    private String nombreHotel;
 
 
-    public Internet(Boolean incluido, Boolean aplicaCompartido, Hotel nombreHotel)
+    public Internet(Boolean incluido, Boolean aplicaCompartido, String nombreHotel)
     {
         this.incluido = incluido;
         this.aplicaCompartido = aplicaCompartido;
@@ -57,11 +57,11 @@ public class Internet {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    public Hotel getNombreHotel() {
+    public String getNombreHotel() {
         return nombreHotel;
     }
 
-    public void setNombreHotel(Hotel nombreHotel) {
+    public void setNombreHotel(String nombreHotel) {
         this.nombreHotel = nombreHotel;
     }
     
