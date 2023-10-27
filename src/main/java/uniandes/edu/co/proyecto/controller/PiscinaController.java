@@ -47,7 +47,7 @@ public class PiscinaController {
     }
 
     @PostMapping("/piscinas/{id}/edit/save")
-    public String piscinaEditarForm(@PathVariable("id") int id, @ModelAttribute Piscina piscina){
+    public String piscinaEditarGuardar(@PathVariable("id") int id, @ModelAttribute Piscina piscina){
         piscinaRepository.actualizarPiscina(id, piscina.getProfundidad(), piscina.getAforo(), piscina.getAplicaCompartido(), piscina.getNombreHotel());
         return "redirect:/piscinas";
     }
