@@ -19,9 +19,9 @@ public class Lavanderia {
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
     @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    private String nombreHotel;
 
-    public Lavanderia(Boolean aplicaCompartido, Hotel nombreHotel)
+    public Lavanderia(Boolean aplicaCompartido, String nombreHotel)
     {
         this.aplicaCompartido = aplicaCompartido;
         this.nombreHotel = nombreHotel;
@@ -46,11 +46,11 @@ public class Lavanderia {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    public Hotel getNombreHotel() {
+    public String getNombreHotel() {
         return nombreHotel;
     }
 
-    public void setNombreHotel(Hotel nombreHotel) {
+    public void setNombreHotel(String nombreHotel) {
         this.nombreHotel = nombreHotel;
     }
 
