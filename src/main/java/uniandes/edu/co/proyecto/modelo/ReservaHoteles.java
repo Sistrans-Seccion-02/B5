@@ -11,61 +11,61 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "reservasHoteles")
+@Table(name = "reservashoteles")
 public class ReservaHoteles {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer numReserva;
-    private Date fechaEntrada;
-    private Date fechaSalida;
+    private Integer numreserva;
+    private Date fechaentrada;
+    private Date fechasalida;
     private Boolean pago;
-    private Boolean reservaTomada;
+    private Boolean reservatomada;
     @ManyToOne
     @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
     private Hotel hoteles_nombre;
     @ManyToOne
-    @JoinColumn(name = "habitaciones_numeroHabitacion", referencedColumnName = "numeroHabitacion")
-    private Habitacion habitaciones_numeroHabitacion;
+    @JoinColumn(name = "habitaciones_numeroHabitacion", referencedColumnName = "numerohabitacion")
+    private Habitacion habitaciones_numerohabitacion;
     @ManyToOne(optional = true)
-    @JoinColumn(name = "promociones_nombrePlan", referencedColumnName = "nombrePlan")
-    private Promocion promociones_nombrePlan;
+    @JoinColumn(name = "promociones_nombreplan", referencedColumnName = "nombreplan")
+    private Promocion promociones_nombreplan;
 
-    public ReservaHoteles(Date fechaEntrada, Date fechaSalida, Boolean pago, Boolean reservaTomada,
-            Hotel hoteles_nombre, Habitacion habitaciones_numeroHabitacion, Promocion promociones_nombrePlan) {
-        this.fechaEntrada = fechaEntrada;
-        this.fechaSalida = fechaSalida;
+    public ReservaHoteles(Date fechaentrada, Date fechasalida, Boolean pago, Boolean reservatomada,
+            Hotel hoteles_nombre, Habitacion habitaciones_numerohabitacion, Promocion promociones_nombreplan) {
+        this.fechaentrada = fechaentrada;
+        this.fechasalida = fechasalida;
         this.pago = pago;
-        this.reservaTomada = reservaTomada;
+        this.reservatomada = reservatomada;
         this.hoteles_nombre = hoteles_nombre;
-        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
-        this.promociones_nombrePlan = promociones_nombrePlan;
+        this.habitaciones_numerohabitacion = habitaciones_numerohabitacion;
+        this.promociones_nombreplan = promociones_nombreplan;
     }
 
     public ReservaHoteles(){;}
 
     public Integer getNumReserva() {
-        return numReserva;
+        return numreserva;
     }
 
-    public void setNumReserva(Integer numReserva) {
-        this.numReserva = numReserva;
+    public void setNumReserva(Integer numreserva) {
+        this.numreserva = numreserva;
     }
 
     public Date getFechaEntrada() {
-        return fechaEntrada;
+        return fechaentrada;
     }
 
-    public void setFechaEntrada(Date fechaEntrada) {
-        this.fechaEntrada = fechaEntrada;
+    public void setFechaEntrada(Date fechaentrada) {
+        this.fechaentrada = fechaentrada;
     }
 
     public Date getFechaSalida() {
-        return fechaSalida;
+        return fechasalida;
     }
 
-    public void setFechaSalida(Date fechaSalida) {
-        this.fechaSalida = fechaSalida;
+    public void setFechaSalida(Date fechasalida) {
+        this.fechasalida = fechasalida;
     }
 
     public Boolean getPago() {
@@ -77,11 +77,11 @@ public class ReservaHoteles {
     }
 
     public Boolean getReservaTomada() {
-        return reservaTomada;
+        return reservatomada;
     }
 
-    public void setReservaTomada(Boolean reservaTomada) {
-        this.reservaTomada = reservaTomada;
+    public void setReservaTomada(Boolean reservatomada) {
+        this.reservatomada = reservatomada;
     }
 
     public Hotel getHoteles_nombre() {
@@ -93,18 +93,18 @@ public class ReservaHoteles {
     }
 
     public Habitacion getHabitaciones_numeroHabitacion() {
-        return habitaciones_numeroHabitacion;
+        return habitaciones_numerohabitacion;
     }
 
-    public void setHabitaciones_numeroHabitacion(Habitacion habitaciones_numeroHabitacion) {
-        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
+    public void setHabitaciones_numeroHabitacion(Habitacion habitaciones_numerohabitacion) {
+        this.habitaciones_numerohabitacion = habitaciones_numerohabitacion;
     }
 
     public Promocion getPromociones_nombrePlan() {
-        return promociones_nombrePlan;
+        return promociones_nombreplan;
     }
 
-    public void setPromociones_nombrePlan(Promocion promociones_nombrePlan) {
-        this.promociones_nombrePlan = promociones_nombrePlan;
+    public void setPromociones_nombrePlan(Promocion promociones_nombreplan) {
+        this.promociones_nombreplan = promociones_nombreplan;
     }
 }

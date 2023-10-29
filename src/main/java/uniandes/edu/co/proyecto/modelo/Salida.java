@@ -11,30 +11,30 @@ import jakarta.persistence.Table;
 public class Salida {
     @Id
     @OneToOne
-    @JoinColumn(name = "numReserva", referencedColumnName = "numReserva")
-    private ReservaHoteles numReserva;
-    private Float cuentaTotal;
+    @JoinColumn(name = "numreserva", referencedColumnName = "numreserva")
+    private ReservaHoteles numreserva;
+    private Float cuentatotal;
 
-    public Salida(ReservaHoteles numReserva, Float cuentaTotal) {
-        this.numReserva = numReserva;
-        this.cuentaTotal = cuentaTotal;
+    public Salida(ReservaHoteles numreserva, Float cuentatotal) {
+        this.numreserva = numreserva;
+        this.cuentatotal = cuentatotal;
     }
 
     public Salida(){;}
 
     public ReservaHoteles getNumReserva() {
-        return numReserva;
+        return numreserva;
     }
 
-    public void setNumReserva(ReservaHoteles numReserva) {
-        this.numReserva = numReserva;
+    public void setNumReserva(ReservaHoteles numreserva) {
+        this.numreserva = numreserva;
     }
 
     public Float getCuentaTotal() {
-        return cuentaTotal;
+        return cuentatotal;
     }
 
-    public void setCuentaTotal(Float cuentaTotal) {
-        this.cuentaTotal = cuentaTotal;
+    public void setCuentaTotal(Float cuentatotal) {
+        this.cuentatotal = cuentatotal;
     }
 }

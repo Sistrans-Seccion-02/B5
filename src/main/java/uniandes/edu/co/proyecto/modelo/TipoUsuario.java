@@ -5,22 +5,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tiposUsuarios")
+@Table(name = "tiposusuarios")
 public class TipoUsuario {
     @Id
-    private String tipoUsuario;
+    private String tipousuario;
 
-    public TipoUsuario(String tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public TipoUsuario(String tipousuario) {
+        this.tipousuario = tipousuario;
     }
 
     public TipoUsuario(){;}
 
     public String getTipoUsuario() {
-        return tipoUsuario;
+        return tipousuario;
     }
 
-    public void setTipoUsuario(String tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public void setTipoUsuario(String tipousuario) {
+        this.tipousuario = tipousuario;
     }
 }

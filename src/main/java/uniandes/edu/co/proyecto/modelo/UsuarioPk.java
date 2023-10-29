@@ -7,12 +7,12 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class UsuarioPk implements Serializable{
     private Integer id;
-    private String tipoId;
+    private String tipoid;
 
-    public UsuarioPk(Integer id, String tipoId) {
+    public UsuarioPk(Integer id, String tipoid) {
         super();
         this.id = id;
-        this.tipoId = tipoId;
+        this.tipoid = tipoid;
     }
 
     public Integer getId() {
@@ -24,10 +24,10 @@ public class UsuarioPk implements Serializable{
     }
 
     public String getTipoId() {
-        return tipoId;
+        return tipoid;
     }
 
-    public void setTipoId(String tipoId) {
-        this.tipoId = tipoId;
+    public void setTipoId(String tipoid) {
+        this.tipoid = tipoid;
     }
 }

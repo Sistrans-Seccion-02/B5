@@ -5,22 +5,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "elementosExtras")
+@Table(name = "elementosextras")
 public class ElementoExtra {
     @Id
-    private String nombreElemento;
+    private String nombreelemento;
 
-    public ElementoExtra(String nombreElemento) {
-        this.nombreElemento = nombreElemento;
+    public ElementoExtra(String nombreelemento) {
+        this.nombreelemento = nombreelemento;
     }
 
     public ElementoExtra(){;}
 
     public String getNombreElemento() {
-        return nombreElemento;
+        return nombreelemento;
     }
 
     public void setNombreElemento(String nombreElemento) {
-        this.nombreElemento = nombreElemento;
+        this.nombreelemento = nombreElemento;
     }
 }

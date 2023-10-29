@@ -5,13 +5,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "elementosTiposHabitaciones")
+@Table(name = "elementostiposhabitaciones")
 public class ElementosTiposHabitaciones {
     @EmbeddedId
     private ElementosTiposHabitacionesPk pk;
 
-    public ElementosTiposHabitaciones(TipoHabitacion tipoHabitacion, ElementoExtra nombreElemento) {
-        this.pk = new ElementosTiposHabitacionesPk(tipoHabitacion, nombreElemento);
+    public ElementosTiposHabitaciones(TipoHabitacion tipohabitacion, ElementoExtra nombreelemento) {
+        this.pk = new ElementosTiposHabitacionesPk(tipohabitacion, nombreelemento);
     }
 
     public ElementosTiposHabitaciones(){;}

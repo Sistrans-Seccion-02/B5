@@ -13,30 +13,30 @@ import jakarta.persistence.Table;
 public class Habitacion {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer numeroHabitacion;
+    private Integer numerohabitacion;
     @ManyToOne
-    @JoinColumn(name = "tipoHabitacion", referencedColumnName = "tipoHabitacion")
-    private TipoHabitacion tipoHabitacion;
+    @JoinColumn(name = "tipohabitacion", referencedColumnName = "tipohabitacion")
+    private TipoHabitacion tipohabitacion;
 
-    public Habitacion(TipoHabitacion tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
+    public Habitacion(TipoHabitacion tipohabitacion) {
+        this.tipohabitacion = tipohabitacion;
     }
 
     public Habitacion(){;}
 
     public Integer getNumeroHabitacion() {
-        return numeroHabitacion;
+        return numerohabitacion;
     }
 
-    public void setNumeroHabitacion(Integer numeroHabitacion) {
-        this.numeroHabitacion = numeroHabitacion;
+    public void setNumeroHabitacion(Integer numerohabitacion) {
+        this.numerohabitacion = numerohabitacion;
     }
 
     public TipoHabitacion getTipoHabitacion() {
-        return tipoHabitacion;
+        return tipohabitacion;
     }
 
-    public void setTipoHabitacion(TipoHabitacion tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
+    public void setTipoHabitacion(TipoHabitacion tipohabitacion) {
+        this.tipohabitacion = tipohabitacion;
     }
 }
