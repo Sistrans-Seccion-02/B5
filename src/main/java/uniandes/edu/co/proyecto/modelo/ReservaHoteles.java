@@ -25,7 +25,7 @@ public class ReservaHoteles {
     @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
     private Hotel hoteles_nombre;
     @ManyToOne
-    @JoinColumn(name = "habitaciones_numeroHabitacion", referencedColumnName = "numerohabitacion")
+    @JoinColumn(name = "habitaciones_numerohabitacion", referencedColumnName = "numerohabitacion")
     private Habitacion habitaciones_numerohabitacion;
     @ManyToOne(optional = true)
     @JoinColumn(name = "promociones_nombreplan", referencedColumnName = "nombreplan")

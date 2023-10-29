@@ -21,6 +21,8 @@ public class ElementosTiposHabitacionesPk implements Serializable{
         this.nombreelemento = nombreelemento;
     }
 
+    public ElementosTiposHabitacionesPk(){;}
+
     public TipoHabitacion getTipoHabitacion() {
         return tipohabitacion;
     }

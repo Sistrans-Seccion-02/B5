@@ -1,40 +1,36 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "salidas")
 public class Salida {
-    @Id
-    @OneToOne
-    @JoinColumn(name = "numreserva", referencedColumnName = "numreserva")
-    private ReservaHoteles numreserva;
+    @EmbeddedId
+    private SalidaPk pk;
     private Float cuentatotal;
 
     public Salida(ReservaHoteles numreserva, Float cuentatotal) {
-        this.numreserva = numreserva;
+        this.pk = new SalidaPk(numreserva);
         this.cuentatotal = cuentatotal;
     }
 
     public Salida(){;}
 
-    public ReservaHoteles getNumReserva() {
-        return numreserva;
+    public SalidaPk getPk() {
+        return pk;
     }
 
-    public void setNumReserva(ReservaHoteles numreserva) {
-        this.numreserva = numreserva;
+    public void setPk(SalidaPk pk) {
+        this.pk = pk;
     }
 
-    public Float getCuentaTotal() {
+    public Float getCuentatotal() {
         return cuentatotal;
     }
 
-    public void setCuentaTotal(Float cuentatotal) {
+    public void setCuentatotal(Float cuentatotal) {
         this.cuentatotal = cuentatotal;
     }
 }

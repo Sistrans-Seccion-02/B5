@@ -15,6 +15,8 @@ public class UsuarioPk implements Serializable{
         this.tipoid = tipoid;
     }
 
+    public UsuarioPk(){;}
+
     public Integer getId() {
         return id;
     }

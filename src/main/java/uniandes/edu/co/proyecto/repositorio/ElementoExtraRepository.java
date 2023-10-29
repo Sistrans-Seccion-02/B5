@@ -31,6 +31,6 @@ public interface ElementoExtraRepository extends JpaRepository<ElementoExtra, St
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM elementosExtras WHERE nombreElemento =:nombreElemento", nativeQuery = true)
+    @Query(value = "DELETE FROM elementosExtras WHERE nombreElemento = :nombreElemento", nativeQuery = true)
     void eliminarElementoExtra(@Param("nombreElemento") String nombreElemento);
 }

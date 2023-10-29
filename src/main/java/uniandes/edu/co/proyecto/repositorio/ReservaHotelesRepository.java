@@ -24,7 +24,7 @@ public interface ReservaHotelesRepository extends JpaRepository<ReservaHoteles, 
         @Param("promociones_nombrePlan") String promociones_nombrePlan);
 
     @Query(value = "SELECT * FROM reservasHoteles", nativeQuery = true)
-    Collection<ReservaHoteles> darHoteles();
+    Collection<ReservaHoteles> darReservasHotel();
 
     @Query(value = "SELECT * FROM reservasHoteles WHERE numReserva = :numReserva", nativeQuery = true)
     ReservaHoteles darReservaHotel(@Param("numReserva") Integer numReserva);
