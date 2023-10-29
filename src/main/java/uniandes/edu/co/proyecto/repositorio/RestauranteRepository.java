@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import uniandes.edu.co.proyecto.modelo.Piscina;
 import uniandes.edu.co.proyecto.modelo.Restaurante;
 import uniandes.edu.co.proyecto.modelo.Usuario;
 
