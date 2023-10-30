@@ -51,10 +51,10 @@ public class TiposUsuariosController {
         tipoUsuarioRepository.actualizarTipoUsuario(pktipoUsuario, tipoUsuario.getTipoUsuario());
         return "redirect:/tiposUsuario";
     }
-    // #TODO
-    // @GetMapping("/bares/{id}/delete")
-    // public String barEliminar(@PathVariable("id") long id) {
-        // barRepository.eliminarBar(id);
-        // return "redirect:/bares";
-    // }
+
+    @GetMapping("/tiposUsuario/{tipoUsuario}/delete")
+    public String tipoUsuarioEliminar(@PathVariable("tipoUsuario") String tipoUsuario) {
+        tipoUsuarioRepository.eliminarTipoUsuario(tipoUsuario);
+        return "redirect:/tiposUsuario";
+    }
 }
