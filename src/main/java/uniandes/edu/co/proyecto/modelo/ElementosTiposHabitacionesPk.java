@@ -9,31 +9,33 @@ import jakarta.persistence.ManyToOne;
 @Embeddable
 public class ElementosTiposHabitacionesPk implements Serializable{
     @ManyToOne
-    @JoinColumn(name = "tipoHabitacion", referencedColumnName = "tipoHabitacion")
-    private TipoHabitacion tipoHabitacion;
+    @JoinColumn(name = "tipohabitacion", referencedColumnName = "tipohabitacion")
+    private TipoHabitacion tipohabitacion;
     @ManyToOne
-    @JoinColumn(name = "nombreElemento", referencedColumnName = "nombreElemento")
-    private ElementoExtra nombreElemento;
+    @JoinColumn(name = "nombreelemento", referencedColumnName = "nombreelemento")
+    private ElementoExtra nombreelemento;
 
-    public ElementosTiposHabitacionesPk(TipoHabitacion tipoHabitacion, ElementoExtra nombreElemento) {
+    public ElementosTiposHabitacionesPk(TipoHabitacion tipohabitacion, ElementoExtra nombreelemento) {
         super();
-        this.tipoHabitacion = tipoHabitacion;
-        this.nombreElemento = nombreElemento;
+        this.tipohabitacion = tipohabitacion;
+        this.nombreelemento = nombreelemento;
     }
 
+    public ElementosTiposHabitacionesPk(){;}
+
     public TipoHabitacion getTipoHabitacion() {
-        return tipoHabitacion;
+        return tipohabitacion;
     }
 
     public void setTipoHabitacion(TipoHabitacion tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
+        this.tipohabitacion = tipoHabitacion;
     }
 
     public ElementoExtra getNombreElemento() {
-        return nombreElemento;
+        return nombreelemento;
     }
 
     public void setNombreElemento(ElementoExtra nombreElemento) {
-        this.nombreElemento = nombreElemento;
+        this.nombreelemento = nombreElemento;
     }
 }

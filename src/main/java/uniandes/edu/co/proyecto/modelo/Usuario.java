@@ -13,20 +13,20 @@ public class Usuario {
     private UsuarioPk pk;
     private String nombre;
     @ManyToOne
-    @JoinColumn(name = "tipoUsuario", referencedColumnName = "tipoUsuario")
-    private TipoUsuario tipoUsuario;
+    @JoinColumn(name = "tipousuario", referencedColumnName = "tipousuario")
+    private TipoUsuario tipousuario;
     private String correo;
     @ManyToOne(optional = true)
-    @JoinColumn(name = "habitaciones_numeroHabitacion", referencedColumnName = "numeroHabitacion")
-    private Habitacion habitaciones_numeroHabitacion;
+    @JoinColumn(name = "habitaciones_numerohabitacion", referencedColumnName = "numerohabitacion")
+    private Habitacion habitaciones_numerohabitacion;
 
-    public Usuario(Integer id, String tipoId, String nombre, TipoUsuario tipoUsuario, String correo,
-            Habitacion habitaciones_numeroHabitacion) {
-        this.pk = new UsuarioPk(id, tipoId);
+    public Usuario(Integer id, String tipoid, String nombre, TipoUsuario tipousuario, String correo,
+            Habitacion habitaciones_numerohabitacion) {
+        this.pk = new UsuarioPk(id, tipoid);
         this.nombre = nombre;
-        this.tipoUsuario = tipoUsuario;
+        this.tipousuario = tipousuario;
         this.correo = correo;
-        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
+        this.habitaciones_numerohabitacion = habitaciones_numerohabitacion;
     }
 
     public Usuario(){;}
@@ -48,11 +48,11 @@ public class Usuario {
     }
 
     public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
+        return tipousuario;
     }
 
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public void setTipoUsuario(TipoUsuario tipousuario) {
+        this.tipousuario = tipousuario;
     }
 
     public String getCorreo() {
@@ -64,10 +64,10 @@ public class Usuario {
     }
 
     public Habitacion getHabitaciones_numeroHabitacion() {
-        return habitaciones_numeroHabitacion;
+        return habitaciones_numerohabitacion;
     }
 
-    public void setHabitaciones_numeroHabitacion(Habitacion habitaciones_numeroHabitacion) {
-        this.habitaciones_numeroHabitacion = habitaciones_numeroHabitacion;
+    public void setHabitaciones_numeroHabitacion(Habitacion habitaciones_numerohabitacion) {
+        this.habitaciones_numerohabitacion = habitaciones_numerohabitacion;
     }
 }

@@ -5,22 +5,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tiposHabitaciones")
+@Table(name = "tiposhabitaciones")
 public class TipoHabitacion {
     @Id
-    private String tipoHabitacion;
+    private String tipohabitacion;
 
-    public TipoHabitacion(String tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
+    public TipoHabitacion(String tipohabitacion) {
+        this.tipohabitacion = tipohabitacion;
     }
 
     public TipoHabitacion(){;}
 
     public String getTipoHabitacion() {
-        return tipoHabitacion;
+        return tipohabitacion;
     }
 
-    public void setTipoHabitacion(String tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
+    public void setTipoHabitacion(String tipohabitacion) {
+        this.tipohabitacion = tipohabitacion;
     }
 }

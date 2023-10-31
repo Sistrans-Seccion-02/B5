@@ -8,55 +8,55 @@ import jakarta.persistence.Table;
 @Table(name = "promociones")
 public class Promocion {
     @Id
-    private String nombrePlan;
-    private Float descuentoAlojamiento;
-    private Float descuentoComida;
-    private Float descuentoServicios;
+    private String nombreplan;
+    private Float descuentoalojamiento;
+    private Float descuentocomida;
+    private Float descuentoservicios;
     private Float costo;
-    private Integer diasMinimaEstadia;
+    private Integer diasminimaestadia;
 
-    public Promocion(String nombrePlan, Float descuentoAlojamiento, Float descuentoComida, Float descuentoServicios,
-            Float costo, Integer diasMinimaEstadia) {
-        this.nombrePlan = nombrePlan;
-        this.descuentoAlojamiento = descuentoAlojamiento;
-        this.descuentoComida = descuentoComida;
-        this.descuentoServicios = descuentoServicios;
+    public Promocion(String nombreplan, Float descuentoalojamiento, Float descuentocomida, Float descuentoservicios,
+            Float costo, Integer diasminimaestadia) {
+        this.nombreplan = nombreplan;
+        this.descuentoalojamiento = descuentoalojamiento;
+        this.descuentocomida = descuentocomida;
+        this.descuentoservicios = descuentoservicios;
         this.costo = costo;
-        this.diasMinimaEstadia = diasMinimaEstadia;
+        this.diasminimaestadia = diasminimaestadia;
     }
 
     public Promocion(){;}
 
     public String getNombrePlan() {
-        return nombrePlan;
+        return nombreplan;
     }
 
-    public void setNombrePlan(String nombrePlan) {
-        this.nombrePlan = nombrePlan;
+    public void setNombrePlan(String nombreplan) {
+        this.nombreplan = nombreplan;
     }
 
     public Float getDescuentoAlojamiento() {
-        return descuentoAlojamiento;
+        return descuentoalojamiento;
     }
 
-    public void setDescuentoAlojamiento(Float descuentoAlojamiento) {
-        this.descuentoAlojamiento = descuentoAlojamiento;
+    public void setDescuentoAlojamiento(Float descuentoalojamiento) {
+        this.descuentoalojamiento = descuentoalojamiento;
     }
 
     public Float getDescuentoComida() {
-        return descuentoComida;
+        return descuentocomida;
     }
 
     public void setDescuentoComida(Float descuentoComida) {
-        this.descuentoComida = descuentoComida;
+        this.descuentocomida = descuentoComida;
     }
 
     public Float getDescuentoServicios() {
-        return descuentoServicios;
+        return descuentoservicios;
     }
 
-    public void setDescuentoServicios(Float descuentoServicios) {
-        this.descuentoServicios = descuentoServicios;
+    public void setDescuentoServicios(Float descuentoservicios) {
+        this.descuentoservicios = descuentoservicios;
     }
 
     public Float getCosto() {
@@ -68,10 +68,10 @@ public class Promocion {
     }
 
     public Integer getDiasMinimaEstadia() {
-        return diasMinimaEstadia;
+        return diasminimaestadia;
     }
 
-    public void setDiasMinimaEstadia(Integer diasMinimaEstadia) {
-        this.diasMinimaEstadia = diasMinimaEstadia;
+    public void setDiasMinimaEstadia(Integer diasminimaestadia) {
+        this.diasminimaestadia = diasminimaestadia;
     }
 }
