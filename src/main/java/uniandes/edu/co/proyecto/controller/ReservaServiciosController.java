@@ -38,7 +38,7 @@ public class ReservaServiciosController {
     
     @GetMapping("/reservasServicios/{id}/edit/")
     public String reservaEditarForm(@PathVariable("id") int id, Model model){
-        ReservaServicios reserva = reservaRepository.darReservaServicioPorId(id);
+        ReservaServicios reserva = reservaRepository.darReservaServicioPorNumReserva(id);
         if (reserva == null) {
             model.addAttribute("reservasServicios", reserva);
             return "reservasServiciosEditar";}

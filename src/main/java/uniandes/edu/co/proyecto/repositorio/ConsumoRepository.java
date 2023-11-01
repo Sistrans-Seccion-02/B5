@@ -8,7 +8,19 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Bar;
 import uniandes.edu.co.proyecto.modelo.Consumo;
+import uniandes.edu.co.proyecto.modelo.Gimnasio;
+import uniandes.edu.co.proyecto.modelo.Habitacion;
+import uniandes.edu.co.proyecto.modelo.Internet;
+import uniandes.edu.co.proyecto.modelo.Lavanderia;
+import uniandes.edu.co.proyecto.modelo.Piscina;
+import uniandes.edu.co.proyecto.modelo.PrestamoUtensilio;
+import uniandes.edu.co.proyecto.modelo.Restaurante;
+import uniandes.edu.co.proyecto.modelo.Salon;
+import uniandes.edu.co.proyecto.modelo.Spa;
+import uniandes.edu.co.proyecto.modelo.Supermercado;
+import uniandes.edu.co.proyecto.modelo.Tienda;
 
 public interface ConsumoRepository extends JpaRepository<Consumo, Integer>{
 
@@ -25,18 +37,18 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer>{
     void crearConsumo(@Param("costo") Integer costo,
     @Param("cargadoHabitacion") Boolean cargadoHabitacion,
     @Param("fecha") java.sql.Date fecha,
-    @Param("gimnasios_idTipoServicio") Integer gimnasios_idTipoServicio,
-    @Param("salones_idTipoServicio") Integer salones_idTipoServicio,
-    @Param("prestamos_idTipoServicio") Integer prestamos_idTipoServicio,
-    @Param("supermercados_idTipoServicio") Integer supermercados_idTipoServicio,
-    @Param("piscinas_idTipoServicio") Integer piscinas_idTipoServicio,
-    @Param("tiendas_idTipoServicio") Integer tiendas_idTipoServicio,
-    @Param("internet_idTipoServicio") Integer internet_idTipoServicio,
-    @Param("bares_idTipoServicio") Integer bares_idTipoServicio,
-    @Param("lavanderias_idTipoServicio") Integer lavanderias_idTipoServicio,
-    @Param("restaurantes_idTipoServicio") Integer restaurantes_idTipoServicio,
-    @Param("spas_idTipoServicio") Integer spas_idTipoServicio,
-    @Param("habitaciones_numeroHabitacion") Integer habitaciones_numeroHabitacion
+    @Param("gimnasios_idTipoServicio") Gimnasio gimnasios_idTipoServicio,
+    @Param("salones_idTipoServicio") Salon salones_idTipoServicio,
+    @Param("prestamos_idTipoServicio") PrestamoUtensilio prestamos_idTipoServicio,
+    @Param("supermercados_idTipoServicio") Supermercado supermercados_idTipoServicio,
+    @Param("piscinas_idTipoServicio") Piscina piscinas_idTipoServicio,
+    @Param("tiendas_idTipoServicio") Tienda tiendas_idTipoServicio,
+    @Param("internet_idTipoServicio") Internet internet_idTipoServicio,
+    @Param("bares_idTipoServicio") Bar bares_idTipoServicio,
+    @Param("lavanderias_idTipoServicio") Lavanderia lavanderias_idTipoServicio,
+    @Param("restaurantes_idTipoServicio") Restaurante restaurantes_idTipoServicio,
+    @Param("spas_idTipoServicio") Spa spas_idTipoServicio,
+    @Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion
     );
 
     @Modifying
@@ -45,18 +57,18 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer>{
     void actualizarConsumo(@Param("costo") Integer costo,
     @Param("cargadoHabitacion") Boolean cargadoHabitacion,
     @Param("fecha") java.sql.Date fecha,
-    @Param("gimnasios_idTipoServicio") Integer gimnasios_idTipoServicio,
-    @Param("salones_idTipoServicio") Integer salones_idTipoServicio,
-    @Param("prestamos_idTipoServicio") Integer prestamos_idTipoServicio,
-    @Param("supermercados_idTipoServicio") Integer supermercados_idTipoServicio,
-    @Param("piscinas_idTipoServicio") Integer piscinas_idTipoServicio,
-    @Param("tiendas_idTipoServicio") Integer tiendas_idTipoServicio,
-    @Param("internet_idTipoServicio") Integer internet_idTipoServicio,
-    @Param("bares_idTipoServicio") Integer bares_idTipoServicio,
-    @Param("lavanderias_idTipoServicio") Integer lavanderias_idTipoServicio,
-    @Param("restaurantes_idTipoServicio") Integer restaurantes_idTipoServicio,
-    @Param("spas_idTipoServicio") Integer spas_idTipoServicio,
-    @Param("habitaciones_numeroHabitacion") Integer habitaciones_numeroHabitacion,
+    @Param("gimnasios_idTipoServicio") Gimnasio gimnasios_idTipoServicio,
+    @Param("salones_idTipoServicio") Salon salones_idTipoServicio,
+    @Param("prestamos_idTipoServicio") PrestamoUtensilio prestamos_idTipoServicio,
+    @Param("supermercados_idTipoServicio") Supermercado supermercados_idTipoServicio,
+    @Param("piscinas_idTipoServicio") Piscina piscinas_idTipoServicio,
+    @Param("tiendas_idTipoServicio") Tienda tiendas_idTipoServicio,
+    @Param("internet_idTipoServicio") Internet internet_idTipoServicio,
+    @Param("bares_idTipoServicio") Bar bares_idTipoServicio,
+    @Param("lavanderias_idTipoServicio") Lavanderia lavanderias_idTipoServicio,
+    @Param("restaurantes_idTipoServicio") Restaurante restaurantes_idTipoServicio,
+    @Param("spas_idTipoServicio") Spa spas_idTipoServicio,
+    @Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion,
     @Param("id") Integer id
     );
 
@@ -69,6 +81,6 @@ public interface ConsumoRepository extends JpaRepository<Consumo, Integer>{
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM consumos WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
-    void eliminarConsumoPorHabitacion(@Param("habitaciones_numeroHabitacion") int habitaciones_numeroHabitacion);
+    void eliminarConsumoPorHabitacion(@Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion);
 
 }
