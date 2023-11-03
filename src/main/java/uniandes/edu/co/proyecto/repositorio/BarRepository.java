@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import uniandes.edu.co.proyecto.modelo.Bar;
+import uniandes.edu.co.proyecto.modelo.Hotel;
 
 public interface BarRepository extends JpaRepository<Bar, Integer>{
 
@@ -21,12 +22,12 @@ public interface BarRepository extends JpaRepository<Bar, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO bares (idTipoServicio, estilo, aforo, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :estilo, :aforo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarBar(@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    void insertarBar(@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE bares SET estilo= :estilo, aforo= :aforo, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarBar(@Param("idTipoServicio") int idTipoServicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido,  @Param("nombreHotel") String nombreHotel);
+    void actualizarBar(@Param("idTipoServicio") int idTipoServicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido,  @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional

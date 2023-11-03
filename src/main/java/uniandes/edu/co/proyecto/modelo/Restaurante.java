@@ -20,12 +20,12 @@ public class Restaurante {
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
     @JoinColumn(name = "Hoteles_nombre", referencedColumnName = "nombre")
-    private String nombreHotel;
+    private Hotel nombreHotel;
 
     public Restaurante()
     {;}
 
-    public Restaurante(Integer aforo, String estilo, Boolean aplicaCompartido, String nombreHotel) {
+    public Restaurante(Integer aforo, String estilo, Boolean aplicaCompartido, Hotel nombreHotel) {
         this.aforo = aforo;
         this.estilo = estilo;
         this.aplicaCompartido = aplicaCompartido;
@@ -64,11 +64,11 @@ public class Restaurante {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    public String getNombreHotel() {
+    public Hotel getNombreHotel() {
         return nombreHotel;
     }
 
-    public void setNombreHotel(String nombreHotel) {
+    public void setNombreHotel(Hotel nombreHotel) {
         this.nombreHotel = nombreHotel;
     }
 }

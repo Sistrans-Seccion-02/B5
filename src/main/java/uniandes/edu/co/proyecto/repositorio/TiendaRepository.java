@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
+
+import uniandes.edu.co.proyecto.modelo.Hotel;
 import uniandes.edu.co.proyecto.modelo.Tienda;
 import uniandes.edu.co.proyecto.modelo.Usuario;
 
@@ -18,12 +20,12 @@ public interface TiendaRepository extends JpaRepository<Tienda, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO tiendas (idTipoServicio, nombre, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :nombre, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarTienda(@Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Integer nombreHotel);
+    void insertarTienda(@Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE tiendas SET nombre= :nombre, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarTienda(@Param("idTipoServicio") int idTipoServicio, @Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Integer nombreHotel);
+    void actualizarTienda(@Param("idTipoServicio") int idTipoServicio, @Param("nombre") Integer nombre, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional

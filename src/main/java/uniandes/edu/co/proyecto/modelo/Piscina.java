@@ -21,9 +21,9 @@ public class Piscina {
     private Boolean aplicaCompartido;
     @ManyToOne(optional=true)
     @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private String nombreHotel;
+    private Hotel nombreHotel;
 
-    public Piscina(Integer profundidad, Integer aforo, Boolean aplicaCompartido, String nombreHotel)
+    public Piscina(Integer profundidad, Integer aforo, Boolean aplicaCompartido, Hotel nombreHotel)
     {
         this.aforo = aforo;
         this.profundidad = profundidad;
@@ -66,11 +66,11 @@ public class Piscina {
         this.aplicaCompartido = aplicaCompartido;
     }
 
-    public String getNombreHotel() {
+    public Hotel getNombreHotel() {
         return nombreHotel;
     }
 
-    public void setNombreHotel(String nombreHotel) {
+    public void setNombreHotel(Hotel nombreHotel) {
         this.nombreHotel = nombreHotel;
     }
 

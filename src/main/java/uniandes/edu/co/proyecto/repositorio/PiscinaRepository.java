@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Hotel;
 import uniandes.edu.co.proyecto.modelo.Piscina;
 
 public interface PiscinaRepository extends JpaRepository<Piscina, Integer>{
@@ -21,12 +22,12 @@ public interface PiscinaRepository extends JpaRepository<Piscina, Integer>{
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO piscinas (idTipoServicio, aforo, profundidad, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :aforo, :profundidad, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarPiscina(@Param("aforo") int aforo,@Param("profundidad") int profundidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    void insertarPiscina(@Param("aforo") int aforo,@Param("profundidad") int profundidad, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE piscinas SET aforo= :aforo, profundidad= :profundidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarPiscina(@Param("idTipoServicio") int idTipoServicio,@Param("profundidad") int profundidad, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    void actualizarPiscina(@Param("idTipoServicio") int idTipoServicio,@Param("profundidad") int profundidad, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional

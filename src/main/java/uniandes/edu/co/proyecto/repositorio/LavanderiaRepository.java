@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Hotel;
 import uniandes.edu.co.proyecto.modelo.Lavanderia;
 
 public interface LavanderiaRepository extends JpaRepository<Lavanderia, Integer>{
@@ -21,12 +22,12 @@ public interface LavanderiaRepository extends JpaRepository<Lavanderia, Integer>
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO lavanderias (idTipoServicio, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarLavanderia( @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    void insertarLavanderia( @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE lavanderias SET aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarLavanderia(@Param("idTipoServicio") int idTipoServicio, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") String nombreHotel);
+    void actualizarLavanderia(@Param("idTipoServicio") int idTipoServicio, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional

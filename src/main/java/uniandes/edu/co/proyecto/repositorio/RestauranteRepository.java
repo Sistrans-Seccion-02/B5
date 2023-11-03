@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Hotel;
 import uniandes.edu.co.proyecto.modelo.Restaurante;
 import uniandes.edu.co.proyecto.modelo.Usuario;
 
@@ -26,7 +27,7 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Intege
     void insertarRestaurante(@Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,
-    @Param("nombreHotel") String nombreHotel
+    @Param("nombreHotel") Hotel nombreHotel
     );
     
     @Modifying
@@ -35,7 +36,7 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Intege
     void actualizarRestaurante(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,
-    @Param("nombreHotel") String nombreHotel);
+    @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional
