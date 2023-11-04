@@ -9,36 +9,36 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "serviciosInternet")
+@Table(name = "serviciosinternet")
 public class Internet {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 
-    private Integer idTipoServicio;
+    private Integer idtiposervicio;
     private Boolean incluido;
-    private Boolean aplicaCompartido;
+    private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    private Hotel nombrehotel;
 
 
     public Internet(Boolean incluido, Boolean aplicaCompartido, Hotel nombreHotel)
     {
         this.incluido = incluido;
-        this.aplicaCompartido = aplicaCompartido;
-        this.nombreHotel = nombreHotel;
+        this.aplicacompartido = aplicaCompartido;
+        this.nombrehotel = nombreHotel;
     }
 
     public Internet()
     {;}
 
     public Integer getIdTipoServicio() {
-        return idTipoServicio;
+        return idtiposervicio;
     }
 
     public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idTipoServicio = idTipoServicio;
+        this.idtiposervicio = idTipoServicio;
     }
 
     public Boolean getIncluido() {
@@ -50,19 +50,19 @@ public class Internet {
     }
 
     public Boolean getAplicaCompartido() {
-        return aplicaCompartido;
+        return aplicacompartido;
     }
 
     public void setAplicaCompartido(Boolean aplicaCompartido) {
-        this.aplicaCompartido = aplicaCompartido;
+        this.aplicacompartido = aplicaCompartido;
     }
 
     public Hotel getNombreHotel() {
-        return nombreHotel;
+        return nombrehotel;
     }
 
     public void setNombreHotel(Hotel nombreHotel) {
-        this.nombreHotel = nombreHotel;
+        this.nombrehotel = nombreHotel;
     }
     
     

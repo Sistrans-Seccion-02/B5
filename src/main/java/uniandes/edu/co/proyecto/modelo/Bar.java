@@ -14,26 +14,26 @@ public class Bar {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer idTipoServicio;
+    private Integer idtiposervicio;
     private String estilo;
     private Integer aforo;
-    private Boolean aplicaCompartido;
+    private Boolean aplicacompartido;
     @ManyToOne
-    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    private Hotel nombrehotel;
 
     public Bar()
     {;}
 
-    public Bar(String estilo, Integer aforo, Boolean aplicaCompartido, Hotel nombreHotel) {
+    public Bar(String estilo, Integer aforo, Boolean aplicacompartido, Hotel nombrehotel) {
         this.estilo = estilo;
         this.aforo = aforo;
-        this.aplicaCompartido = aplicaCompartido;
-        this.nombreHotel = nombreHotel;
+        this.aplicacompartido = aplicacompartido;
+        this.nombrehotel = nombrehotel;
     }
 
-    public Integer getIdTipoServicio() {
-        return idTipoServicio;
+    public Integer getIdtipoServicio() {
+        return idtiposervicio;
     }
 
     public String getEstilo() {
@@ -45,12 +45,12 @@ public class Bar {
     }
 
     public Boolean getAplicaCompartido() {
-        return aplicaCompartido;
+        return aplicacompartido;
     }
 
 
-    public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idTipoServicio = idTipoServicio;
+    public void setIdtipoServicio(Integer idtipoServicio) {
+        this.idtiposervicio = idtipoServicio;
     }
 
     public void setEstilo(String estilo) {
@@ -61,16 +61,16 @@ public class Bar {
         this.aforo = aforo;
     }
 
-    public void setAplicaCompartido(Boolean aplicaCompartido) {
-        this.aplicaCompartido = aplicaCompartido;
+    public void setAplicaCompartido(Boolean aplicacompartido) {
+        this.aplicacompartido = aplicacompartido;
     }
 
     public Hotel getNombreHotel() {
-        return nombreHotel;
+        return nombrehotel;
     }
 
-    public void setNombreHotel(Hotel nombreHotel) {
-        this.nombreHotel = nombreHotel;
+    public void setNombreHotel(Hotel nombrehotel) {
+        this.nombrehotel = nombrehotel;
     }
  
 }

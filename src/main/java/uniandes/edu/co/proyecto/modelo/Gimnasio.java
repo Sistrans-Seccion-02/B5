@@ -15,34 +15,34 @@ public class Gimnasio {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 
-    private Integer idTipoServicio;
+    private Integer idtiposervicio;
     private Integer aforo;
-    private Integer numMaquinas;
+    private Integer nummaquinas;
     private String horario;
-    private Boolean aplicaCompartido;
+    private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    private Hotel nombrehotel;
 
 
     public Gimnasio(Integer numMaquinas, Integer aforo, String horario, Boolean aplicaCompartido, Hotel nombreHotel)
     {
         this.aforo = aforo;
-        this.numMaquinas = numMaquinas;
+        this.nummaquinas = numMaquinas;
         this.horario = horario;
-        this.aplicaCompartido = aplicaCompartido;
-        this.nombreHotel = nombreHotel;
+        this.aplicacompartido = aplicaCompartido;
+        this.nombrehotel = nombreHotel;
     }
 
     public Gimnasio()
     {;}
 
     public Integer getIdTipoServicio() {
-        return idTipoServicio;
+        return idtiposervicio;
     }
 
     public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idTipoServicio = idTipoServicio;
+        this.idtiposervicio = idTipoServicio;
     }
 
     public Integer getAforo() {
@@ -54,11 +54,11 @@ public class Gimnasio {
     }
 
     public Integer getNumMaquinas() {
-        return numMaquinas;
+        return nummaquinas;
     }
 
     public void setNumMaquinas(Integer numMaquinas) {
-        this.numMaquinas = numMaquinas;
+        this.nummaquinas = numMaquinas;
     }
 
     public String getHorario() {
@@ -70,19 +70,19 @@ public class Gimnasio {
     }
 
     public Boolean getAplicaCompartido() {
-        return aplicaCompartido;
+        return aplicacompartido;
     }
 
     public void setAplicaCompartido(Boolean aplicaCompartido) {
-        this.aplicaCompartido = aplicaCompartido;
+        this.aplicacompartido = aplicaCompartido;
     }
 
     public Hotel getNombreHotel() {
-        return nombreHotel;
+        return nombrehotel;
     }
 
     public void setNombreHotel(Hotel nombreHotel) {
-        this.nombreHotel = nombreHotel;
+        this.nombrehotel = nombreHotel;
     }
 
     

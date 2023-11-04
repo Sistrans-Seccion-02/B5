@@ -15,43 +15,43 @@ public class Lavanderia {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 
-    private Integer idTipoServicio;
-    private Boolean aplicaCompartido;
+    private Integer idtiposervicio;
+    private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    private Hotel nombrehotel;
 
     public Lavanderia(Boolean aplicaCompartido, Hotel nombreHotel)
     {
-        this.aplicaCompartido = aplicaCompartido;
-        this.nombreHotel = nombreHotel;
+        this.aplicacompartido = aplicaCompartido;
+        this.nombrehotel = nombreHotel;
     }
 
     public Lavanderia()
     {;}
 
     public Integer getIdTipoServicio() {
-        return idTipoServicio;
+        return idtiposervicio;
     }
 
     public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idTipoServicio = idTipoServicio;
+        this.idtiposervicio = idTipoServicio;
     }
 
     public Boolean getAplicaCompartido() {
-        return aplicaCompartido;
+        return aplicacompartido;
     }
 
     public void setAplicaCompartido(Boolean aplicaCompartido) {
-        this.aplicaCompartido = aplicaCompartido;
+        this.aplicacompartido = aplicaCompartido;
     }
 
     public Hotel getNombreHotel() {
-        return nombreHotel;
+        return nombrehotel;
     }
 
     public void setNombreHotel(Hotel nombreHotel) {
-        this.nombreHotel = nombreHotel;
+        this.nombrehotel = nombreHotel;
     }
 
 }

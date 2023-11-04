@@ -14,28 +14,28 @@ public class Spa {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer idTipoServicio;
+    private Integer idtiposervicio;
     private Integer duracion;
-    private Boolean aplicaCompartido;
+    private Boolean aplicacompartido;
     @ManyToOne
-    @JoinColumn(name = "Hoteles_nombre", referencedColumnName = "nombre")
-    private Hotel nombreHotel;
+    @JoinColumn(name = "hotelesnombre", referencedColumnName = "nombre")
+    private Hotel nombrehotel;
 
     public Spa()
     {;}
 
     public Spa(Integer duracion, Boolean aplicaCompartido, Hotel nombreHotel) {
         this.duracion = duracion;
-        this.aplicaCompartido = aplicaCompartido;
-        this.nombreHotel = nombreHotel;
+        this.aplicacompartido = aplicaCompartido;
+        this.nombrehotel = nombreHotel;
     }
 
     public Integer getIdTipoServicio() {
-        return idTipoServicio;
+        return idtiposervicio;
     }
 
     public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idTipoServicio = idTipoServicio;
+        this.idtiposervicio = idTipoServicio;
     }
 
     public Integer getDuracion() {
@@ -47,18 +47,18 @@ public class Spa {
     }
 
     public Boolean getAplicaCompartido() {
-        return aplicaCompartido;
+        return aplicacompartido;
     }
 
     public void setAplicaCompartido(Boolean aplicaCompartido) {
-        this.aplicaCompartido = aplicaCompartido;
+        this.aplicacompartido = aplicaCompartido;
     }
 
     public Hotel getNombreHotel() {
-        return nombreHotel;
+        return nombrehotel;
     }
 
     public void setNombreHotel(Hotel nombreHotel) {
-        this.nombreHotel = nombreHotel;
+        this.nombrehotel = nombreHotel;
     }
 }
