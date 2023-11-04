@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bares</title>
+    <title>Gimnasios</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
 </head>
 <body>
     <div>
-        <h1>Lista de Bares</h1>
+        <h1>Lista de Gimnasios</h1>
         <table class=" table table-hover table-bordered">
             <thead class= "thead-dark">
                 <tr>
                     <th>ID</th>
-                    <th>Estilo</th>
                     <th>Aforo</th>
+                    <th>Numero de maquinas</th>
+                    <th>Horario</th>
                     <th>Aplica Compartido</th>
                     <th>Nombre del Hotel</th>
                 </tr>
             </thead>
-            <th:block th:each="bar:${bares}">
+            <th:block th:each="gimnasio:${gimnasios}">
                 <tr>
-                    <td th:text="${bar.idtipoServicio}"></td>
-                    <td th:text="${bar.estilo}"></td>
-                    <td th:text="${bar.aforo}"></td>
-                    <td th:text="${bar.aplicaCompartido}"></td>
-                    <td th:text="${bar.hotel.nombre}"></td>
+                    <td th:text="${gimnasio.id}"></td>
+                    <td th:text="${gimnasio.aforo}"></td>
+                    <td th:text="${gimnasio.numeroMaquinas}"></td>
+                    <td th:text="${gimnasio.horario}"></td>
+                    <td th:text="${gimnasio.aplicaCompartido}"></td>
+                    <td th:text="${gimnasio.hotel.nombre}"></td>
                     <td>
-                        <a th:href="@{bares/{id}/edit(id=${bar.idtipoServicio})}">
+                        <a th:href="@{gimnasios/{id}/edit(id=${gimnasio.id})}">
                             Editar
                         </a>
-                        <a th:ref="@{bares/{id}/delete(id=${bar.idtipoServicio})}"
-                        onclick="return confirm('¿Estás seguro de borrar este bar?')">
+                        <a th:ref="@{gimnasios/{id}/delete(id=${gimnasio.id})}"
+                        onclick="return confirm('¿Estás seguro de borrar este gimnasio?')">
                             Borrar
                         </a>
                     </td>

@@ -31,7 +31,7 @@ public class BaresController {
 
     @PostMapping("/bares/new/save")
     public String barGuardar(@ModelAttribute Bar bar){
-        barRepository.insertarBar(bar.getEstilo(), bar.getAforo(), bar.getAplicaCompartido(), bar.getNombreHotel());
+        barRepository.insertarBar(bar.getEstilo(), bar.getAforo(), bar.getAplicaCompartido(), bar.getHotel());
         return "redirect:/bares";
     }
 
@@ -48,7 +48,7 @@ public class BaresController {
 
     @PostMapping("/bares/{id}/edit/save")
     public String barEditarGuardar(@PathVariable("id") int id, @ModelAttribute Bar bar){
-        barRepository.actualizarBar(id, bar.getEstilo(), bar.getAforo(), bar.getAplicaCompartido(), bar.getNombreHotel());
+        barRepository.actualizarBar(id, bar.getEstilo(), bar.getAforo(), bar.getAplicaCompartido(), bar.getHotel());
         return "redirect:/bares";
     }
 
