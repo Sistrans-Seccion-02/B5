@@ -17,7 +17,7 @@ public interface BarRepository extends JpaRepository<Bar, Integer>{
     Collection<Bar> darBares();
 
     @Query(value = "SELECT * FROM bares WHERE idtiposervicio = :idtiposervicio", nativeQuery = true)
-    Bar darBar(@Param("idTipoServicio") int idtiposervicio);
+    Bar darBar(@Param("idtiposervicio") int idtiposervicio);
 
     @Modifying
     @Transactional
