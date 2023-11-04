@@ -21,7 +21,7 @@ public interface BarRepository extends JpaRepository<Bar, Integer>{
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO bares (idTipoServicio, estilo, aforo, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :estilo, :aforo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO bares (idTipoServicio, estilo, aforo, aplicaCompartido, nombreHotel) VALUES(baresSeq.nextval, :estilo, :aforo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarBar(@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying

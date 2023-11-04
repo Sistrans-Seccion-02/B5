@@ -23,7 +23,7 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Intege
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO restaurantes (idTipoServicio, aforo, estilo, aplicaCompartido, nombreHotel) VALUES(:idTipoServicio, :aforo, :estilo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO restaurantes (idTipoServicio, aforo, estilo, aplicaCompartido, nombreHotel) VALUES(restaurantesSeq.nextval, :aforo, :estilo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarRestaurante(@Param("aforo") Integer aforo,
     @Param("estilo") String estilo,
     @Param("aplicaCompartido") Boolean aplicaCompartido,

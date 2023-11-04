@@ -13,25 +13,25 @@ import uniandes.edu.co.proyecto.modelo.Internet;
 
 public interface InternetRepository extends JpaRepository<Internet, Integer>{
 
-    @Query(value = "SELECT * FROM serviciosInternet ", nativeQuery = true)
+    @Query(value = "SELECT * FROM serviciosinternet ", nativeQuery = true)
     Collection<Internet> darInternets();
     
-    @Query(value = "SELECT * FROM serviciosInternet WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
+    @Query(value = "SELECT * FROM serviciosinternet WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
     Internet darInternet(@Param("idTipoServicio") int idTipoServicio);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO serviciosInternet (idTipoServicio, incluido, aplicaCompartido, nombreHotel) VALUES(proyecto_sequence.nextval, :incluido, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO serviciosinternet (idTipoServicio, incluido, aplicaCompartido, nombreHotel) VALUES(serviciosinternetSeq.nextval, :incluido, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarInternet(@Param("incluido") Boolean incluido, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE serviciosInternet SET  incluido= :incluido, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    @Query(value = "UPDATE serviciosinternet SET  incluido= :incluido, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
     void actualizarInternet(@Param("idTipoServicio") int idTipoServicio, @Param("incluido") Boolean incluido, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM serviciosInternet WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    @Query(value = "DELETE FROM serviciosinternet WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
     void eliminarInternet(@Param("idTipoServicio") int idTipoServicio);
     
 }

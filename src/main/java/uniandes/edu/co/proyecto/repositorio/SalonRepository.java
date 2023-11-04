@@ -19,7 +19,7 @@ public interface SalonRepository extends JpaRepository<Salon, Integer>{
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO salones (idTipoServicio, aforo, equipo, aplicaCompartido, nombreHotel) VALUES(:idTipoServicio, :aforo, :equipo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO salones (idTipoServicio, aforo, equipo, aplicaCompartido, nombreHotel) VALUES(salonesSeq.nextval, :aforo, :equipo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarSalon(@Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
