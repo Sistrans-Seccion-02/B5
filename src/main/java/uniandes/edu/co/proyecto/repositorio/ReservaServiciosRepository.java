@@ -56,7 +56,7 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE reservaServicios SET fecha =: fecha, atendida = :atendida, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion, lavanderias_idTipoServicio = :lavanderias_idTipoServicio, bares_idTipoServicio = :bares_idTipoServicio, spas_idTipoServicio = :spas_idTipoServicio, gimnasios_idTipoServicio = :gimnasios_idTipoServicio, salones_idTipoServicio = :salones_idTipoServicio, restaurantes_idTipoServicio = :restaurantes_idTipoServicio, piscinas_idTipoServicio = :piscinas_idTipoServicio WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
+    @Query(value = "UPDATE reservaServicios SET fecha = :fecha, atendida = :atendida, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion, lavanderias_idTipoServicio = :lavanderias_idTipoServicio, bares_idTipoServicio = :bares_idTipoServicio, spas_idTipoServicio = :spas_idTipoServicio, gimnasios_idTipoServicio = :gimnasios_idTipoServicio, salones_idTipoServicio = :salones_idTipoServicio, restaurantes_idTipoServicio = :restaurantes_idTipoServicio, piscinas_idTipoServicio = :piscinas_idTipoServicio WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
     void actualizarReservaServicio(
         @Param("fecha") Date fecha,
         @Param("atendida") Boolean atendida,
@@ -69,6 +69,7 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
         @Param("restaurantes_idTipoServicio") Restaurante restaurantes_idTipoServicio,
         @Param("piscinas_idTipoServicio") Piscina piscinas_idTipoServicio
     );
+    
 
 
     @Modifying
