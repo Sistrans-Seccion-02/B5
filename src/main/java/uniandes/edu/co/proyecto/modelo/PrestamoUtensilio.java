@@ -9,36 +9,36 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "prestamosUtensilios")
+@Table(name = "prestamosutensilios")
 public class PrestamoUtensilio {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 
-    private Integer idTipoServicio;
+    private Integer idtiposervicio;
     private String nombre;
     private Boolean retornado;
     @ManyToOne(optional=true)
-    @JoinColumn(name="Hoteles_nombre", referencedColumnName="nombre")
-    private Hotel nombreHotel;
+    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    private Hotel nombrehotel;
 
 
     public PrestamoUtensilio(String nombre, Boolean retornado, Hotel nombreHotel)
     {
         this.nombre = nombre;
         this.retornado = retornado;
-        this.nombreHotel = nombreHotel;
+        this.nombrehotel = nombreHotel;
     }
 
     public PrestamoUtensilio()
     {;}
 
     public Integer getIdTipoServicio() {
-        return idTipoServicio;
+        return idtiposervicio;
     }
 
     public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idTipoServicio = idTipoServicio;
+        this.idtiposervicio = idTipoServicio;
     }
 
     public String getNombre() {
@@ -58,11 +58,11 @@ public class PrestamoUtensilio {
     }
 
     public Hotel getNombreHotel() {
-        return nombreHotel;
+        return nombrehotel;
     }
 
     public void setNombreHotel(Hotel nombreHotel) {
-        this.nombreHotel = nombreHotel;
+        this.nombrehotel = nombreHotel;
     }
 
     

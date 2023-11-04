@@ -16,7 +16,7 @@ public interface ProductoSupermercadoRepository  extends JpaRepository<Productos
     @Query(value = "SELECT * FROM gustan", nativeQuery = true)
     Collection<ProductosSupermercado> darProductosSupermercados();
 
-    @Query(value = "SELECT * FROM gustan WHERE supermercado_idTipoServicio = :supermercado_idTipoServicio AND supermercado_idTipoServicio = :supermercado_idTipoServicio", nativeQuery = true)
+    @Query(value = "SELECT * FROM gustan WHERE supermercado_idTipoServicio = :supermercado_idTipoServicio AND productos_idProducto = :productos_idProducto", nativeQuery = true)
     ProductosSupermercado darProductoSupermercado(@Param("supermercado_idTipoServicio") Integer supermercado_idTipoServicio, @Param("productos_idProducto") Integer productos_idProducto);
 
     @Modifying

@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import uniandes.edu.co.proyecto.modelo.Hotel;
 import uniandes.edu.co.proyecto.modelo.PrestamoUtensilio;
 
 public interface PrestamoUtensilioRepository extends JpaRepository<PrestamoUtensilio, Integer>{
@@ -15,22 +16,26 @@ public interface PrestamoUtensilioRepository extends JpaRepository<PrestamoUtens
     @Query(value = "SELECT * FROM prestamosUtensilios ", nativeQuery = true)
     Collection<PrestamoUtensilio> darPrestamoUtensilios();
     
-    @Query(value = "SELECT * FROM prestamosUtensilios WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
-    PrestamoUtensilio darPrestamoUtensilios(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "SELECT * FROM prestamosutensilios WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
+    PrestamoUtensilio darPrestamoUtensilio(@Param("idTipoServicio") int idTipoServicio);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO prestamosUtensilios (idTipoServicio, nombre, retornado,  nombreHotel) VALUES(proyecto_sequence.nextval, :nombre, :retornado, :nombreHotel) ", nativeQuery = true)
-    void insertarPrestamoUtensilio(@Param("nombre") String nombre,@Param("retornado") Boolean retornado, @Param("nombreHotel") String nombreHotel);
+    @Query(value = "INSERT INTO prestamosutensilios (nombre, retornado, nombreHotel) VALUES(:nombre, :retornado, :nombreHotel)", nativeQuery = true)
+    void insertarPrestamoUtensilio(@Param("nombre") String nombre, @Param("retornado") Boolean retornado, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE prestamosUtensilios SET capacidad= :capacidad, profundidad= :profundidad, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel  WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarPrestamoUtensilio(@Param("idTipoServicio") int idTipoServicio,@Param("nombre") String nombre,@Param("retornado") Boolean retornado, @Param("nombreHotel") String nombreHotel);
+    @Query(value = "UPDATE prestamosutensilios SET nombre = :nombre, retornado = :retornado, nombreHotel = :nombreHotel WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
+    void actualizarPrestamoUtensilio(@Param("idTipoServicio") int idTipoServicio,
+                                    @Param("nombre") String nombre,
+                                    @Param("retornado") Boolean retornado,
+                                    @Param("nombreHotel") Hotel nombreHotel);
+
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM prestamosUtensilios WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
+    @Query(value = "DELETE FROM prestamosutensilios WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
     void eliminarPrestamoUtensilio(@Param("idTipoServicio") int idTipoServicio);
     
 }
