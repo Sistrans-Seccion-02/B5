@@ -20,7 +20,7 @@ public class Piscina {
     private Integer profundidad;
     private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    @JoinColumn(name="hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombrehotel;
 
     public Piscina(Integer profundidad, Integer aforo, Boolean aplicaCompartido, Hotel nombreHotel)

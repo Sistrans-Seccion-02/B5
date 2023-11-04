@@ -19,7 +19,7 @@ public class Restaurante {
     private String estilo;
     private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name = "hotelesnombre", referencedColumnName = "nombre")
+    @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
     private Hotel nombrehotel;
 
     public Restaurante()

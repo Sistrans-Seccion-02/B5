@@ -19,7 +19,7 @@ public class Salon {
     private String equipo;
     private Boolean aplicacompartido;
     @ManyToOne
-    @JoinColumn(name = "hotelesnombre", referencedColumnName = "nombre")
+    @JoinColumn(name = "hoteles_nombre", referencedColumnName = "nombre")
     private Hotel nombrehotel;
 
     public Salon()

@@ -19,7 +19,7 @@ public class Internet {
     private Boolean incluido;
     private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    @JoinColumn(name="hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombrehotel;
 
 

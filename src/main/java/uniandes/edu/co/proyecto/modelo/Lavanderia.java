@@ -18,7 +18,7 @@ public class Lavanderia {
     private Integer idtiposervicio;
     private Boolean aplicacompartido;
     @ManyToOne(optional=true)
-    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    @JoinColumn(name="hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombrehotel;
 
     public Lavanderia(Boolean aplicaCompartido, Hotel nombreHotel)

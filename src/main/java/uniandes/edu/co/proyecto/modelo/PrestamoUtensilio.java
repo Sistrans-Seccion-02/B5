@@ -19,7 +19,7 @@ public class PrestamoUtensilio {
     private String nombre;
     private Boolean retornado;
     @ManyToOne(optional=true)
-    @JoinColumn(name="hotelesnombre", referencedColumnName="nombre")
+    @JoinColumn(name="hoteles_nombre", referencedColumnName="nombre")
     private Hotel nombrehotel;
 
 
