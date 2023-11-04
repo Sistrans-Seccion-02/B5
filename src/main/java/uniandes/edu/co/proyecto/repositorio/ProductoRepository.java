@@ -20,9 +20,16 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer>{
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Productos (idProducto, nombre, costo,  aplicaIncluido, barId, restauranteId, tiendaId, lavanderiaId) VALUES(proyecto_sequence.nextval, :nombre, :costo, :aplicaIncluido, :barId, :restauranteId, tiendaId, :lavanderiaId) ", nativeQuery = true)
-    void insertarPrestamoUtensilio(@Param("nombre") String nombre,@Param("costo") int costo, @Param("aplicaIncluido") Boolean aplicaIncluido,@Param("barId") int barId,@Param("restauranteId") int restauranteId,@Param("tiendaId") int tiendaId,@Param("lavanderiaId") int lavanderiaId);
-    
+    @Query(value = "INSERT INTO Productos (idProducto, nombre, costo, aplicaIncluido, barId, restauranteId, tiendaId, lavanderiaId) VALUES(proyecto_sequence.nextval, :nombre, :costo, :aplicaIncluido, :barId, :restauranteId, :tiendaId, :lavanderiaId)", nativeQuery = true)
+    void insertarPrestamoUtensilio(
+        @Param("nombre") String nombre,
+        @Param("costo") int costo,
+        @Param("aplicaIncluido") Boolean aplicaIncluido,
+        @Param("barId") int barId,
+        @Param("restauranteId") int restauranteId,
+        @Param("tiendaId") int tiendaId,
+        @Param("lavanderiaId") int lavanderiaId
+    );
     @Modifying
     @Transactional
     @Query(value = "UPDATE Productos SET nombre= :nombre, costo= :costo, aplicaIncluido= :aplicaIncluido, barId= :barId, restauranteId= :restauranteId, tiendaId= :tiendaId, lavanderiaId= :lavanderiaId   WHERE idProducto =:idProducto", nativeQuery = true)
