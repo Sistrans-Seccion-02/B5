@@ -16,22 +16,22 @@ public interface BarRepository extends JpaRepository<Bar, Integer>{
     @Query(value = "SELECT * FROM bares ", nativeQuery = true)
     Collection<Bar> darBares();
 
-    @Query(value = "SELECT * FROM bares WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
-    Bar darBar(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "SELECT * FROM bares WHERE idtiposervicio = :idtiposervicio", nativeQuery = true)
+    Bar darBar(@Param("idTipoServicio") int idtiposervicio);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO bares (idTipoServicio, estilo, aforo, aplicaCompartido, nombreHotel) VALUES(baresSeq.nextval, :estilo, :aforo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO bares (idtiposervicio, estilo, aforo, aplicaCompartido, nombreHotel) VALUES(baresSeq.nextval, :estilo, :aforo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarBar(@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE bares SET estilo= :estilo, aforo= :aforo, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarBar(@Param("idTipoServicio") int idTipoServicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido,  @Param("nombreHotel") Hotel nombreHotel);
+    @Query(value = "UPDATE bares SET estilo= :estilo, aforo= :aforo, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idtiposervicio =:idtiposervicio", nativeQuery = true)
+    void actualizarBar(@Param("idtiposervicio") int idtiposervicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido,  @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM bares WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void eliminarBar(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "DELETE FROM bares WHERE idtiposervicio =:idtiposervicio", nativeQuery = true)
+    void eliminarBar(@Param("idtiposervicio") int idtiposervicio);
     
 }
