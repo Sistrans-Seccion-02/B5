@@ -12,7 +12,7 @@ import uniandes.edu.co.proyecto.modelo.Internet;
 import uniandes.edu.co.proyecto.repositorio.InternetRepository;
 
 @Controller
-public class InternetController {
+public class InternetsController {
     
     @Autowired
     private InternetRepository internetRepository;

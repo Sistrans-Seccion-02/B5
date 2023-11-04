@@ -17,6 +17,9 @@ public interface SpaRepository extends JpaRepository<Spa, Integer>{
     @Query(value = "SELECT * FROM spas ", nativeQuery = true)
     Collection<Usuario> darSpas();
 
+    @Query(value = "SELECT * FROM spas WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
+    Spa darSpa(@Param("idTipoServicio") int idTipoServicio);
+
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO spas (idTipoServicio, duracion, aplicaCompartido, nombreHotel) VALUES(spasSeq.nextval, :duracion, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)

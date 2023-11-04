@@ -12,7 +12,7 @@ import uniandes.edu.co.proyecto.modelo.Piscina;
 import uniandes.edu.co.proyecto.repositorio.PiscinaRepository;
 
 @Controller
-public class PiscinaController {
+public class PiscinasController {
     
     @Autowired
     private PiscinaRepository piscinaRepository;

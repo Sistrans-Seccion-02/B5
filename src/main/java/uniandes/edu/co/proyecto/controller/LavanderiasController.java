@@ -12,7 +12,7 @@ import uniandes.edu.co.proyecto.modelo.Lavanderia;
 import uniandes.edu.co.proyecto.repositorio.LavanderiaRepository;
 
 @Controller
-public class LavanderiaController {
+public class LavanderiasController {
     
     @Autowired
     private LavanderiaRepository lavanderiaRepository;

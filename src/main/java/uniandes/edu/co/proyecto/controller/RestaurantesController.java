@@ -12,7 +12,7 @@ import uniandes.edu.co.proyecto.modelo.Restaurante;
 import uniandes.edu.co.proyecto.repositorio.RestauranteRepository;
 
 @Controller
-public class RestauranteController {
+public class RestaurantesController {
     
     @Autowired
     private RestauranteRepository restauranteRepository;

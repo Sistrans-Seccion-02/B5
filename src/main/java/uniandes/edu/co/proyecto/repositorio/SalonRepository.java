@@ -17,15 +17,18 @@ public interface SalonRepository extends JpaRepository<Salon, Integer>{
     @Query(value = "SELECT * FROM salones ", nativeQuery = true)
     Collection<Usuario> darSalones();
 
+    @Query(value = "SELECT * FROM salones WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
+    Salon darSalon(@Param("idTipoServicio") int idTipoServicio);
+
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO salones (idTipoServicio, aforo, equipo, aplicaCompartido, nombreHotel) VALUES(salonesSeq.nextval, :aforo, :equipo, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
-    void insertarSalon(@Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
+    void insertarSalon(@Param("aforo") Integer aforo, @Param("equipo") String equipo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
     @Query(value = "UPDATE salones SET aforo= :aforo, equipo= :equipo, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarSalon(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo, @Param("equipo") Integer equipo, @Param("aplicaCompartido") Integer aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
+    void actualizarSalon(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") Integer aforo, @Param("equipo") String equipo, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional
