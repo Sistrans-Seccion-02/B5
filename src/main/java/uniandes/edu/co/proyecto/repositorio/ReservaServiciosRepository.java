@@ -36,7 +36,8 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO reservaServicios (fecha, atendida, habitaciones_numeroHabitacion, lavanderias_idTipoServicio, bares_idTipoServicio, spas_idTipoServicio, gimnasios_idTipoServicio, salones_idTipoServicio, restaurantes_idTipoServicio, piscinas_idTipoServicio) VALUES (:fecha, :atendida, :habitaciones_numeroHabitacion, :lavanderias_idTipoServicio, :bares_idTipoServicio, :spas_idTipoServicio, :gimnasios_idTipoServicio, :salones_idTipoServicio, :restaurantes_idTipoServicio, :piscinas_idTipoServicio)", nativeQuery = true)
-    void crearReservaServicio(@Param("fecha") Date fecha,
+    void crearReservaServicio(
+    @Param("fecha") Date fecha,
     @Param("atendida") Boolean atendida,
     @Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion,
     @Param("lavanderias_idTipoServicio") Lavanderia lavanderias_idTipoServicio,
@@ -55,18 +56,20 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE reservaServicios SET atendida= :atendida, habitaciones_numeroHabitacion= :habitaciones_numeroHabitacion, lavanderias_idTipoServicio= :lavanderias_idTipoServicio, bares_idTipoServicio= :bares_idTipoServicio, spas_idTipoServicio= :spas_idTipoServicio, gimnasios_idTipoServicio= :gimnasios_idTipoServicio, salones_idTipoServicio= :salones_idTipoServicio, restaurantes_idTipoServicio= :restaurantes_idTipoServicio, piscinas_idTipoServicio= :piscinas_idTipoServicio WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
-    void actualizarReservaServicio(@Param("fecha") Date fecha,
-    @Param("atendida") Boolean atendida,
-    @Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion,
-    @Param("lavanderias_idTipoServicio") Lavanderia lavanderias_idTipoServicio,
-    @Param("bares_idTipoServicio") Bar bares_idTipoServicio,
-    @Param("spas_idTipoServicio") Spa spas_idTipoServicio,
-    @Param("gimnasios_idTipoServicio") Gimnasio gimnasios_idTipoServicio,
-    @Param("salones_idTipoServicio") Salon salones_idTipoServicio,
-    @Param("restaurantes_idTipoServicio") Restaurante restaurantes_idTipoServicio,
-    @Param("piscinas_idTipoServicio") Piscina piscinas_idTipoServicio
+    @Query(value = "UPDATE reservaServicios SET fecha =: fecha, atendida = :atendida, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion, lavanderias_idTipoServicio = :lavanderias_idTipoServicio, bares_idTipoServicio = :bares_idTipoServicio, spas_idTipoServicio = :spas_idTipoServicio, gimnasios_idTipoServicio = :gimnasios_idTipoServicio, salones_idTipoServicio = :salones_idTipoServicio, restaurantes_idTipoServicio = :restaurantes_idTipoServicio, piscinas_idTipoServicio = :piscinas_idTipoServicio WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
+    void actualizarReservaServicio(
+        @Param("fecha") Date fecha,
+        @Param("atendida") Boolean atendida,
+        @Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion,
+        @Param("lavanderias_idTipoServicio") Lavanderia lavanderias_idTipoServicio,
+        @Param("bares_idTipoServicio") Bar bares_idTipoServicio,
+        @Param("spas_idTipoServicio") Spa spas_idTipoServicio,
+        @Param("gimnasios_idTipoServicio") Gimnasio gimnasios_idTipoServicio,
+        @Param("salones_idTipoServicio") Salon salones_idTipoServicio,
+        @Param("restaurantes_idTipoServicio") Restaurante restaurantes_idTipoServicio,
+        @Param("piscinas_idTipoServicio") Piscina piscinas_idTipoServicio
     );
+
 
     @Modifying
     @Transactional
