@@ -30,13 +30,12 @@ public interface UsuarioRepository extends JpaRepository<Usuario, UsuarioPk>{
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE usuarios SET id = :id_actualizado, tipoId = :tipoId_actualizado,"
-        + " nombre= :nombre, tipoUsuario = :tipoUsuario,"
+    @Query(value = "UPDATE usuarios SET nombre = :nombre, tipoUsuario = :tipoUsuario,"
         + " correo = :correo, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion"
         + " WHERE id =:id AND tipoId = :tipoId",
         nativeQuery = true)
-    void actualizarUsuario(@Param("id") Integer id, @Param("id_actualizado") Integer id_actualizado,
-        @Param("tipoId") String tipoId, @Param("tipoId_actualizado") String tipoId_actualizado,
+    void actualizarUsuario(@Param("id") Integer id,
+        @Param("tipoId") String tipoId,
         @Param("nombre") String nombre, @Param("tipoUsuario") String tipoUsuario,
         @Param("correo") String correo,
         @Param("habitaciones_numeroHabitacion") Integer habitaciones_numeroHabitacion);
