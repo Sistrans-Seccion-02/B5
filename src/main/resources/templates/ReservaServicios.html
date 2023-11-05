@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas de Servicios</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+    
+</body>
+<div class ="text-center">
+    <h1>Lista de Reservas de Servicios</h1>
+    <table class = "table table-hover table-bordered">
+        <thead class = "thead-dark">
+            <tr>
+                <th>Numero Reserva</th>
+                <th>Fecha</th>
+                <th>Atendida Habitacion</th>
+                <th>Habitacion</th>
+            </tr>
+        </thead>
+        <th:block th:each="reservasServicios:${reservasServicios}">
+            <tr>
+                <td th:text="${reservasServicios.numReserva}"></td>
+                <td th:text="${reservasServicios.fecha}"></td>
+                <td th:text="${reservasServicios.atendida}"></td>
+                <td th:text="${reservasServicios.habitaciones_numeroHabitacion}"></td>
+                <td>
+                    <a th:href="@{reservasServicios/{id}/edit(id=${reservasServicios.id})}">
+                        Editar
+                    </a>
+                    <a th:ref="@{reservasServicios/{id}/delete(id=${reservasServicios.id})}" onclick="return confirm('¿Seguro que quiere borrar?')">
+                        Borrar
+                    </a>
+                </td>
+            </tr>
+        </th:block>
+    </table>
+    <div>
+        <a th:href='@{/}' class="btn btn-primary">Volver Atrás</a>
+    </div>
+</div>
+</html>
