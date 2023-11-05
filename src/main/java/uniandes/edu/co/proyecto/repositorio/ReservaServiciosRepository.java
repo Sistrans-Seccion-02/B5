@@ -22,20 +22,20 @@ import uniandes.edu.co.proyecto.modelo.Usuario;
 
 public interface ReservaServiciosRepository extends JpaRepository<ReservaServicios, Integer>{
 
-    @Query(value = "SELECT * FROM reservaServicios ", nativeQuery = true)
+    @Query(value = "SELECT * FROM reservasServicios ", nativeQuery = true)
     Collection<Usuario> darReservaServicio();
 
     //select * from reservaServicios where id = :id
-    @Query(value = "SELECT * FROM reservaServicios WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
+    @Query(value = "SELECT * FROM reservasServicios WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
     ReservaServicios darReservaServicioPorNumHabitacion(@Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion);
 
     //select * from reservaServicios where numReserva = :numReserva
-    @Query(value = "SELECT * FROM reservaServicios WHERE numReserva = :numReserva", nativeQuery = true)
+    @Query(value = "SELECT * FROM reservasServicios WHERE numReserva = :numReserva", nativeQuery = true)
     ReservaServicios darReservaServicioPorNumReserva(@Param("numReserva") int numReserva);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO reservaServicios (fecha, atendida, habitaciones_numeroHabitacion, lavanderias_idTipoServicio, bares_idTipoServicio, spas_idTipoServicio, gimnasios_idTipoServicio, salones_idTipoServicio, restaurantes_idTipoServicio, piscinas_idTipoServicio) VALUES (:fecha, :atendida, :habitaciones_numeroHabitacion, :lavanderias_idTipoServicio, :bares_idTipoServicio, :spas_idTipoServicio, :gimnasios_idTipoServicio, :salones_idTipoServicio, :restaurantes_idTipoServicio, :piscinas_idTipoServicio)", nativeQuery = true)
+    @Query(value = "INSERT INTO reservasServicios (fecha, atendida, habitaciones_numeroHabitacion, lavanderias_idTipoServicio, bares_idTipoServicio, spas_idTipoServicio, gimnasios_idTipoServicio, salones_idTipoServicio, restaurantes_idTipoServicio, piscinas_idTipoServicio) VALUES (:fecha, :atendida, :habitaciones_numeroHabitacion, :lavanderias_idTipoServicio, :bares_idTipoServicio, :spas_idTipoServicio, :gimnasios_idTipoServicio, :salones_idTipoServicio, :restaurantes_idTipoServicio, :piscinas_idTipoServicio)", nativeQuery = true)
     void crearReservaServicio(
     @Param("fecha") Date fecha,
     @Param("atendida") Boolean atendida,
@@ -51,12 +51,12 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE reservaServicios SET atendida= :atendida WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
+    @Query(value = "UPDATE reservasServicios SET atendida= :atendida WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
     void actualizarReservaServicioAtendido(@Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion, @Param("atendida") Boolean atendida);
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE reservaServicios SET fecha = :fecha, atendida = :atendida, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion, lavanderias_idTipoServicio = :lavanderias_idTipoServicio, bares_idTipoServicio = :bares_idTipoServicio, spas_idTipoServicio = :spas_idTipoServicio, gimnasios_idTipoServicio = :gimnasios_idTipoServicio, salones_idTipoServicio = :salones_idTipoServicio, restaurantes_idTipoServicio = :restaurantes_idTipoServicio, piscinas_idTipoServicio = :piscinas_idTipoServicio WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
+    @Query(value = "UPDATE reservasServicios SET fecha = :fecha, atendida = :atendida, habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion, lavanderias_idTipoServicio = :lavanderias_idTipoServicio, bares_idTipoServicio = :bares_idTipoServicio, spas_idTipoServicio = :spas_idTipoServicio, gimnasios_idTipoServicio = :gimnasios_idTipoServicio, salones_idTipoServicio = :salones_idTipoServicio, restaurantes_idTipoServicio = :restaurantes_idTipoServicio, piscinas_idTipoServicio = :piscinas_idTipoServicio WHERE habitaciones_numeroHabitacion = :habitaciones_numeroHabitacion", nativeQuery = true)
     void actualizarReservaServicio(
         @Param("fecha") Date fecha,
         @Param("atendida") Boolean atendida,
@@ -74,13 +74,13 @@ public interface ReservaServiciosRepository extends JpaRepository<ReservaServici
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM reservaServicios WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
+    @Query(value = "DELETE FROM reservasServicios WHERE habitaciones_numeroHabitacion =:habitaciones_numeroHabitacion", nativeQuery = true)
     void eliminarReservaServicio(@Param("habitaciones_numeroHabitacion") Habitacion habitaciones_numeroHabitacion);
 
     // delete from reservaServicios where numReserva = :numReserva
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM reservaServicios WHERE numReserva =:numReserva", nativeQuery = true)
+    @Query(value = "DELETE FROM reservasServicios WHERE numReserva =:numReserva", nativeQuery = true)
     void eliminarReservaServicioPorNumReserva(@Param("numReserva") int numReserva);
     
 }
