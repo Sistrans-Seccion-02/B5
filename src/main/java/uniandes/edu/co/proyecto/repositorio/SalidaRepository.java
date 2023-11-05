@@ -29,7 +29,7 @@ public interface SalidaRepository extends JpaRepository<Salida, Integer>{
     @Query(value = "UPDATE salidas SET numReserva = :numReserva_actualizada, cuentaTotal = :cuentaTotal"
         + " WHERE numReserva = :numReserva", nativeQuery = true)
     void actualizarSalida(@Param("numReserva") Integer numReserva, @Param("cuentaTotal") Float cuentaTotal,
-        @Param("numReserva_actualizada") Float numReserva_actualizada);
+        @Param("numReserva_actualizada") Integer numReserva_actualizada);
 
     @Modifying
     @Transactional
