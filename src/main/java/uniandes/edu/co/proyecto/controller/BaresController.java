@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Bar;
+import uniandes.edu.co.proyecto.modelo.Hotel;
 import uniandes.edu.co.proyecto.repositorio.BarRepository;
 
 @Controller
@@ -48,7 +49,9 @@ public class BaresController {
 
     @PostMapping("/bares/{id}/edit/save")
     public String barEditarGuardar(@PathVariable("id") int id, @ModelAttribute Bar bar){
-        barRepository.actualizarBar(id, bar.getEstilo(), bar.getAforo(), bar.getAplicaCompartido(), bar.getHotel());
+        Hotel hotel = bar.getHotel();
+        String nombreHotel = hotel.getNombre();
+        barRepository.actualizarBar(id, bar.getEstilo(), bar.getAforo(), bar.getAplicaCompartido(),nombreHotel );
         return "redirect:/bares";
     }
 

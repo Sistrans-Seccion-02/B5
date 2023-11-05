@@ -20,7 +20,7 @@ public class Bar {
     private Boolean aplicacompartido;
     @ManyToOne
     @JoinColumn(name="hoteles_nombre", referencedColumnName="nombre")
-    private Hotel hotel;
+    private Hotel nombreHotel;
 
     public Bar()
     {;}
@@ -29,7 +29,7 @@ public class Bar {
         this.estilo = estilo;
         this.aforo = aforo;
         this.aplicacompartido = aplicacompartido;
-        this.hotel = hotel;
+        this.nombreHotel = nombrehotel;
     }
 
     public Integer getIdtipoServicio() {
@@ -66,11 +66,11 @@ public class Bar {
     }
 
     public Hotel getHotel() {
-        return hotel;
+        return nombreHotel;
     }
 
     public void setHotel(Hotel hotel) {
-        this.hotel = hotel;
+        this.nombreHotel = hotel;
     }
  
 }

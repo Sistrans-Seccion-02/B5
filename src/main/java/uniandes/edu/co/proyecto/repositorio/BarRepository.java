@@ -27,7 +27,7 @@ public interface BarRepository extends JpaRepository<Bar, Integer>{
     @Modifying
     @Transactional
     @Query(value = "UPDATE bares SET estilo= :estilo, aforo= :aforo, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idtiposervicio =:idtiposervicio", nativeQuery = true)
-    void actualizarBar(@Param("idtiposervicio") int idtiposervicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido,  @Param("nombreHotel") Hotel nombreHotel);
+    void actualizarBar(@Param("idtiposervicio") int idtiposervicio,@Param("estilo") String estilo, @Param("aforo") int aforo, @Param("aplicaCompartido") Boolean aplicaCompartido,  @Param("nombreHotel") String nombreHotel);
 
     @Modifying
     @Transactional
