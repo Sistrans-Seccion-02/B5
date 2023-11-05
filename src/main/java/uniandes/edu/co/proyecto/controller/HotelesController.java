@@ -19,13 +19,13 @@ public class HotelesController {
     @GetMapping("/hoteles")
     public String hoteles(Model model) {
         model.addAttribute("hoteles", hotelRepository.darHoteles());
-        return "tiposUsuario";
+        return "hoteles";
     }
 
     @GetMapping("/hoteles/new")
     public String hotelForm(Model model) {
         model.addAttribute("hotel", new Hotel());
-        return "tipoUsuarioNuevo";
+        return "hotelNuevo";
     }
 
     @PostMapping("/hoteles/new/save")
