@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import uniandes.edu.co.proyecto.modelo.Salida;
-import uniandes.edu.co.proyecto.modelo.TipoUsuario;
 import uniandes.edu.co.proyecto.repositorio.SalidaRepository;
-import uniandes.edu.co.proyecto.repositorio.TipoUsuarioRepository;
 
 @Controller
 public class SalidasController {
