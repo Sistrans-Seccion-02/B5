@@ -18,15 +18,15 @@
                     <th>Nombre del Hotel</th>
                 </tr>
             </thead>
-            <th:block th:each="internet:${serviciosinternet}">
+            <th:block th:each="internet:${internets}">
                 <tr>
                     <td th:text="${internet.idtiposervicio}"></td>
                     <td th:text="${internet.incluido}"></td>
                     <td th:text="${internet.aplicaCompartido}"></td>
                     <td th:text="${internet.hotel.nombre}"></td>
                     <td>
-                        <a th:href="@{serviciosinternet/{id}/edit(id=${internet.idtipoServicio})}">Editar</a>
-                        <a th:href="@{serviciosinternet/{id}/delete(id=${internet.idtipoServicio})}"
+                        <a th:href="@{internets/{id}/edit(id=${internet.idtipoServicio})}">Editar</a>
+                        <a th:href="@{internets/{id}/delete(id=${internet.idtipoServicio})}"
                             onclick="return confirm('¿Estás seguro de borrar este internet?')">Borrar</a>
                     </td>
                 </tr>
