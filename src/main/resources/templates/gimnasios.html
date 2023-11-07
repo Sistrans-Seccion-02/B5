@@ -22,17 +22,17 @@
             </thead>
             <th:block th:each="gimnasio:${gimnasios}">
                 <tr>
-                    <td th:text="${gimnasio.id}"></td>
+                    <td th:text="${gimnasio.idtiposervicio }"></td>
                     <td th:text="${gimnasio.aforo}"></td>
-                    <td th:text="${gimnasio.numeroMaquinas}"></td>
+                    <td th:text="${gimnasio.nummaquinas}"></td>
                     <td th:text="${gimnasio.horario}"></td>
                     <td th:text="${gimnasio.aplicaCompartido}"></td>
                     <td th:text="${gimnasio.hotel.nombre}"></td>
                     <td>
-                        <a th:href="@{gimnasios/{id}/edit(id=${gimnasio.id})}">
+                        <a th:href="@{gimnasios/{id}/edit(id=${gimnasio.idtiposervicio})}">
                             Editar
                         </a>
-                        <a th:ref="@{gimnasios/{id}/delete(id=${gimnasio.id})}"
+                        <a th:ref="@{gimnasios/{id}/delete(id=${gimnasio.idtiposervicio})}"
                         onclick="return confirm('¿Estás seguro de borrar este gimnasio?')">
                             Borrar
                         </a>

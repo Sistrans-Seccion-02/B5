@@ -16,23 +16,23 @@ public interface GimnasioRepository extends JpaRepository<Gimnasio, Integer>{
     @Query(value = "SELECT * FROM gimnasios ", nativeQuery = true)
     Collection<Gimnasio> darGimnasios();
 
-    @Query(value = "SELECT * FROM gimnasios WHERE idTipoServicio = :idTipoServicio", nativeQuery = true)
-    Gimnasio darGimnasio(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "SELECT * FROM gimnasios WHERE idtiposervicio = :idtiposervicio", nativeQuery = true)
+    Gimnasio darGimnasio(@Param("idtiposervicio") int idtiposervicio);
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO gimnasios (idTipoServicio, aforo, numMaquinas, horario, aplicaCompartido, nombreHotel) VALUES(gimnasiosSeq.nextval, :aforo, :numMaquinas, :horario, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
+    @Query(value = "INSERT INTO gimnasios (idtiposervicio, aforo, numMaquinas, horario, aplicaCompartido, nombreHotel) VALUES(gimnasiosSeq.nextval, :aforo, :numMaquinas, :horario, :aplicaCompartido, :nombreHotel) ", nativeQuery = true)
     void insertarGimnasio(@Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
     
     @Modifying
     @Transactional
-    @Query(value = "UPDATE gimnasios SET aforo= :aforo, numMaquinas = :numMaquinas, horario= :horario, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void actualizarGimnasio(@Param("idTipoServicio") int idTipoServicio, @Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
+    @Query(value = "UPDATE gimnasios SET aforo= :aforo, numMaquinas = :numMaquinas, horario= :horario, aplicaCompartido= :aplicaCompartido, nombreHotel= :nombreHotel WHERE idtiposervicio =:idtiposervicio", nativeQuery = true)
+    void actualizarGimnasio(@Param("idtiposervicio") int idtiposervicio, @Param("aforo") int aforo, @Param("numMaquinas") int numMaquinas, @Param("horario") String horario, @Param("aplicaCompartido") Boolean aplicaCompartido, @Param("nombreHotel") Hotel nombreHotel);
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM gimnasios WHERE idTipoServicio =:idTipoServicio", nativeQuery = true)
-    void eliminarGimnasio(@Param("idTipoServicio") int idTipoServicio);
+    @Query(value = "DELETE FROM gimnasios WHERE idtiposervicio =:idtiposervicio", nativeQuery = true)
+    void eliminarGimnasio(@Param("idtiposervicio") int idtiposervicio);
 
     
 }

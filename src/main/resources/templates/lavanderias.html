@@ -19,12 +19,12 @@
             </thead>
             <th:block th:each="lavanderia:${lavanderias}">
                 <tr>
-                    <td th:text="${lavanderia.idtipoServicio}"></td>
+                    <td th:text="${lavanderia.idTipoServicio}"></td>
                     <td th:text="${lavanderia.aplicaCompartido}"></td>
                     <td th:text="${lavanderia.hotel.nombre}"></td>
                     <td>
-                        <a th:href="@{lavanderias/{id}/edit(id=${lavanderia.idtipoServicio})}">Editar</a>
-                        <a th:href="@{lavanderias/{id}/delete(id=${lavanderia.idtipoServicio})}"
+                        <a th:href="@{lavanderias/{id}/edit(id=${lavanderia.idTipoServicio})}">Editar</a>
+                        <a th:href="@{lavanderias/{id}/delete(id=${lavanderia.idTipoServicio})}"
                             onclick="return confirm('¿Estás seguro de borrar este bar?')">Borrar</a>
                     </td>
                 </tr>

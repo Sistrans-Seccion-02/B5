@@ -31,7 +31,7 @@ public class LavanderiasController {
 
     @PostMapping("/lavanderias/new/save")
     public String lavanderiaGuardar(@ModelAttribute Lavanderia lavanderia){
-        lavanderiaRepository.insertarLavanderia(lavanderia.getAplicaCompartido(), lavanderia.getNombreHotel());
+        lavanderiaRepository.insertarLavanderia(lavanderia.getAplicaCompartido(), lavanderia.getHotel());
         return "redirect:/lavanderias";
     }
 
@@ -50,7 +50,7 @@ public class LavanderiasController {
 
     @PostMapping("/lavanderias/{id}/edit/save")
     public String lavanderiaEditarGuardar(@PathVariable("id") int id, @ModelAttribute Lavanderia lavanderia){
-        lavanderiaRepository.actualizarLavanderia(id, lavanderia.getAplicaCompartido(), lavanderia.getNombreHotel());
+        lavanderiaRepository.actualizarLavanderia(id, lavanderia.getAplicaCompartido(), lavanderia.getHotel());
         return "redirect:/lavanderias";
     }
 
