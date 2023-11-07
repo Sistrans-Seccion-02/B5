@@ -27,7 +27,7 @@ public class ConsumoController {
 
     @PostMapping("/consumos/new/save")
     public String consumoGuardar(@ModelAttribute Consumo consumo){
-        consumoRepository.crearConsumo(consumo.getCosto(), consumo.isCargadoHabitacion(), consumo.getFecha(), consumo.getGimnasios_idTipoServicio(), consumo.getSalones_idTipoServicio(), consumo.getPrestamos_idTipoServicio(), consumo.getSupermercados_idTipoServicio(), consumo.getPiscinas_idTipoServicio(), consumo.getTiendas_idTipoServicio(), consumo.getInternet_idTipoServicio(), consumo.getBares_idTipoServicio(), consumo.getLavanderias_idTipoServicio(), consumo.getRestaurantes_idTipoServicio(), consumo.getSpas_idTipoServicio(), consumo.getHabitaciones_numeroHabitacion());
+        consumoRepository.crearConsumo(consumo.getCosto(), consumo.iscargadoHabitacion(), consumo.getFecha(), consumo.getGimnasios_idtiposervicio(), consumo.getSalones_idtiposervicio(), consumo.getPrestamos_idtiposervicio(), consumo.getSupermercados_idtiposervicio(), consumo.getPiscinas_idtiposervicio(), consumo.getTiendas_idtiposervicio(), consumo.getInternet_idtiposervicio(), consumo.getBares_idtiposervicio(), consumo.getLavanderias_idtiposervicio(), consumo.getRestaurantes_idtiposervicio(), consumo.getSpas_idtiposervicio(), consumo.getHabitaciones_numeroHabitacion());
         return "redirect:/consumos";
     }
     
@@ -44,7 +44,7 @@ public class ConsumoController {
 
     @PostMapping("/consumos/{id}/edit/save")
     public String consumoEditGuardar(@PathVariable("id") int id, @ModelAttribute Consumo consumo){
-        consumoRepository.actualizarConsumo(consumo.getCosto(), consumo.isCargadoHabitacion(), consumo.getFecha(), consumo.getGimnasios_idTipoServicio(), consumo.getSalones_idTipoServicio(), consumo.getPrestamos_idTipoServicio(), consumo.getSupermercados_idTipoServicio(), consumo.getPiscinas_idTipoServicio(), consumo.getTiendas_idTipoServicio(), consumo.getInternet_idTipoServicio(), consumo.getBares_idTipoServicio(), consumo.getLavanderias_idTipoServicio(), consumo.getRestaurantes_idTipoServicio(), consumo.getSpas_idTipoServicio(), consumo.getHabitaciones_numeroHabitacion(), id);
+        consumoRepository.actualizarConsumo(consumo.getCosto(), consumo.iscargadoHabitacion(), consumo.getFecha(), consumo.getGimnasios_idtiposervicio(), consumo.getSalones_idtiposervicio(), consumo.getPrestamos_idtiposervicio(), consumo.getSupermercados_idtiposervicio(), consumo.getPiscinas_idtiposervicio(), consumo.getTiendas_idtiposervicio(), consumo.getInternet_idtiposervicio(), consumo.getBares_idtiposervicio(), consumo.getLavanderias_idtiposervicio(), consumo.getRestaurantes_idtiposervicio(), consumo.getSpas_idtiposervicio(), consumo.getHabitaciones_numeroHabitacion(), id);
         return "redirect:/consumos";
     }
 
