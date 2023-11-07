@@ -46,11 +46,11 @@ public class Lavanderia {
         this.aplicacompartido = aplicaCompartido;
     }
 
-    public Hotel getNombreHotel() {
+    public Hotel getHotel() {
         return nombrehotel;
     }
 
-    public void setNombreHotel(Hotel nombreHotel) {
+    public void setHotel(Hotel nombreHotel) {
         this.nombrehotel = nombreHotel;
     }
 

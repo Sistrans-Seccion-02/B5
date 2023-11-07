@@ -14,7 +14,6 @@ public class Gimnasio {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-
     private Integer idtiposervicio;
     private Integer aforo;
     private Integer nummaquinas;
@@ -37,12 +36,12 @@ public class Gimnasio {
     public Gimnasio()
     {;}
 
-    public Integer getIdTipoServicio() {
+    public Integer getIdtiposervicio() {
         return idtiposervicio;
     }
 
-    public void setIdTipoServicio(Integer idTipoServicio) {
-        this.idtiposervicio = idTipoServicio;
+    public void setIdtiposervicio(Integer idtiposervicio) {
+        this.idtiposervicio = idtiposervicio;
     }
 
     public Integer getAforo() {
@@ -53,13 +52,24 @@ public class Gimnasio {
         this.aforo = aforo;
     }
 
-    public Integer getNumMaquinas() {
+
+    public Integer getNummaquinas() {
         return nummaquinas;
     }
 
-    public void setNumMaquinas(Integer numMaquinas) {
-        this.nummaquinas = numMaquinas;
+    public void setNummaquinas(Integer nummaquinas) {
+        this.nummaquinas = nummaquinas;
     }
+
+    public Boolean getAplicacompartido() {
+        return aplicacompartido;
+    }
+
+    public void setAplicacompartido(Boolean aplicacompartido) {
+        this.aplicacompartido = aplicacompartido;
+    }
+
+
 
     public String getHorario() {
         return horario;
@@ -83,6 +93,14 @@ public class Gimnasio {
 
     public void setNombreHotel(Hotel nombreHotel) {
         this.nombrehotel = nombreHotel;
+    }
+
+    public Hotel getHotel() {
+        return nombrehotel;
+    }
+
+    public void setHotel(Hotel nombrehotel) {
+        this.nombrehotel = nombrehotel;
     }
 
     

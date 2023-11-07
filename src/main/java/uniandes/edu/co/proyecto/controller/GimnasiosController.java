@@ -31,7 +31,7 @@ public class GimnasiosController {
 
     @PostMapping("/gimnasios/new/save")
     public String gimnasioGuardar(@ModelAttribute Gimnasio gimnasio){
-        gimnasioRepository.insertarGimnasio(gimnasio.getAforo(), gimnasio.getNumMaquinas(), gimnasio.getHorario(), gimnasio.getAplicaCompartido(), gimnasio.getNombreHotel());
+        gimnasioRepository.insertarGimnasio(gimnasio.getAforo(), gimnasio.getNummaquinas(), gimnasio.getHorario(), gimnasio.getAplicaCompartido(), gimnasio.getNombreHotel());
         return "redirect:/gimnasios";
     }
 
@@ -48,7 +48,7 @@ public class GimnasiosController {
 
     @PostMapping("/gimnasios/{id}/edit/save")
     public String gimnasioEditarGuardar(@PathVariable("id") int id, @ModelAttribute Gimnasio gimnasio){
-        gimnasioRepository.actualizarGimnasio(id, gimnasio.getAforo(), gimnasio.getNumMaquinas(), null, gimnasio.getAplicaCompartido(), gimnasio.getNombreHotel());
+        gimnasioRepository.actualizarGimnasio(id, gimnasio.getAforo(), gimnasio.getNummaquinas(), null, gimnasio.getAplicaCompartido(), gimnasio.getNombreHotel());
         return "redirect:/gimnasios";
     }
 

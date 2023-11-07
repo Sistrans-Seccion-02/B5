@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salones</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+    <div>
+        <h1>Lista de Salones</h1>
+        <table class=" table table-hover table-bordered">
+            <thead class= "thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Equipo</th>
+                    <th>Aforo</th>
+                    <th>Aplica Compartido</th>
+                    <th>Nombre del Hotel</th>
+                </tr>
+            </thead>
+            <th:block th:each="salon:${salones}">
+                <tr>
+                    <td th:text="${salon.idtipoServicio}"></td>
+                    <td th:text="${salon.equipo}"></td>
+                    <td th:text="${salon.aforo}"></td>
+                    <td th:text="${salon.aplicaCompartido}"></td>
+                    <td th:text="${salon.hotel.nombre}"></td>
+                    <td>
+                        <a th:href="@{salones/{id}/edit(id=${salon.idtipoServicio})}">Editar</a>
+                        <a th:href="@{salones/{id}/delete(id=${salon.idtipoServicio})}"
+                            onclick="return confirm('¿Estás seguro de borrar este bar?')">Borrar</a>
+                    </td>
+                </tr>
+            </th:block>
+        </table>
+        <div>
+            <a th:href='@{/}' class="btn btn-primary">Volver Atrás</a>
+    </div>
+</body>
+</html>
