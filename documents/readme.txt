@@ -1,0 +1,1 @@
+Clone el proyecto, introduzca la información del login de su base de datos en application properties, corra el script de generación de tablas y corra la app.
